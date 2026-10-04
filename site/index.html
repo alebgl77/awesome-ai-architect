@@ -1,0 +1,596 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Awesome AI Architect</title>
+<meta name="description" content="A self-updating map of the GenAI engineering stack, classified automatically from the GitHub stars and open-source work of an AI architect.">
+<meta property="og:title" content="Awesome AI Architect">
+<meta property="og:description" content="Agents, RAG, MCP, evals, LLMOps and AI security. A self-updating map of the GenAI stack.">
+<meta name="theme-color" content="#0f766e">
+<meta property="og:image" content="https://raw.githubusercontent.com/alebgl77/awesome-ai-architect/main/site/social-preview.png">
+<meta property="og:url" content="https://alebgl77.github.io/awesome-ai-architect/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230f766e'/%3E%3Crect x='7' y='7' width='8' height='18' rx='2' fill='%23fff'/%3E%3Crect x='17' y='7' width='8' height='8' rx='2' fill='%23fff' opacity='.7'/%3E%3Crect x='17' y='17' width='8' height='8' rx='2' fill='%23fff' opacity='.45'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<style>
+:root {
+  --bg: #fafafa;
+  --surface: #ffffff;
+  --sunken: #f4f4f5;
+  --line: #e4e4e7;
+  --line-strong: #d4d4d8;
+  --text: #18181b;
+  --muted: #52525b;
+  --faint: #71717a;
+  --accent: #0f766e;
+  --accent-ink: #ffffff;
+  --accent-soft: #ccfbf1;
+  --accent-text: #0f766e;
+  --shadow: 0 1px 2px rgba(24, 24, 27, .05), 0 8px 24px -12px rgba(24, 24, 27, .12);
+  --r: 6px;
+  --mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --sans: "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0c0c0e; --surface: #141417; --sunken: #1b1b1f; --line: #26262b; --line-strong: #34343a;
+    --text: #f4f4f5; --muted: #a1a1aa; --faint: #8b8b94;
+    --accent: #2dd4bf; --accent-ink: #042f2e; --accent-soft: #10302d; --accent-text: #5eead4;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 8px 24px -12px rgba(0, 0, 0, .6);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0c0c0e; --surface: #141417; --sunken: #1b1b1f; --line: #26262b; --line-strong: #34343a;
+  --text: #f4f4f5; --muted: #a1a1aa; --faint: #8b8b94;
+  --accent: #2dd4bf; --accent-ink: #042f2e; --accent-soft: #10302d; --accent-text: #5eead4;
+  --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 8px 24px -12px rgba(0, 0, 0, .6);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: 132px; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 15px/1.55 var(--sans); -webkit-font-smoothing: antialiased;
+  min-height: 100dvh;
+}
+a { color: inherit; text-decoration: none; }
+button, input { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: var(--r); }
+.wrap { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+.mono { font-family: var(--mono); }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* top bar */
+.bar { height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 600; letter-spacing: -.01em; white-space: nowrap; }
+.brand svg { flex: none; }
+.brand small { font: 400 13px var(--mono); color: var(--faint); }
+.bar nav { display: flex; align-items: center; gap: 4px; }
+.icon-btn {
+  display: inline-flex; align-items: center; gap: 8px; height: 36px; padding: 0 12px;
+  border: 1px solid transparent; border-radius: var(--r); background: none; cursor: pointer;
+  color: var(--muted); font-size: 14px; white-space: nowrap;
+}
+.icon-btn:hover { color: var(--text); background: var(--sunken); }
+.icon-btn i { font-size: 18px; }
+
+/* hero */
+.hero { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 48px; align-items: center; padding: 40px 0 48px; }
+.hero h1 { font-size: clamp(32px, 4.4vw, 52px); line-height: 1.05; letter-spacing: -.035em; margin: 0 0 18px; font-weight: 600; max-width: 17ch; }
+.hero h1 em { font-style: normal; color: var(--accent-text); }
+.hero p { margin: 0 0 28px; color: var(--muted); font-size: 17px; max-width: 42ch; }
+.ctas { display: flex; flex-wrap: wrap; gap: 10px; }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px; height: 42px; padding: 0 18px;
+  border-radius: var(--r); font-weight: 500; white-space: nowrap; cursor: pointer;
+  border: 1px solid var(--line-strong); background: var(--surface); transition: transform .12s ease, background .12s ease;
+}
+.btn:hover { background: var(--sunken); }
+.btn:active { transform: translateY(1px); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.btn.primary:hover { filter: brightness(1.06); }
+.stats { display: flex; gap: 32px; margin-top: 36px; padding-top: 20px; border-top: 1px solid var(--line); }
+.stats div { display: flex; flex-direction: column; }
+.stats b { font: 600 24px/1.1 var(--sans); letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+.stats span { font-size: 13px; color: var(--faint); }
+
+/* treemap */
+.map { position: relative; height: 380px; border-radius: var(--r); overflow: hidden; background: var(--sunken); }
+.tile {
+  position: absolute; padding: 10px 12px; border: 2px solid var(--bg); border-radius: 8px;
+  display: flex; flex-direction: column; justify-content: space-between; text-align: left;
+  cursor: pointer; overflow: hidden; transition: filter .15s ease, transform .15s ease;
+  background: color-mix(in oklab, var(--accent) calc(var(--w) * 100%), var(--surface));
+  color: var(--tile-ink, var(--text));
+}
+.tile:hover { filter: brightness(1.08) saturate(1.1); }
+.tile:active { transform: scale(.99); }
+.tile[aria-pressed="true"] { outline: 2px solid var(--text); outline-offset: -4px; }
+.tile strong { font-size: 13px; font-weight: 600; line-height: 1.25; letter-spacing: -.005em; }
+.tile span { font: 500 12px var(--mono); opacity: .8; }
+.tile.small strong { font-size: 11px; }
+.tile.tiny strong, .tile.tiny span { display: none; }
+.map.loading { animation: pulse 1.4s ease-in-out infinite; }
+
+/* toolbar */
+.toolbar {
+  position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: saturate(1.4) blur(10px); -webkit-backdrop-filter: saturate(1.4) blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.toolbar .wrap { display: flex; align-items: center; gap: 12px; padding-top: 12px; padding-bottom: 12px; }
+.search { position: relative; flex: 1 1 320px; max-width: 460px; }
+.search i { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--faint); font-size: 17px; pointer-events: none; }
+.search input {
+  width: 100%; height: 40px; padding: 0 44px 0 38px; border-radius: var(--r);
+  border: 1px solid var(--line-strong); background: var(--surface);
+}
+.search input::placeholder { color: var(--faint); }
+.search input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 22%, transparent); }
+.search kbd {
+  position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
+  font: 500 12px var(--mono); color: var(--faint); border: 1px solid var(--line-strong);
+  border-radius: 4px; padding: 0 6px; line-height: 20px;
+}
+.seg { display: inline-flex; padding: 3px; border-radius: var(--r); background: var(--sunken); border: 1px solid var(--line); }
+.seg button {
+  height: 32px; padding: 0 12px; border: 0; border-radius: 4px; background: none; cursor: pointer;
+  color: var(--muted); font-size: 13.5px; white-space: nowrap;
+}
+.seg button[aria-pressed="true"] { background: var(--surface); color: var(--text); box-shadow: var(--shadow); font-weight: 500; }
+.toggle { display: inline-flex; align-items: center; gap: 8px; font-size: 13.5px; color: var(--muted); cursor: pointer; white-space: nowrap; user-select: none; }
+.toggle input { appearance: none; width: 32px; height: 18px; border-radius: 999px; background: var(--line-strong); position: relative; cursor: pointer; transition: background .15s; margin: 0; }
+.toggle input::after { content: ""; position: absolute; top: 2px; left: 2px; width: 14px; height: 14px; border-radius: 50%; background: #fff; transition: transform .15s; }
+.toggle input:checked { background: var(--accent); }
+.toggle input:checked::after { transform: translateX(14px); }
+.spacer { flex: 1; }
+
+/* layout */
+.layout { display: grid; grid-template-columns: 248px minmax(0, 1fr); gap: 40px; padding: 28px 0 80px; }
+.rail { position: sticky; top: 88px; align-self: start; max-height: calc(100dvh - 104px); overflow: auto; padding-right: 4px; }
+.rail button {
+  width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  padding: 7px 10px; border: 0; border-radius: var(--r); background: none; cursor: pointer;
+  text-align: left; font-size: 14px; color: var(--muted);
+}
+.rail button:hover { background: var(--sunken); color: var(--text); }
+.rail button[aria-pressed="true"] { background: var(--accent-soft); color: var(--accent-text); font-weight: 500; }
+.rail button span:last-child { font: 400 12px var(--mono); color: var(--faint); font-variant-numeric: tabular-nums; }
+.rail button[aria-pressed="true"] span:last-child { color: inherit; }
+.rail hr { border: 0; border-top: 1px solid var(--line); margin: 8px 10px; }
+
+.head { margin-bottom: 18px; }
+.head h2 { font-size: 24px; letter-spacing: -.02em; margin: 0 0 4px; font-weight: 600; }
+.head p { margin: 0; color: var(--muted); max-width: 65ch; }
+.head .count { font: 400 13px var(--mono); color: var(--faint); margin-top: 8px; }
+
+/* rows */
+.list { border-top: 1px solid var(--line); }
+.row {
+  display: grid; grid-template-columns: 36px minmax(0, 1fr) 172px; gap: 16px;
+  padding: 18px 8px; border-bottom: 1px solid var(--line); align-items: start;
+  border-radius: 0; transition: background .12s;
+}
+.row:hover { background: color-mix(in srgb, var(--sunken) 70%, transparent); }
+.avatar { width: 36px; height: 36px; border-radius: var(--r); background: var(--sunken); object-fit: cover; }
+.title { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 8px; }
+.title a { font-weight: 600; letter-spacing: -.01em; }
+.title a:hover { color: var(--accent-text); text-decoration: underline; text-underline-offset: 3px; }
+.title .owner { color: var(--faint); font-weight: 400; }
+.badge {
+  font: 500 11px/18px var(--mono); padding: 0 7px; border-radius: 4px;
+  border: 1px solid currentColor; white-space: nowrap;
+}
+.badge.mine { color: var(--accent-text); }
+.badge.arch { color: var(--faint); }
+.desc { margin: 4px 0 10px; color: var(--muted); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip {
+  font: 400 12px/22px var(--mono); padding: 0 8px; border-radius: 4px; background: var(--sunken);
+  color: var(--muted); border: 1px solid transparent; cursor: pointer;
+}
+.chip:hover { border-color: var(--line-strong); color: var(--text); }
+.chip.cat, .chip.tag { font-family: var(--sans); font-size: 12.5px; }
+.chip.cat { background: none; border-color: var(--line-strong); color: var(--text); font-weight: 500; }
+.chip.cat i { font-size: 12px; vertical-align: -1px; margin-right: 4px; color: var(--accent-text); }
+.metrics { display: grid; grid-template-columns: auto 1fr; gap: 3px 10px; font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.metrics dt { color: var(--faint); display: flex; align-items: center; }
+.metrics dt i { font-size: 14px; }
+.metrics dd { margin: 0; text-align: right; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.metrics .stars { color: var(--text); font-weight: 600; }
+.delta { color: var(--accent-text); font-weight: 500; }
+
+.skel { height: 112px; border-bottom: 1px solid var(--line); position: relative; }
+.skel::before, .skel::after { content: ""; position: absolute; left: 60px; height: 12px; border-radius: 4px; background: var(--sunken); animation: pulse 1.4s ease-in-out infinite; }
+.skel::before { top: 24px; width: 30%; }
+.skel::after { top: 50px; width: 62%; }
+@keyframes pulse { 50% { opacity: .45; } }
+
+.sub { font-size: 14px; font-weight: 600; margin: 0; padding: 28px 8px 10px; border-bottom: 1px solid var(--line); color: var(--muted); }
+.empty { padding: 64px 24px; text-align: center; color: var(--muted); border-bottom: 1px solid var(--line); }
+.empty i { font-size: 32px; color: var(--faint); display: block; margin-bottom: 12px; }
+.empty b { color: var(--text); display: block; margin-bottom: 4px; }
+.more { display: flex; justify-content: center; padding: 24px 0; }
+
+footer { border-top: 1px solid var(--line); padding: 32px 0 48px; color: var(--faint); font-size: 14px; }
+footer .wrap { display: flex; flex-wrap: wrap; gap: 12px 32px; justify-content: space-between; }
+footer a { color: var(--muted); text-decoration: underline; text-decoration-color: var(--line-strong); text-underline-offset: 3px; }
+footer a:hover { color: var(--text); }
+
+@media (max-width: 1080px) {
+  .hero { grid-template-columns: 1fr; gap: 32px; padding-top: 24px; }
+  .hero h1 { max-width: 20ch; }
+  .map { height: 300px; }
+  .layout { grid-template-columns: 1fr; gap: 16px; }
+  .rail {
+    position: static; max-height: none; display: flex; gap: 6px; overflow-x: auto;
+    scroll-snap-type: x proximity; padding-bottom: 6px; margin: 0 -24px; padding-left: 24px; padding-right: 24px;
+    scrollbar-width: none;
+  }
+  .rail::-webkit-scrollbar { display: none; }
+  .rail button { width: auto; flex: none; scroll-snap-align: start; border: 1px solid var(--line); white-space: nowrap; }
+  .rail hr { display: none; }
+}
+@media (max-width: 760px) {
+  .wrap { padding: 0 16px; }
+  .rail { margin: 0 -16px; padding-left: 16px; padding-right: 16px; }
+  .bar nav .label { display: none; }
+  .brand small { display: none; }
+  .toolbar .wrap { flex-wrap: wrap; gap: 10px; }
+  .search { flex-basis: 100%; max-width: none; }
+  .search kbd { display: none; }
+  .seg { overflow-x: auto; max-width: 100%; }
+  .spacer { display: none; }
+  .row { grid-template-columns: 32px minmax(0, 1fr); gap: 12px; padding: 16px 0; }
+  .avatar { width: 32px; height: 32px; }
+  .metrics { grid-column: 2; display: flex; flex-wrap: wrap; gap: 4px 14px; }
+  .metrics dt { display: none; }
+  .metrics dd { text-align: left; }
+  .stats { gap: 22px; }
+  .map { height: 260px; }
+  html { scroll-padding-top: 180px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+</style>
+</head>
+<body>
+<header class="wrap bar">
+  <a class="brand" href="#" aria-label="Awesome AI Architect, home">
+    <svg width="26" height="26" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="6" fill="var(--accent)"/><rect x="7" y="7" width="8" height="18" rx="2" fill="var(--accent-ink)"/><rect x="17" y="7" width="8" height="8" rx="2" fill="var(--accent-ink)" opacity=".7"/><rect x="17" y="17" width="8" height="8" rx="2" fill="var(--accent-ink)" opacity=".45"/></svg>
+    Awesome AI Architect <small id="byline"></small>
+  </a>
+  <nav>
+    <a class="icon-btn" id="readme-link" href="https://github.com/alebgl77/awesome-ai-architect"><i class="ph ph-list-bullets"></i><span class="label">Markdown list</span></a>
+    <a class="icon-btn" id="gh-link" href="https://github.com/alebgl77/awesome-ai-architect"><i class="ph ph-star"></i><span class="label">Star on GitHub</span></a>
+    <button class="icon-btn" id="theme" type="button" aria-label="Toggle color theme"><i class="ph ph-moon"></i></button>
+  </nav>
+</header>
+
+<main>
+  <section class="wrap hero">
+    <div>
+      <h1>The GenAI stack, <em>mapped</em> from real use.</h1>
+      <p id="tagline">Agents, RAG, MCP, evals, LLMOps and AI security. Every star classified automatically, refreshed daily.</p>
+      <div class="ctas">
+        <a class="btn primary" href="#explore"><i class="ph ph-compass"></i>Explore the map</a>
+        <a class="btn" href="https://github.com/alebgl77/awesome-ai-architect#use-it-for-your-own-stars"><i class="ph ph-git-fork"></i>Use your stars</a>
+      </div>
+      <div class="stats" aria-live="polite">
+        <div><b id="s-total">&nbsp;</b><span>projects</span></div>
+        <div><b id="s-cats">&nbsp;</b><span>categories</span></div>
+        <div><b id="s-mine">&nbsp;</b><span>original</span></div>
+        <div><b id="s-date">&nbsp;</b><span>last refresh</span></div>
+      </div>
+    </div>
+    <div class="map loading" id="map" role="group" aria-label="Categories sized by number of projects"></div>
+  </section>
+
+  <div class="toolbar" id="explore">
+    <div class="wrap">
+      <label class="search">
+        <span class="sr">Search projects</span>
+        <i class="ph ph-magnifying-glass"></i>
+        <input id="q" type="search" placeholder="Search name, topic, description" autocomplete="off" spellcheck="false">
+        <kbd>/</kbd>
+      </label>
+      <div class="seg" role="group" aria-label="Sort by" id="sort">
+        <button type="button" data-sort="stars" aria-pressed="true">Stars</button>
+        <button type="button" data-sort="momentum" aria-pressed="false" title="Stars gained over about 30 days">Rising</button>
+        <button type="button" data-sort="starred" aria-pressed="false" title="Most recently starred or created">New</button>
+        <button type="button" data-sort="pushed" aria-pressed="false" title="Most recent commit">Updated</button>
+      </div>
+      <span class="spacer"></span>
+      <label class="toggle"><input type="checkbox" id="mine"> Original work</label>
+      <label class="toggle"><input type="checkbox" id="active"> Hide dormant</label>
+    </div>
+  </div>
+
+  <div class="wrap layout">
+    <nav class="rail" id="rail" aria-label="Categories"></nav>
+    <section aria-live="polite">
+      <div class="head">
+        <h2 id="h-title">All projects</h2>
+        <p id="h-blurb"></p>
+        <div class="count" id="h-count"></div>
+      </div>
+      <div class="list" id="list">
+        <div class="skel"></div><div class="skel"></div><div class="skel"></div><div class="skel"></div>
+      </div>
+      <div class="more" id="more" hidden><button class="btn" type="button" id="more-btn">Show more</button></div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Generated by a dependency-free Python script and a daily GitHub Action. Descriptions belong to their authors.</span>
+    <span><a href="https://github.com/alebgl77/awesome-ai-architect/blob/main/config.toml">Taxonomy</a> &nbsp; <a href="https://github.com/alebgl77/awesome-ai-architect/blob/main/data/repos.json">Dataset</a> &nbsp; <a href="https://github.com/alebgl77/awesome-ai-architect">Source</a></span>
+  </div>
+</footer>
+
+<script>
+(() => {
+  const $ = (s) => document.querySelector(s);
+  const PAGE = 40;
+  const ICONS = {
+    mcp: "plugs-connected", memory: "memory", rag: "books", evals: "exam", observability: "pulse", security: "shield-check",
+    search: "magnifying-glass", context: "text-aa", coding: "terminal-window", agents: "graph", inference: "lightning",
+    models: "brain", multimodal: "waveform", data: "database", automation: "flow-arrow", frontend: "paint-brush",
+    infra: "cloud", apps: "chat-circle-text", learning: "graduation-cap", triage: "tray",
+  };
+  const state = { cat: "all", q: "", sort: "stars", mine: false, active: false, shown: PAGE };
+  let DATA = null, CATS = {}, filtered = [], related = 0;
+
+  /* theme */
+  const root = document.documentElement;
+  const themeBtn = $("#theme");
+  const sysDark = matchMedia("(prefers-color-scheme: dark)");
+  const isDark = () => root.dataset.theme ? root.dataset.theme === "dark" : sysDark.matches;
+  const paintThemeIcon = () => { themeBtn.innerHTML = `<i class="ph ph-${isDark() ? "sun" : "moon"}"></i>`; };
+  try { const t = localStorage.getItem("aaa-theme"); if (t) root.dataset.theme = t; } catch (e) {}
+  paintThemeIcon();
+  themeBtn.addEventListener("click", () => {
+    root.dataset.theme = isDark() ? "light" : "dark";
+    try { localStorage.setItem("aaa-theme", root.dataset.theme); } catch (e) {}
+    paintThemeIcon(); drawMap();
+  });
+  sysDark.addEventListener("change", () => { paintThemeIcon(); drawMap(); });
+
+  /* helpers */
+  const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const num = (n) => n >= 1e6 ? (n / 1e6).toFixed(1).replace(/\.0$/, "") + "M" : n >= 1e3 ? (n / 1e3).toFixed(1).replace(/\.0$/, "") + "k" : String(n);
+  const ago = (iso) => {
+    if (!iso) return "";
+    const d = (Date.now() - Date.parse(iso)) / 864e5;
+    if (d < 1) return "today";
+    if (d < 30) return `${Math.floor(d)}d ago`;
+    if (d < 365) return `${Math.floor(d / 30)}mo ago`;
+    return `${(d / 365).toFixed(1).replace(/\.0$/, "")}y ago`;
+  };
+
+  /* url state */
+  const readHash = () => {
+    const p = new URLSearchParams(location.hash.slice(1));
+    state.cat = p.get("cat") || "all";
+    state.q = p.get("q") || "";
+    state.sort = p.get("sort") || "stars";
+    state.mine = p.get("mine") === "1";
+    state.active = p.get("active") === "1";
+  };
+  const writeHash = () => {
+    const p = new URLSearchParams();
+    if (state.cat !== "all") p.set("cat", state.cat);
+    if (state.q) p.set("q", state.q);
+    if (state.sort !== "stars") p.set("sort", state.sort);
+    if (state.mine) p.set("mine", "1");
+    if (state.active) p.set("active", "1");
+    const h = p.toString();
+    history.replaceState(null, "", h ? `#${h}` : location.pathname + location.search);
+  };
+
+  /* treemap (squarified) */
+  function squarify(items, x, y, w, h) {
+    const out = [];
+    const total = items.reduce((a, b) => a + b.value, 0);
+    const scale = (w * h) / total;
+    let rest = items.map((i) => ({ ...i, area: i.value * scale }));
+    const worst = (row, side) => {
+      const s = row.reduce((a, b) => a + b.area, 0);
+      const max = Math.max(...row.map((r) => r.area)), min = Math.min(...row.map((r) => r.area));
+      return Math.max((side * side * max) / (s * s), (s * s) / (side * side * min));
+    };
+    while (rest.length) {
+      const side = Math.min(w, h);
+      let row = [rest[0]], i = 1;
+      while (i < rest.length && worst([...row, rest[i]], side) <= worst(row, side)) { row.push(rest[i]); i++; }
+      const s = row.reduce((a, b) => a + b.area, 0);
+      if (w >= h) {
+        const cw = s / h; let cy = y;
+        row.forEach((r) => { const ch = r.area / cw; out.push({ ...r, x, y: cy, w: cw, h: ch }); cy += ch; });
+        x += cw; w -= cw;
+      } else {
+        const ch = s / w; let cx = x;
+        row.forEach((r) => { const cw = r.area / ch; out.push({ ...r, x: cx, y, w: cw, h: ch }); cx += cw; });
+        y += ch; h -= ch;
+      }
+      rest = rest.slice(i);
+    }
+    return out;
+  }
+
+  function drawMap() {
+    if (!DATA) return;
+    const el = $("#map");
+    const W = el.clientWidth, H = el.clientHeight;
+    const items = DATA.categories.filter((c) => c.count > 0).sort((a, b) => b.count - a.count)
+      .map((c) => ({ id: c.id, title: c.short, full: c.title, value: c.count }));
+    if (!items.length) { el.innerHTML = ""; return; }
+    const max = items[0].value;
+    el.classList.remove("loading");
+    el.innerHTML = squarify(items, 0, 0, W, H).map((t) => {
+      const wgt = 0.12 + 0.8 * (t.value / max);
+      const ink = wgt > 0.5 ? "var(--accent-ink)" : "var(--text)";
+      const size = t.w < 70 || t.h < 44 ? "tiny" : t.w < 120 ? "small" : "";
+      return `<button type="button" class="tile ${size}" data-cat="${t.id}" aria-pressed="${state.cat === t.id}"
+        style="left:${t.x}px;top:${t.y}px;width:${t.w}px;height:${t.h}px;--w:${wgt.toFixed(3)};--tile-ink:${ink}"
+        title="${esc(t.full)}: ${t.value}"><strong>${esc(t.title)}</strong><span>${t.value}</span></button>`;
+    }).join("");
+  }
+
+  /* rail */
+  function drawRail() {
+    const total = DATA.repos.length;
+    const mineCount = DATA.repos.filter((r) => r.mine).length;
+    const btn = (id, title, count, icon, full = title) => `<button type="button" data-cat="${id}" aria-pressed="${state.cat === id}" title="${esc(full)}">
+      <span><i class="ph ph-${icon}" aria-hidden="true"></i> ${esc(title)}</span><span>${count}</span></button>`;
+    $("#rail").innerHTML = btn("all", "All projects", total, "squares-four") + "<hr>" +
+      DATA.categories.filter((c) => c.count > 0).map((c) => btn(c.id, c.short, c.count, ICONS[c.id] || "folder", c.title)).join("");
+    $("#s-mine").textContent = mineCount;
+  }
+
+  /* filtering */
+  function apply() {
+    const q = state.q.trim().toLowerCase();
+    const terms = q ? q.split(/\s+/) : [];
+    filtered = DATA.repos.filter((r) => {
+      if (state.cat !== "all" && r.category !== state.cat && !r.tags.includes(state.cat)) return false;
+      if (state.mine && !r.mine) return false;
+      if (state.active && (r.health === "dormant" || r.health === "archived")) return false;
+      if (!terms.length) return true;
+      const hay = r._hay || (r._hay = [r.full_name, r.description, r.language, ...r.topics, CATS[r.category]?.title].join(" ").toLowerCase());
+      return terms.every((t) => hay.includes(t));
+    });
+    const primaryFirst = (a, b) => state.cat === "all" ? 0 : (b.category === state.cat) - (a.category === state.cat);
+    related = state.cat === "all" ? 0 : filtered.filter((r) => r.category !== state.cat).length;
+    const by = {
+      stars: (a, b) => b.stars - a.stars,
+      momentum: (a, b) => (b.stars_delta ?? -1) - (a.stars_delta ?? -1) || b.stars - a.stars,
+      starred: (a, b) => (b.starred_at || b.created_at || "").localeCompare(a.starred_at || a.created_at || ""),
+      pushed: (a, b) => (b.pushed_at || "").localeCompare(a.pushed_at || ""),
+    }[state.sort];
+    filtered.sort((a, b) => primaryFirst(a, b) || by(a, b));
+    render();
+  }
+
+  function row(r) {
+    const cat = CATS[r.category];
+    const delta = r.stars_delta > 0 ? ` <span class="delta">+${num(r.stars_delta)}</span>` : "";
+    const chips = [
+      `<button type="button" class="chip cat" data-cat="${r.category}"><i class="ph ph-${ICONS[r.category] || "folder"}"></i>${esc(cat?.short || r.category)}</button>`,
+      ...r.tags.map((t) => `<button type="button" class="chip tag" data-cat="${t}">${esc(CATS[t]?.short || t)}</button>`),
+      ...(r.key_topics || r.topics).slice(0, 4).map((t) => `<button type="button" class="chip" data-q="${esc(t)}">${esc(t)}</button>`),
+    ].join("");
+    const health = { active: "Active", maintained: "Maintained", dormant: "Dormant", archived: "Archived" }[r.health] || "";
+    return `<article class="row">
+      <img class="avatar" src="https://avatars.githubusercontent.com/${encodeURIComponent(r.owner)}?s=72" alt="" loading="lazy" width="36" height="36">
+      <div>
+        <div class="title">
+          <a href="${esc(r.url)}" target="_blank" rel="noopener"><span class="owner">${esc(r.owner)} /</span> ${esc(r.name)}</a>
+          ${r.mine ? '<span class="badge mine">Original</span>' : ""}
+          ${r.archived ? '<span class="badge arch">Archived</span>' : ""}
+        </div>
+        <p class="desc">${esc(r.description) || "No description."}</p>
+        <div class="chips">${chips}</div>
+      </div>
+      <dl class="metrics">
+        <dt title="Stars"><i class="ph ph-star"></i><span class="sr">Stars</span></dt><dd class="stars">${num(r.stars)}${delta}</dd>
+        ${r.language ? `<dt title="Language"><i class="ph ph-code"></i><span class="sr">Language</span></dt><dd>${esc(r.language)}</dd>` : ""}
+        <dt title="Last push"><i class="ph ph-git-commit"></i><span class="sr">Last push</span></dt><dd>${ago(r.pushed_at)}${health ? ", " + health.toLowerCase() : ""}</dd>
+        ${r.license ? `<dt title="License"><i class="ph ph-scales"></i><span class="sr">License</span></dt><dd>${esc(r.license)}</dd>` : ""}
+      </dl>
+    </article>`;
+  }
+
+  function render() {
+    const cat = state.cat === "all" ? null : CATS[state.cat];
+    $("#h-title").textContent = state.mine && !cat ? "Original work" : cat ? cat.title : "All projects";
+    $("#h-blurb").textContent = cat ? cat.blurb : DATA.tagline;
+    const core = filtered.length - related;
+    $("#h-count").textContent = `${core} project${core === 1 ? "" : "s"}${related ? `, ${related} related` : ""}${state.q ? ` matching "${state.q}"` : ""}`;
+    document.querySelectorAll("[data-cat]").forEach((b) => b.matches(".tile, .rail button") && b.setAttribute("aria-pressed", String(b.dataset.cat === state.cat)));
+    document.querySelectorAll("#sort button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.sort === state.sort)));
+    $("#mine").checked = state.mine; $("#active").checked = state.active;
+    if ($("#q").value !== state.q) $("#q").value = state.q;
+
+    if (!filtered.length) {
+      $("#list").innerHTML = `<div class="empty"><i class="ph ph-binoculars"></i><b>Nothing matches these filters.</b>
+        Try a broader term or <button class="btn" type="button" id="reset" style="margin-top:14px">Reset filters</button></div>`;
+      $("#more").hidden = true;
+      return;
+    }
+    const firstRelated = filtered.length - related;
+    $("#list").innerHTML = filtered.slice(0, state.shown).map((r, i) =>
+      (related && i === firstRelated ? `<h3 class="sub">Also relevant to ${esc(cat.short)}</h3>` : "") + row(r)).join("");
+    $("#more").hidden = filtered.length <= state.shown;
+    $("#more-btn").textContent = `Show ${Math.min(PAGE, filtered.length - state.shown)} more`;
+  }
+
+  function update(patch, { scroll = false } = {}) {
+    Object.assign(state, patch, { shown: PAGE });
+    writeHash(); apply();
+    if (scroll) $("#explore").scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+  }
+
+  /* events */
+  document.addEventListener("click", (e) => {
+    const c = e.target.closest("[data-cat]");
+    if (c) {
+      const patch = { cat: c.dataset.cat === state.cat && !c.closest(".rail") ? "all" : c.dataset.cat };
+      if (c.closest(".map")) patch.q = "";
+      update(patch, { scroll: !!c.closest(".map, .chips") });
+      return;
+    }
+    const t = e.target.closest("[data-q]");
+    if (t) { update({ q: t.dataset.q }, { scroll: true }); return; }
+    const s = e.target.closest("#sort button");
+    if (s) { update({ sort: s.dataset.sort }); return; }
+    if (e.target.closest("#reset")) update({ cat: "all", q: "", mine: false, active: false });
+    if (e.target.closest("#more-btn")) { state.shown += PAGE; render(); }
+  });
+  let qTimer;
+  $("#q").addEventListener("input", (e) => { clearTimeout(qTimer); qTimer = setTimeout(() => update({ q: e.target.value }), 120); });
+  $("#mine").addEventListener("change", (e) => update({ mine: e.target.checked }));
+  $("#active").addEventListener("change", (e) => update({ active: e.target.checked }));
+  document.addEventListener("keydown", (e) => {
+    const typing = /INPUT|TEXTAREA/.test(document.activeElement?.tagName);
+    if (e.key === "/" && !typing) { e.preventDefault(); $("#q").focus(); $("#q").select(); }
+    if (e.key === "Escape" && document.activeElement === $("#q")) { update({ q: "" }); $("#q").blur(); }
+  });
+  new ResizeObserver(() => drawMap()).observe($("#map"));
+  addEventListener("hashchange", () => { readHash(); state.shown = PAGE; apply(); drawMap(); });
+
+  /* boot */
+  async function load() {
+    for (const url of ["data/repos.json", "../data/repos.json"]) {
+      try { const res = await fetch(url, { cache: "no-cache" }); if (res.ok) return res.json(); } catch (e) {}
+    }
+    throw new Error("dataset unavailable");
+  }
+  readHash();
+  load().then((data) => {
+    DATA = data;
+    data.categories.forEach((c) => { CATS[c.id] = c; });
+    $("#byline").textContent = `by @${data.user}`;
+    
+    $("#s-total").textContent = data.repos.length;
+    $("#s-cats").textContent = data.categories.filter((c) => c.count > 0).length;
+    $("#s-date").textContent = new Date(data.generated_at + "T00:00:00Z").toLocaleDateString("en", { month: "short", day: "numeric", timeZone: "UTC" });
+    drawRail(); drawMap(); apply();
+  }).catch(() => {
+    $("#map").classList.remove("loading");
+    $("#list").innerHTML = `<div class="empty"><i class="ph ph-cloud-slash"></i><b>The dataset could not be loaded.</b>
+      It is generated by the daily workflow. Open the <a href="https://github.com/alebgl77/awesome-ai-architect" style="text-decoration:underline">Markdown list</a> instead.</div>`;
+  });
+})();
+</script>
+</body>
+</html>

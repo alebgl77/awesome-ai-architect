@@ -1,0 +1,44 @@
+name: Suggest a project
+description: Propose an open-source project for the map.
+title: "Suggest: owner/repo"
+labels: ["suggestion"]
+body:
+  - type: input
+    id: repo
+    attributes:
+      label: Repository
+      description: Full GitHub URL.
+      placeholder: https://github.com/owner/repo
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Best category
+      options:
+        - MCP & Tool Use
+        - Agent Memory & Persistent Context
+        - RAG, Retrieval & Knowledge
+        - Evaluation, Benchmarks & Testing
+        - Observability, LLMOps & FinOps
+        - AI Security, Safety & Governance
+        - Generative Search, GEO & LLMO
+        - Prompt & Context Engineering
+        - AI Coding Agents & Skills
+        - Agent Frameworks & Orchestration
+        - Inference, Serving & Model Routing
+        - Models, Training & Fine-tuning
+        - Vision, Voice & Generative Media
+        - Data Engineering, Scraping & Analytics
+        - Automation, Browser Agents & Productivity
+        - Frontend, Design & Generative UI
+        - Cloud, DevOps & Infrastructure
+        - AI Apps & Chat Interfaces
+        - Learning, Papers & Awesome Lists
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it belongs here
+      description: What it does in production and why an AI engineer should know it.
+    validations:
+      required: true

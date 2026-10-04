@@ -1,0 +1,93 @@
+name: Awesome AI Architect
+
+# Rebuilds the auto-classified list from the owner's GitHub stars
+# and public repositories, commits the result and publishes the explorer.
+
+on:
+  schedule:
+    - cron: "17 5 * * *" # every day, 05:17 UTC
+  workflow_dispatch:
+  push:
+    paths:
+      - "config.toml"
+      - "scripts/**"
+      - "site/**"
+      - "tests/**"
+      - ".github/workflows/awesome.yml"
+
+concurrency:
+  group: awesome-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  DIR: "."
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Test the generator
+        run: python -m unittest discover -s "$DIR/tests" -v
+
+      - name: Fetch, classify and render
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python "$DIR/scripts/build.py"
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$DIR/README.md" "$DIR/data"
+          if git diff --cached --quiet; then
+            echo "No changes."
+            exit 0
+          fi
+          count=$(python -c "import json;print(len(json.load(open('$DIR/data/repos.json'))['repos']))")
+          git commit -m "chore(awesome): refresh list ($count projects)"
+          for i in 1 2 3; do
+            git pull --rebase origin "$GITHUB_REF_NAME" && git push origin "HEAD:$GITHUB_REF_NAME" && exit 0
+            sleep $((i * 5))
+          done
+          exit 1
+
+  pages:
+    # Publishing needs Settings > Pages > Source: GitHub Actions (one-time switch).
+    # Until then this job fails softly and the Markdown list still updates.
+    needs: build
+    if: github.ref == 'refs/heads/main'
+    continue-on-error: true
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ github.ref_name }}
+
+      - name: Assemble site
+        run: |
+          mkdir -p _site
+          cp "$DIR/site/index.html" _site/
+          cp -r "$DIR/data" _site/data
+          touch _site/.nojekyll
+
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+      - id: deploy
+        uses: actions/deploy-pages@v4

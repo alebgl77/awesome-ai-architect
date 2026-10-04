@@ -1,0 +1,222 @@
+# Awesome AI Architect: configuration
+#
+# Everything the generator needs lives here. Edit this file, push, and the next
+# run re-classifies every repository. No code change required.
+
+[list]
+user = "alebgl77"
+title = "Awesome AI Architect"
+tagline = "A self-updating map of the GenAI engineering stack: agents, RAG, MCP, evals, LLMOps and AI security. Classified automatically from the GitHub stars and open-source work of an AI architect."
+author = "Alexandre Beguel"
+author_url = "https://github.com/alebgl77"
+site_url = "https://alebgl77.github.io/awesome-ai-architect/"
+repo = "alebgl77/awesome-ai-architect"
+# Items shown per category in README before the rest folds into <details>.
+readme_top = 20
+# Recently starred / rising sections size.
+highlight_size = 10
+# Days of star-count history kept to compute momentum.
+history_days = 35
+# Public repositories of `user` that never appear (exact names).
+exclude_own = ["alebgl77"]
+# Starred repositories that never appear (owner/name).
+exclude_starred = []
+
+# Force a category when the automatic classifier is wrong: "owner/name" = "category-id".
+[overrides]
+# "owner/name" = "category-id"
+"thedotmack/claude-mem" = "memory"
+"rohitg00/agentmemory" = "memory"
+"zilliztech/memsearch" = "memory"
+
+# ---------------------------------------------------------------------------
+# Taxonomy
+#
+# Scoring per repository:
+#   strong topic match   = 3 points   (GitHub topics are curated by the author)
+#   weak topic match     = 1 point    (ecosystem names that appear everywhere)
+#   keyword in name      = 2 points
+#   keyword in description = 1 point
+# Highest score wins; ties go to the category listed first (most specific first).
+# Every other category scoring >= `secondary_min` becomes a secondary tag.
+# A repository scoring 0 everywhere lands in "triage".
+# ---------------------------------------------------------------------------
+
+[scoring]
+strong_topic = 3
+weak_topic = 1
+name = 2
+description = 1
+secondary_min = 3
+max_secondary = 3
+
+[[category]]
+id = "mcp"
+title = "MCP & Tool Use"
+short = "MCP"
+blurb = "Model Context Protocol servers, clients, gateways and function-calling infrastructure."
+topics = ["mcp", "model-context-protocol", "mcp-server", "mcp-servers", "mcp-client", "mcp-tools", "mcp-gateway", "function-calling", "tool-calling", "tool-use", "a2a", "agent-protocol"]
+weak_topics = ["tools"]
+keywords = ["mcp", "model context protocol", "function calling", "tool calling", "tool use"]
+
+[[category]]
+id = "memory"
+title = "Agent Memory & Persistent Context"
+short = "Memory"
+blurb = "Long-term memory layers, persistent context across sessions and knowledge stores for agents."
+topics = ["agent-memory", "memory", "long-term-memory", "persistent-memory", "memory-layer", "memory-management", "mem0", "context-management", "knowledge-base", "second-brain"]
+keywords = ["memory", "memories", "persistent context", "remember", "memory bank", "memorybank"]
+
+[[category]]
+id = "rag"
+title = "RAG, Retrieval & Knowledge"
+short = "RAG"
+blurb = "Retrieval-augmented generation, vector search, document parsing, embeddings and knowledge graphs."
+topics = ["rag", "retrieval-augmented-generation", "retrieval", "vector-database", "vector-search", "vector-search-engine", "embeddings", "embedding", "semantic-search", "hybrid-search", "reranking", "reranker", "graphrag", "knowledge-graph", "llamaindex", "haystack", "qdrant", "chromadb", "weaviate", "milvus", "pgvector", "document-parsing", "document-parser", "pdf-parsing", "chunking", "agentic-rag", "information-retrieval"]
+weak_topics = ["search", "pdf"]
+keywords = ["rag", "retrieval", "vector database", "vector search", "embedding", "embeddings", "rerank", "reranking", "knowledge graph", "semantic search", "document parsing", "documents"]
+
+[[category]]
+id = "evals"
+title = "Evaluation, Benchmarks & Testing"
+short = "Evals"
+blurb = "LLM and agent evaluation, LLM-as-a-judge, benchmarks, regression testing and red teaming harnesses."
+topics = ["llm-evaluation", "evaluation", "evaluation-framework", "evals", "ragas", "benchmark", "benchmarks", "llm-eval", "llm-evaluation-framework", "llm-as-a-judge", "red-teaming", "deepeval", "promptfoo", "prompt-testing", "agent-evaluation"]
+weak_topics = ["testing"]
+keywords = ["eval", "evals", "evaluation", "evaluate", "benchmark", "llm-as-a-judge", "judge", "red teaming", "red-teaming"]
+
+[[category]]
+id = "observability"
+title = "Observability, LLMOps & FinOps"
+short = "LLMOps"
+blurb = "Tracing, monitoring, cost tracking and operations for LLM applications and agents in production."
+topics = ["llmops", "observability", "llm-observability", "ai-observability", "opentelemetry", "otel", "otlp", "tracing", "llm-monitoring", "monitoring", "langfuse", "grafana", "grafana-dashboards", "prometheus", "finops", "mlops", "telemetry", "cost-tracking", "sre", "quality-monitoring"]
+weak_topics = ["analytics", "dashboard"]
+keywords = ["observability", "tracing", "traces", "telemetry", "monitoring", "opentelemetry", "llmops", "finops", "grafana", "dashboards"]
+
+[[category]]
+id = "security"
+title = "AI Security, Safety & Governance"
+short = "AI Security"
+blurb = "Guardrails, prompt-injection defense, agent security scanning, privacy and AI governance or compliance."
+topics = ["ai-security", "llm-security", "security", "security-tools", "prompt-injection", "guardrails", "jailbreak", "ai-governance", "governance", "compliance", "eu-ai-act", "privacy", "pii", "cybersecurity", "shadow-ai", "ai-safety", "alignment", "pentesting", "vulnerability-scanners", "adversarial-machine-learning", "static-analysis", "sast", "appsec"]
+keywords = ["security", "secure", "guardrail", "guardrails", "prompt injection", "governance", "compliance", "privacy", "pii", "jailbreak", "shadow ai", "vulnerabilities", "vulnerability", "safety", "static analysis", "pentester", "pentesting"]
+
+[[category]]
+id = "search"
+title = "Generative Search, GEO & LLMO"
+short = "GEO & LLMO"
+blurb = "Visibility in AI answers: generative engine optimization, AI search monitoring and SEO for LLMs."
+topics = ["geo", "generative-engine-optimization", "aeo", "llmo", "seo", "ai-search", "search-engine-optimization", "brand-monitoring", "perplexity", "llms-txt"]
+keywords = ["seo", "geo", "generative engine", "ai search", "llmo", "aeo", "brand visibility", "ai answers", "llms.txt"]
+
+[[category]]
+id = "context"
+title = "Prompt & Context Engineering"
+short = "Context Eng."
+blurb = "Prompt design and optimization, context engineering, structured outputs and instruction profiling."
+topics = ["prompt-engineering", "prompts", "prompt", "context-engineering", "dspy", "prompt-optimization", "system-prompts", "meta-prompt", "structured-output", "structured-outputs", "prompt-management", "harness-engineering"]
+keywords = ["prompt", "prompts", "prompting", "context engineering", "structured output", "instructions"]
+
+[[category]]
+id = "coding"
+title = "AI Coding Agents & Skills"
+short = "Coding Agents"
+blurb = "Coding agents, IDE copilots, agent skills, plugins and harness tooling for Claude Code, Codex, Cursor and peers."
+topics = ["claude-code", "claude-code-plugin", "claude-skills", "agent-skills", "skills", "skill", "ai-coding", "coding-agent", "coding-agents", "openai-codex", "codex", "github-copilot", "copilot", "aider", "cline", "gemini-cli", "google-antigravity", "vibecoding", "vibe-coding", "code-generation", "agents-md", "claude-md", "agent-harness", "code-review"]
+weak_topics = ["claude", "cursor", "windsurf", "developer-tools", "coding", "cli"]
+keywords = ["claude code", "codex", "cursor", "coding agent", "coding tool", "agentic coding", "copilot", "skills", "skill", "codebase", "subagents"]
+
+[[category]]
+id = "agents"
+title = "Agent Frameworks & Orchestration"
+short = "Agents"
+blurb = "Frameworks and runtimes for single and multi-agent systems, planning, memory and orchestration."
+topics = ["multi-agent", "multi-agents", "multiagent", "multi-agent-systems", "agentic-ai", "agentic", "agent-framework", "aiagentframework", "langgraph", "crewai", "autogen", "llm-agent", "autonomous-agents", "deepagents", "langchain", "swarm", "orchestration"]
+weak_topics = ["agents", "ai-agents", "agent", "ai-agent", "llm-framework", "framework"]
+keywords = ["agent", "agents", "agentic", "multi-agent", "orchestration", "orchestrating", "autonomous"]
+
+[[category]]
+id = "inference"
+title = "Inference, Serving & Model Routing"
+short = "Inference"
+blurb = "Local and production inference engines, quantization, AI gateways and model routers."
+topics = ["inference", "llm-inference", "llm-serving", "model-serving", "serving", "vllm", "llama-cpp", "llamacpp", "ollama", "sglang", "tensorrt", "quantization", "gguf", "mlx", "ai-gateway", "llm-gateway", "gateway", "litellm", "model-routing", "router", "llm-router", "local-llm", "openai-proxy", "gpu", "cuda"]
+weak_topics = ["self-hosted", "llama", "deepseek", "qwen", "gemma", "mistral"]
+keywords = ["inference", "serving", "quantization", "quantized", "gateway", "router", "routing", "local llm", "run models", "llm apis", "throughput"]
+
+[[category]]
+id = "models"
+title = "Models, Training & Fine-tuning"
+short = "Models"
+blurb = "Foundation models, fine-tuning, distillation, reinforcement learning, datasets and ML frameworks."
+topics = ["fine-tuning", "finetuning", "lora", "qlora", "peft", "training", "pretraining", "llm-training", "transformers", "transformer", "pytorch", "jax", "deep-learning", "machine-learning", "reinforcement-learning", "rlhf", "grpo", "dataset", "datasets", "distillation", "foundation-models", "pretrained-models", "small-language-models", "model-hub", "natural-language-processing", "nlp"]
+keywords = ["fine-tune", "fine-tuning", "finetune", "train", "training", "lora", "dataset", "distillation", "pretrained", "machine learning", "model-definition"]
+
+[[category]]
+id = "multimodal"
+title = "Vision, Voice & Generative Media"
+short = "Multimodal"
+blurb = "Speech, text-to-speech, OCR, computer vision, image and video generation and multimodal models."
+topics = ["computer-vision", "vision", "ocr", "speech", "speech-recognition", "speech-to-text", "tts", "text-to-speech", "asr", "whisper", "voice", "voice-ai", "audio", "stable-diffusion", "diffusion", "image-generation", "text-to-image", "video-generation", "text-to-video", "multimodal", "vlm", "comfyui", "transcription", "meeting-notes", "deepfake", "face-swap"]
+keywords = ["speech", "voice", "tts", "text-to-speech", "ocr", "image generation", "diffusion", "video", "vision", "multimodal", "audio", "transcription", "meeting", "meetings", "face swap"]
+
+[[category]]
+id = "data"
+title = "Data Engineering, Scraping & Analytics"
+short = "Data"
+blurb = "Pipelines, web crawling for LLMs, text-to-SQL, warehouses and analytics tooling."
+topics = ["data-engineering", "etl", "elt", "data-pipeline", "bigquery", "sql", "text-to-sql", "dbt", "spark", "duckdb", "pandas", "polars", "web-scraping", "scraping", "scraper", "crawler", "web-crawler", "firecrawl", "data-visualization", "business-intelligence", "power-bi", "data-flow", "mongodb"]
+weak_topics = ["data", "postgresql", "database"]
+keywords = ["scrape", "scraping", "crawl", "crawler", "etl", "sql", "data pipeline", "analytics", "warehouse", "spreadsheet"]
+
+[[category]]
+id = "automation"
+title = "Automation, Browser Agents & Productivity"
+short = "Automation"
+blurb = "Workflow automation, browser and computer-use agents, extensions and everyday productivity tools."
+topics = ["automation", "workflow", "workflow-automation", "n8n", "zapier", "browser-automation", "browser-use", "computer-use", "playwright", "puppeteer", "rpa", "low-code", "low-code-platform", "no-code", "nocode", "lowcode", "chrome-extension", "productivity", "ipaas", "integrations", "obsidian", "obsidian-md", "note-taking", "notes"]
+keywords = ["automation", "automate", "workflow", "workflows", "browser", "no-code", "low-code", "chrome", "extension", "screenshot", "capture", "productivity", "obsidian", "android"]
+
+[[category]]
+id = "frontend"
+title = "Frontend, Design & Generative UI"
+short = "Frontend"
+blurb = "Design systems, UI components, design taste for AI agents and generative interfaces."
+topics = ["design-system", "design-systems", "design-tokens", "design", "ui", "ux", "frontend", "react", "nextjs", "tailwindcss", "tailwind", "shadcn", "components", "generative-ui", "figma", "css", "radix-ui", "accessibility", "wcag", "design-md"]
+weak_topics = ["vite", "typescript"]
+keywords = ["design", "ui", "frontend", "component", "components", "tailwind", "css", "interface", "design system"]
+
+[[category]]
+id = "infra"
+title = "Cloud, DevOps & Infrastructure"
+short = "Infra"
+blurb = "Deployment, containers, CI/CD and cloud infrastructure for shipping AI systems."
+topics = ["docker", "kubernetes", "k8s", "terraform", "devops", "deployment", "deployment-automation", "cloud", "aws", "gcp", "azure", "serverless", "ci-cd", "cicd", "github-actions", "infrastructure", "iac"]
+weak_topics = ["self-hosted", "ci"]
+keywords = ["deploy", "deployment", "docker", "kubernetes", "terraform", "cloud", "devops", "infrastructure", "ci/cd", "hosting"]
+
+[[category]]
+id = "apps"
+title = "AI Apps & Chat Interfaces"
+short = "AI Apps"
+blurb = "End-user AI applications, chat UIs, assistants and business tools built on LLMs."
+topics = ["chatbot", "chat-ui", "llm-ui", "librechat", "open-webui", "assistant", "ai-assistant", "chatgpt-app", "chat", "webui"]
+weak_topics = ["chatgpt", "openai", "anthropic", "gemini"]
+keywords = ["chat", "chatbot", "assistant", "app", "apps", "workspace", "chatgpt clone"]
+
+[[category]]
+id = "learning"
+title = "Learning, Papers & Awesome Lists"
+short = "Learning"
+blurb = "Curated lists, courses, cookbooks, tutorials and research references."
+topics = ["awesome", "awesome-list", "awesome-lists", "tutorial", "tutorials", "course", "courses", "cookbook", "examples", "papers", "research", "education", "book", "books", "guide", "interview", "roadmap", "learning", "llm-course"]
+keywords = ["awesome", "tutorial", "tutorials", "course", "cookbook", "curated", "collection", "guide", "learn", "papers", "roadmap", "examples"]
+
+[[category]]
+id = "triage"
+title = "To Triage"
+short = "Triage"
+blurb = "Not matched by the taxonomy yet. Add topics upstream or an override in config.toml."
+topics = []
+keywords = []

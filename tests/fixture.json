@@ -1,0 +1,1531 @@
+{
+ "own": [
+  {
+   "full_name": "alebgl77/claude-inc",
+   "name": "claude-inc",
+   "owner": {
+    "login": "alebgl77"
+   },
+   "html_url": "https://github.com/alebgl77/claude-inc",
+   "description": "Your project, an entire virtual company. CEO and CTO, 8 business departments and 54 skill manuals in Claude Code.",
+   "language": "Python",
+   "stargazers_count": 16,
+   "forks_count": 2,
+   "open_issues_count": 0,
+   "topics": [
+    "agentic-ai",
+    "ai-agents",
+    "automation",
+    "claude",
+    "claude-code",
+    "claude-code-plugin",
+    "claude-skills",
+    "developer-tools",
+    "llm",
+    "multi-agent",
+    "productivity"
+   ],
+   "created_at": "2026-07-11T00:00:00Z",
+   "pushed_at": "2026-09-27T00:00:00Z",
+   "license": {
+    "spdx_id": "MIT"
+   },
+   "private": false,
+   "archived": false,
+   "fork": false,
+   "homepage": ""
+  },
+  {
+   "full_name": "alebgl77/tierdecay",
+   "name": "tierdecay",
+   "owner": {
+    "login": "alebgl77"
+   },
+   "html_url": "https://github.com/alebgl77/tierdecay",
+   "description": "Per-repo learning layer for AI coding model routers: learns which task classes can safely run on a cheaper tier. Native for Claude Code, Codex, Antigravity · MCP server · zero deps.",
+   "language": "JavaScript",
+   "stargazers_count": 1,
+   "forks_count": 0,
+   "open_issues_count": 0,
+   "topics": [
+    "agent-skills",
+    "agents-md",
+    "ai-agents",
+    "ai-coding",
+    "claude-code",
+    "cost-optimization",
+    "developer-tools",
+    "finops",
+    "google-antigravity",
+    "llm",
+    "llmops",
+    "mcp",
+    "model-context-protocol",
+    "model-routing",
+    "openai-codex"
+   ],
+   "created_at": "2026-07-12T00:00:00Z",
+   "pushed_at": "2026-10-02T00:00:00Z",
+   "license": {
+    "spdx_id": "MIT"
+   },
+   "private": false,
+   "archived": false,
+   "fork": false,
+   "homepage": ""
+  },
+  {
+   "full_name": "alebgl77/grafana-llmops-forge",
+   "name": "grafana-llmops-forge",
+   "owner": {
+    "login": "alebgl77"
+   },
+   "html_url": "https://github.com/alebgl77/grafana-llmops-forge",
+   "description": "Grafana-native LLMOps dashboards for FinOps, agents, quality and AI governance, generated and visually verified.",
+   "language": "Python",
+   "stargazers_count": 1,
+   "forks_count": 0,
+   "open_issues_count": 0,
+   "topics": [
+    "agent-skills",
+    "ai-governance",
+    "ai-observability",
+    "claude-code",
+    "claude-skills",
+    "eu-ai-act",
+    "finops",
+    "grafana",
+    "grafana-dashboards",
+    "litellm",
+    "llm-observability",
+    "llmops",
+    "opentelemetry",
+    "prometheus",
+    "sre",
+    "vllm"
+   ],
+   "created_at": "2026-07-12T00:00:00Z",
+   "pushed_at": "2026-09-14T00:00:00Z",
+   "license": {
+    "spdx_id": "MIT"
+   },
+   "private": false,
+   "archived": false,
+   "fork": false,
+   "homepage": ""
+  },
+  {
+   "full_name": "alebgl77/open-fullscreenshot",
+   "name": "open-fullscreenshot",
+   "owner": {
+    "login": "alebgl77"
+   },
+   "html_url": "https://github.com/alebgl77/open-fullscreenshot",
+   "description": "Full-page screen capture extension for Chrome (Manifest V3) — scroll-and-stitch full page, visible area, element or region. activeTab only, no host permissions, no network, no telemetry.",
+   "language": "JavaScript",
+   "stargazers_count": 0,
+   "forks_count": 0,
+   "open_issues_count": 0,
+   "topics": [],
+   "created_at": "2026-08-12T00:00:00Z",
+   "pushed_at": "2026-09-14T00:00:00Z",
+   "license": {
+    "spdx_id": "MIT"
+   },
+   "private": false,
+   "archived": false,
+   "fork": false,
+   "homepage": ""
+  },
+  {
+   "full_name": "alebgl77/promptor",
+   "name": "promptor",
+   "owner": {
+    "login": "alebgl77"
+   },
+   "html_url": "https://github.com/alebgl77/promptor",
+   "description": "Architecte de prompts sur mesure — protocole itératif human-in-the-loop avec mémoire apprenante, pour ChatGPT, Claude, Gemini, Midjourney, Cursor et agents",
+   "language": null,
+   "stargazers_count": 0,
+   "forks_count": 0,
+   "open_issues_count": 0,
+   "topics": [
+    "ai",
+    "chatgpt",
+    "claude",
+    "francais",
+    "gemini",
+    "llm",
+    "meta-prompt",
+    "midjourney",
+    "prompt-engineering"
+   ],
+   "created_at": "2026-07-19T00:00:00Z",
+   "pushed_at": "2026-07-20T00:00:00Z",
+   "license": {
+    "spdx_id": "MIT"
+   },
+   "private": false,
+   "archived": false,
+   "fork": false,
+   "homepage": ""
+  },
+  {
+   "full_name": "alebgl77/generative-engine-monitor",
+   "name": "generative-engine-monitor",
+   "owner": {
+    "login": "alebgl77"
+   },
+   "html_url": "https://github.com/alebgl77/generative-engine-monitor",
+   "description": "Measure brand visibility in AI answers with explainable scoring, confidence intervals and zero-cost replay.",
+   "language": "TypeScript",
+   "stargazers_count": 0,
+   "forks_count": 0,
+   "open_issues_count": 0,
+   "topics": [
+    "aeo",
+    "ai-search",
+    "anthropic",
+    "brand-monitoring",
+    "geo",
+    "llm",
+    "nextjs",
+    "openai",
+    "perplexity",
+    "postgresql",
+    "prisma",
+    "typescript"
+   ],
+   "created_at": "2026-08-03T00:00:00Z",
+   "pushed_at": "2026-09-14T00:00:00Z",
+   "license": {
+    "spdx_id": "MIT"
+   },
+   "private": false,
+   "archived": false,
+   "fork": false,
+   "homepage": ""
+  },
+  {
+   "full_name": "alebgl77/dsh-plugin-otel-genai",
+   "name": "dsh-plugin-otel-genai",
+   "owner": {
+    "login": "alebgl77"
+   },
+   "html_url": "https://github.com/alebgl77/dsh-plugin-otel-genai",
+   "description": "OpenTelemetry GenAI metrics for DeepSeek Harness: token usage and step latency per provider and model, exported over OTLP for Grafana and Prometheus",
+   "language": "TypeScript",
+   "stargazers_count": 0,
+   "forks_count": 0,
+   "open_issues_count": 0,
+   "topics": [
+    "deepseek-harness",
+    "dsh-plugin",
+    "grafana",
+    "llmops",
+    "opentelemetry"
+   ],
+   "created_at": "2026-09-06T00:00:00Z",
+   "pushed_at": "2026-09-14T00:00:00Z",
+   "license": {
+    "spdx_id": "MIT"
+   },
+   "private": false,
+   "archived": false,
+   "fork": false,
+   "homepage": ""
+  },
+  {
+   "full_name": "alebgl77/harnessmeter",
+   "name": "harnessmeter",
+   "owner": {
+    "login": "alebgl77"
+   },
+   "html_url": "https://github.com/alebgl77/harnessmeter",
+   "description": "Offline profiler for AI agent instructions, skills, subagents and MCP schemas. No API keys or network.",
+   "language": "TypeScript",
+   "stargazers_count": 0,
+   "forks_count": 0,
+   "open_issues_count": 0,
+   "topics": [
+    "agent-harness",
+    "ai-agents",
+    "claude-code",
+    "claude-md",
+    "context-engineering",
+    "developer-tools",
+    "harness-engineering",
+    "llm",
+    "mcp",
+    "observability",
+    "profiler",
+    "prompt-engineering"
+   ],
+   "created_at": "2026-07-27T00:00:00Z",
+   "pushed_at": "2026-09-26T00:00:00Z",
+   "license": {
+    "spdx_id": "MIT"
+   },
+   "private": false,
+   "archived": false,
+   "fork": false,
+   "homepage": ""
+  },
+  {
+   "full_name": "alebgl77/design-md-viewer",
+   "name": "design-md-viewer",
+   "owner": {
+    "login": "alebgl77"
+   },
+   "html_url": "https://github.com/alebgl77/design-md-viewer",
+   "description": "Client-side explorer that parses a design-system markdown file into browsable tokens, a health audit and code exports.",
+   "language": "TypeScript",
+   "stargazers_count": 0,
+   "forks_count": 0,
+   "open_issues_count": 0,
+   "topics": [
+    "accessibility",
+    "design-md",
+    "design-system",
+    "design-tokens",
+    "markdown",
+    "react",
+    "tailwindcss",
+    "typescript",
+    "vite",
+    "wcag"
+   ],
+   "created_at": "2026-08-20T00:00:00Z",
+   "pushed_at": "2026-09-14T00:00:00Z",
+   "license": {
+    "spdx_id": "MIT"
+   },
+   "private": false,
+   "archived": false,
+   "fork": false,
+   "homepage": ""
+  },
+  {
+   "full_name": "alebgl77/alebgl77",
+   "name": "alebgl77",
+   "owner": {
+    "login": "alebgl77"
+   },
+   "html_url": "https://github.com/alebgl77/alebgl77",
+   "description": "Profile and open-source work of Alexandre Beguel.",
+   "language": null,
+   "stargazers_count": 0,
+   "forks_count": 0,
+   "open_issues_count": 0,
+   "topics": [],
+   "created_at": "2026-06-18T00:00:00Z",
+   "pushed_at": "2026-09-14T00:00:00Z",
+   "license": {
+    "spdx_id": "MIT"
+   },
+   "private": false,
+   "archived": false,
+   "fork": false,
+   "homepage": ""
+  },
+  {
+   "full_name": "alebgl77/ftp-deploy-mcp",
+   "name": "ftp-deploy-mcp",
+   "owner": {
+    "login": "alebgl77"
+   },
+   "html_url": "https://github.com/alebgl77/ftp-deploy-mcp",
+   "description": "MCP server to deploy, inspect and transfer files over FTP/FTPS/SFTP from AI coding agents. Local confinement, SFTP host-key pinning, verified staged promotion, read-only mode and dry runs. Bilingual EN/FR.",
+   "language": "HTML",
+   "stargazers_count": 0,
+   "forks_count": 0,
+   "open_issues_count": 0,
+   "topics": [
+    "ai-agents",
+    "ai-coding",
+    "claude",
+    "claude-code",
+    "cursor",
+    "deployment",
+    "deployment-automation",
+    "devops",
+    "filezilla",
+    "ftp",
+    "ftps",
+    "mcp",
+    "mcp-server",
+    "mcp-tools",
+    "model-context-protocol",
+    "nodejs",
+    "secure-deployment",
+    "sftp",
+    "shared-hosting",
+    "windsurf"
+   ],
+   "created_at": "2026-07-20T00:00:00Z",
+   "pushed_at": "2026-09-26T00:00:00Z",
+   "license": {
+    "spdx_id": "MIT"
+   },
+   "private": false,
+   "archived": false,
+   "fork": false,
+   "homepage": ""
+  },
+  {
+   "full_name": "alebgl77/openspanguard",
+   "name": "openspanguard",
+   "owner": {
+    "login": "alebgl77"
+   },
+   "html_url": "https://github.com/alebgl77/openspanguard",
+   "description": "Make AI quality observable. OpenTelemetry trace enrichment, Jev evaluation, streaming deduplication, and cohort quality alerts.",
+   "language": "TypeScript",
+   "stargazers_count": 0,
+   "forks_count": 0,
+   "open_issues_count": 0,
+   "topics": [
+    "ai-agents",
+    "ai-observability",
+    "genai",
+    "grafana",
+    "jev",
+    "llm-evaluation",
+    "llm-monitoring",
+    "llmops",
+    "observability",
+    "opentelemetry",
+    "otlp",
+    "prometheus",
+    "quality-monitoring",
+    "typescript"
+   ],
+   "created_at": "2026-09-26T00:00:00Z",
+   "pushed_at": "2026-09-27T00:00:00Z",
+   "license": {
+    "spdx_id": "MIT"
+   },
+   "private": false,
+   "archived": false,
+   "fork": false,
+   "homepage": ""
+  },
+  {
+   "full_name": "alebgl77/open-shadow-ai",
+   "name": "open-shadow-ai",
+   "owner": {
+    "login": "alebgl77"
+   },
+   "html_url": "https://github.com/alebgl77/open-shadow-ai",
+   "description": "Self-hosted Shadow AI discovery and governance. Evidence-first visibility across network, endpoints, Active Directory and Entra ID.",
+   "language": "Python",
+   "stargazers_count": 0,
+   "forks_count": 0,
+   "open_issues_count": 0,
+   "topics": [
+    "active-directory",
+    "ai-governance",
+    "cybersecurity",
+    "docker",
+    "entra-id",
+    "fastapi",
+    "kubernetes",
+    "react",
+    "self-hosted",
+    "shadow-ai"
+   ],
+   "created_at": "2026-09-26T00:00:00Z",
+   "pushed_at": "2026-09-27T00:00:00Z",
+   "license": {
+    "spdx_id": "MIT"
+   },
+   "private": false,
+   "archived": false,
+   "fork": false,
+   "homepage": ""
+  },
+  {
+   "full_name": "alebgl77/ai-quote-engine",
+   "name": "ai-quote-engine",
+   "owner": {
+    "login": "alebgl77"
+   },
+   "html_url": "https://github.com/alebgl77/ai-quote-engine",
+   "description": "Private repo",
+   "language": "TypeScript",
+   "stargazers_count": 0,
+   "forks_count": 0,
+   "open_issues_count": 0,
+   "topics": [],
+   "created_at": "2024-01-01T00:00:00Z",
+   "pushed_at": "2026-10-01T00:00:00Z",
+   "license": {
+    "spdx_id": "MIT"
+   },
+   "private": true,
+   "archived": false,
+   "fork": false,
+   "homepage": ""
+  }
+ ],
+ "starred": [
+  {
+   "starred_at": "2026-09-28T10:00:00Z",
+   "repo": {
+    "full_name": "n8n-io/n8n",
+    "name": "n8n",
+    "owner": {
+     "login": "n8n-io"
+    },
+    "html_url": "https://github.com/n8n-io/n8n",
+    "description": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
+    "language": "TypeScript",
+    "stargazers_count": 206587,
+    "forks_count": 25823,
+    "open_issues_count": 0,
+    "topics": [
+     "ai",
+     "apis",
+     "automation",
+     "cli",
+     "data-flow",
+     "development",
+     "integration-framework",
+     "integrations",
+     "ipaas",
+     "low-code",
+     "low-code-platform",
+     "mcp",
+     "mcp-client",
+     "mcp-server",
+     "n8n",
+     "no-code",
+     "self-hosted",
+     "typescript",
+     "workflow",
+     "workflow-automation"
+    ],
+    "created_at": "2024-01-01T00:00:00Z",
+    "pushed_at": "2026-10-01T00:00:00Z",
+    "license": {
+     "spdx_id": "MIT"
+    },
+    "private": false,
+    "archived": false,
+    "fork": false,
+    "homepage": ""
+   }
+  },
+  {
+   "starred_at": "2026-09-27T10:00:00Z",
+   "repo": {
+    "full_name": "ollama/ollama",
+    "name": "ollama",
+    "owner": {
+     "login": "ollama"
+    },
+    "html_url": "https://github.com/ollama/ollama",
+    "description": "Get up and running with Kimi, GLM, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.",
+    "language": "Go",
+    "stargazers_count": 182113,
+    "forks_count": 22764,
+    "open_issues_count": 0,
+    "topics": [
+     "deepseek",
+     "gemma",
+     "gemma3",
+     "glm",
+     "go",
+     "golang",
+     "gpt-oss",
+     "llama",
+     "llama3",
+     "llm",
+     "llms",
+     "minimax",
+     "mistral",
+     "ollama",
+     "qwen"
+    ],
+    "created_at": "2024-01-01T00:00:00Z",
+    "pushed_at": "2026-10-01T00:00:00Z",
+    "license": {
+     "spdx_id": "MIT"
+    },
+    "private": false,
+    "archived": false,
+    "fork": false,
+    "homepage": ""
+   }
+  },
+  {
+   "starred_at": "2026-09-26T10:00:00Z",
+   "repo": {
+    "full_name": "huggingface/transformers",
+    "name": "transformers",
+    "owner": {
+     "login": "huggingface"
+    },
+    "html_url": "https://github.com/huggingface/transformers",
+    "description": "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training.",
+    "language": "Python",
+    "stargazers_count": 166926,
+    "forks_count": 20865,
+    "open_issues_count": 0,
+    "topics": [
+     "audio",
+     "deep-learning",
+     "deepseek",
+     "gemma",
+     "glm",
+     "hacktoberfest",
+     "llm",
+     "machine-learning",
+     "model-hub",
+     "natural-language-processing",
+     "nlp",
+     "pretrained-models",
+     "python",
+     "pytorch",
+     "pytorch-transformers",
+     "qwen",
+     "speech-recognition",
+     "transformer",
+     "vlm"
+    ],
+    "created_at": "2024-01-01T00:00:00Z",
+    "pushed_at": "2026-10-01T00:00:00Z",
+    "license": {
+     "spdx_id": "MIT"
+    },
+    "private": false,
+    "archived": false,
+    "fork": false,
+    "homepage": ""
+   }
+  },
+  {
+   "starred_at": "2026-09-25T10:00:00Z",
+   "repo": {
+    "full_name": "anthropics/claude-code",
+    "name": "claude-code",
+    "owner": {
+     "login": "anthropics"
+    },
+    "html_url": "https://github.com/anthropics/claude-code",
+    "description": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.",
+    "language": "TypeScript",
+    "stargazers_count": 149204,
+    "forks_count": 18650,
+    "open_issues_count": 0,
+    "topics": [],
+    "created_at": "2024-01-01T00:00:00Z",
+    "pushed_at": "2026-10-01T00:00:00Z",
+    "license": {
+     "spdx_id": "MIT"
+    },
+    "private": false,
+    "archived": false,
+    "fork": false,
+    "homepage": ""
+   }
+  },
+  {
+   "starred_at": "2026-09-24T10:00:00Z",
+   "repo": {
+    "full_name": "Shubhamsaboo/awesome-llm-apps",
+    "name": "awesome-llm-apps",
+    "owner": {
+     "login": "Shubhamsaboo"
+    },
+    "html_url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
+    "description": "100+ AI Agents, Agent Skills and RAG Apps - Free and Open Source.",
+    "language": "Python",
+    "stargazers_count": 140632,
+    "forks_count": 17579,
+    "open_issues_count": 0,
+    "topics": [
+     "agents",
+     "llms",
+     "python",
+     "rag"
+    ],
+    "created_at": "2024-01-01T00:00:00Z",
+    "pushed_at": "2026-10-01T00:00:00Z",
+    "license": {
+     "spdx_id": "MIT"
+    },
+    "private": false,
+    "archived": false,
+    "fork": false,
+    "homepage": ""
+   }
+  },
+  {
+   "starred_at": "2026-09-23T10:00:00Z",
+   "repo": {
+    "full_name": "shadcn-ui/ui",
+    "name": "ui",
+    "owner": {
+     "login": "shadcn-ui"
+    },
+    "html_url": "https://github.com/shadcn-ui/ui",
+    "description": "Composable, accessible components with thoughtful defaults. Build your own component library with code you can customize, extend, and make your own.",
+    "language": "TypeScript",
+    "stargazers_count": 125055,
+    "forks_count": 15631,
+    "open_issues_count": 0,
+    "topics": [
+     "base-ui",
+     "components",
+     "laravel",
+     "nextjs",
+     "radix-ui",
+     "react",
+     "react-aria",
+     "react-aria-components",
+     "shadcn",
+     "tailwindcss",
+     "tanstack",
+     "ui",
+     "vite"
+    ],
+    "created_at": "2024-01-01T00:00:00Z",
+    "pushed_at": "2026-10-01T00:00:00Z",
+    "license": {
+     "spdx_id": "MIT"
+    },
+    "private": false,
+    "archived": false,
+    "fork": false,
+    "homepage": ""
+   }
+  },
+  {
+   "starred_at": "2026-09-22T10:00:00Z",
+   "repo": {
+    "full_name": "browser-use/browser-use",
+    "name": "browser-use",
+    "owner": {
+     "login": "browser-use"
+    },
+    "html_url": "https://github.com/browser-use/browser-use",
+    "description": "Agents that use the browser.",
+    "language": "Python",
+    "stargazers_count": 117069,
+    "forks_count": 14633,
+    "open_issues_count": 0,
+    "topics": [
+     "ai-agents",
+     "ai-tools",
+     "browser-automation",
+     "browser-use",
+     "llm",
+     "playwright",
+     "python"
+    ],
+    "created_at": "2024-01-01T00:00:00Z",
+    "pushed_at": "2026-10-01T00:00:00Z",
+    "license": {
+     "spdx_id": "MIT"
+    },
+    "private": false,
+    "archived": false,
+    "fork": false,
+    "homepage": ""
+   }
+  },
+  {
+   "starred_at": "2026-09-21T10:00:00Z",
+   "repo": {
+    "full_name": "openai/whisper",
+    "name": "whisper",
+    "owner": {
+     "login": "openai"
+    },
+    "html_url": "https://github.com/openai/whisper",
+    "description": "Robust Speech Recognition via Large-Scale Weak Supervision",
+    "language": "Python",
+    "stargazers_count": 109919,
+    "forks_count": 13739,
+    "open_issues_count": 0,
+    "topics": [],
+    "created_at": "2024-01-01T00:00:00Z",
+    "pushed_at": "2026-10-01T00:00:00Z",
+    "license": {
+     "spdx_id": "MIT"
+    },
+    "private": false,
+    "archived": false,
+    "fork": false,
+    "homepage": ""
+   }
+  },
+  {
+   "starred_at": "2026-09-20T10:00:00Z",
+   "repo": {
+    "full_name": "punkpeye/awesome-mcp-servers",
+    "name": "awesome-mcp-servers",
+    "owner": {
+     "login": "punkpeye"
+    },
+    "html_url": "https://github.com/punkpeye/awesome-mcp-servers",
+    "description": "A collection of MCP servers.",
+    "language": null,
+    "stargazers_count": 95791,
+    "forks_count": 11973,
+    "open_issues_count": 0,
+    "topics": [
+     "ai",
+     "mcp"
+    ],
+    "created_at": "2024-01-01T00:00:00Z",
+    "pushed_at": "2026-10-01T00:00:00Z",
+    "license": {
+     "spdx_id": "MIT"
+    },
+    "private": false,
+    "archived": false,
+    "fork": false,
+    "homepage": ""
+   }
+  },
+  {
+   "starred_at": "2026-09-19T10:00:00Z",
+   "repo": {
+    "full_name": "vllm-project/vllm",
+    "name": "vllm",
+    "owner": {
+     "login": "vllm-project"
+    },
+    "html_url": "https://github.com/vllm-project/vllm",
+    "description": "A high-throughput and memory-efficient inference and serving engine for LLMs",
+    "language": "Python",
+    "stargazers_count": 93128,
+    "forks_count": 11641,
+    "open_issues_count": 0,
+    "topics": [
+     "amd",
+     "blackwell",
+     "cuda",
+     "deepseek",
+     "deepseek-v3",
+     "gpt",
+     "gpt-oss",
+     "inference",
+     "kimi",
+     "llama",
+     "llm",
+     "llm-serving",
+     "model-serving",
+     "moe",
+     "openai",
+     "pytorch",
+     "qwen",
+     "qwen3",
+     "tpu",
+     "transformer"
+    ],
+    "created_at": "2024-01-01T00:00:00Z",
+    "pushed_at": "2026-10-01T00:00:00Z",
+    "license": {
+     "spdx_id": "MIT"
+    },
+    "private": false,
+    "archived": false,
+    "fork": false,
+    "homepage": ""
+   }
+  },
+  {
+   "starred_at": "2026-09-18T10:00:00Z",
+   "repo": {
+    "full_name": "Leonxlnx/taste-skill",
+    "name": "taste-skill",
+    "owner": {
+     "login": "Leonxlnx"
+    },
+    "html_url": "https://github.com/Leonxlnx/taste-skill",
+    "description": "Taste-Skill - gives your AI good taste. stops the AI from generating boring, generic slop",
+    "language": "JavaScript",
+    "stargazers_count": 92315,
+    "forks_count": 11539,
+    "open_issues_count": 0,
+    "topics": [
+     "agent",
+     "ai",
+     "claude",
+     "claude-code",
+     "codex",
+     "coding",
+     "design",
+     "frontend",
+     "lowcode",
+     "nocode",
+     "skill",
+     "skills",
+     "vibecoding"
+    ],
+    "created_at": "2024-01-01T00:00:00Z",
+    "pushed_at": "2026-10-01T00:00:00Z",
+    "license": {
+     "spdx_id": "MIT"
+    },
+    "private": false,
+    "archived": false,
+    "fork": false,
+    "homepage": ""
+   }
+  },
+  {
+   "starred_at": "2026-09-17T10:00:00Z",
+   "repo": {
+    "full_name": "modelcontextprotocol/servers",
+    "name": "servers",
+    "owner": {
+     "login": "modelcontextprotocol"
+    },
+    "html_url": "https://github.com/modelcontextprotocol/servers",
+    "description": "Model Context Protocol Servers",
+    "language": "TypeScript",
+    "stargazers_count": 90985,
+    "forks_count": 11373,
+    "open_issues_count": 0,
+    "topics": [],
+    "created_at": "2024-01-01T00:00:00Z",
+    "pushed_at": "2026-10-01T00:00:00Z",
+    "license": {
+     "spdx_id": "MIT"
+    },
+    "private": false,
+    "archived": false,
+    "fork": false,
+    "homepage": ""
+   }
+  },
+  {
+   "starred_at": "2026-09-16T10:00:00Z",
+   "repo": {
+    "full_name": "unslothai/unsloth",
+    "name": "unsloth",
+    "owner": {
+     "login": "unslothai"
+    },
+    "html_url": "https://github.com/unslothai/unsloth",
+    "description": "Local UI to run and train LLMs and diffusion models. Supports GGUF, MLX, Qwen3.8, DeepSeek-V4, MiniMax-H3, Gemma 4, FLUX and more.",
+    "language": "Python",
+    "stargazers_count": 77172,
+    "forks_count": 9646,
+    "open_issues_count": 0,
+    "topics": [
+     "agent",
+     "ai",
+     "chatgpt",
+     "deepseek",
+     "fine-tuning",
+     "gemma",
+     "image-generation",
+     "llama",
+     "llm",
+     "llms",
+     "openai",
+     "python",
+     "qwen",
+     "reinforcement-learning",
+     "self-hosted",
+     "stable-diffusion",
+     "text-to-speech",
+     "tts",
+     "ui",
+     "unsloth"
+    ],
+    "created_at": "2024-01-01T00:00:00Z",
+    "pushed_at": "2026-10-01T00:00:00Z",
+    "license": {
+     "spdx_id": "MIT"
+    },
+    "private": false,
+    "archived": false,
+    "fork": false,
+    "homepage": ""
+   }
+  },
+  {
+   "starred_at": "2026-09-15T10:00:00Z",
+   "repo": {
+    "full_name": "docling-project/docling",
+    "name": "docling",
+    "owner": {
+     "login": "docling-project"
+    },
+    "html_url": "https://github.com/docling-project/docling",
+    "description": "Get your documents ready for gen AI",
+    "language": "Python",
+    "stargazers_count": 68341,
+    "forks_count": 8542,
+    "open_issues_count": 0,
+    "topics": [
+     "ai",
+     "convert",
+     "document-parser",
+     "document-parsing",
+     "documents",
+     "docx",
+     "html",
+     "markdown",
+     "pdf",
+     "pdf-converter",
+     "pdf-to-json",
+     "pdf-to-text",
+     "pptx",
+     "tables",
+     "xlsx"
+    ],
+    "created_at": "2024-01-01T00:00:00Z",
+    "pushed_at": "2026-10-01T00:00:00Z",
+    "license": {
+     "spdx_id": "MIT"
+    },
+    "private": false,
+    "archived": false,
+    "fork": false,
+    "homepage": ""
+   }
+  },
+  {
+   "starred_at": "2026-09-14T10:00:00Z",
+   "repo": {
+    "full_name": "microsoft/autogen",
+    "name": "autogen",
+    "owner": {
+     "login": "microsoft"
+    },
+    "html_url": "https://github.com/microsoft/autogen",
+    "description": "A programming framework for agentic AI",
+    "language": "Python",
+    "stargazers_count": 61250,
+    "forks_count": 7656,
+    "open_issues_count": 0,
+    "topics": [
+     "agentic",
+     "agentic-agi",
+     "agents",
+     "ai",
+     "autogen",
+     "autogen-ecosystem",
+     "chatgpt",
+     "framework",
+     "llm-agent",
+     "llm-framework"
+    ],
+    "created_at": "2024-01-01T00:00:00Z",
+    "pushed_at": "2026-10-01T00:00:00Z",
+    "license": {
+     "spdx_id": "MIT"
+    },
+    "private": false,
+    "archived": false,
+    "fork": false,
+    "homepage": ""
+   }
+  },
+  {
+   "starred_at": "2026-09-13T10:00:00Z",
+   "repo": {
+    "full_name": "BerriAI/litellm",
+    "name": "litellm",
+    "owner": {
+     "login": "BerriAI"
+    },
+    "html_url": "https://github.com/BerriAI/litellm",
+    "description": "The fastest, litest AI Gateway. Rust core with Python SDK. Call 100+ LLM APIs in OpenAI (or native) format with cost tracking, guardrails, load balancing, and logging [Bedrock, Azure, OpenAI, Anthropic, OpenAI, VertexAI, vLLM, Nvidia NIM]",
+    "language": "Python",
+    "stargazers_count": 60091,
+    "forks_count": 7511,
+    "open_issues_count": 0,
+    "topics": [
+     "ai-gateway",
+     "anthropic",
+     "azure-openai",
+     "bedrock",
+     "gateway",
+     "langchain",
+     "litellm",
+     "llm",
+     "llm-gateway",
+     "llmops",
+     "mcp-gateway",
+     "openai",
+     "openai-proxy",
+     "rust",
+     "rust-ai",
+     "vertex-ai"
+    ],
+    "created_at": "2024-01-01T00:00:00Z",
+    "pushed_at": "2026-10-01T00:00:00Z",
+    "license": {
+     "spdx_id": "MIT"
+    },
+    "private": false,
+    "archived": false,
+    "fork": false,
+    "homepage": ""
+   }
+  },
+  {
+   "starred_at": "2026-09-12T10:00:00Z",
+   "repo": {
+    "full_name": "crewAIInc/crewAI",
+    "name": "crewAI",
+    "owner": {
+     "login": "crewAIInc"
+    },
+    "html_url": "https://github.com/crewAIInc/crewAI",
+    "description": "Framework for orchestrating role-playing, autonomous AI agents. By fostering collaborative intelligence, CrewAI empowers agents to work together seamlessly, tackling complex tasks.",
+    "language": "Python",
+    "stargazers_count": 59324,
+    "forks_count": 7415,
+    "open_issues_count": 0,
+    "topics": [
+     "agents",
+     "ai",
+     "ai-agents",
+     "aiagentframework",
+     "llms"
+    ],
+    "created_at": "2024-01-01T00:00:00Z",
+    "pushed_at": "2026-10-01T00:00:00Z",
+    "license": {
+     "spdx_id": "MIT"
+    },
+    "private": false,
+    "archived": false,
+    "fork": false,
+    "homepage": ""
+   }
+  },
+  {
+   "starred_at": "2026-09-11T10:00:00Z",
+   "repo": {
+    "full_name": "run-llama/llama_index",
+    "name": "llama_index",
+    "owner": {
+     "login": "run-llama"
+    },
+    "html_url": "https://github.com/run-llama/llama_index",
+    "description": "LlamaIndex is the document processing platform for AI",
+    "language": "Python",
+    "stargazers_count": 52397,
+    "forks_count": 6549,
+    "open_issues_count": 0,
+    "topics": [
+     "agents",
+     "application",
+     "data",
+     "fine-tuning",
+     "framework",
+     "llamaindex",
+     "llm",
+     "multi-agents",
+     "rag",
+     "vector-database"
+    ],
+    "created_at": "2024-01-01T00:00:00Z",
+    "pushed_at": "2026-10-01T00:00:00Z",
+    "license": {
+     "spdx_id": "MIT"
+    },
+    "private": false,
+    "archived": false,
+    "fork": false,
+    "homepage": ""
+   }
+  },
+  {
+   "starred_at": "2026-09-10T10:00:00Z",
+   "repo": {
+    "full_name": "langchain-ai/langgraph",
+    "name": "langgraph",
+    "owner": {
+     "login": "langchain-ai"
+    },
+    "html_url": "https://github.com/langchain-ai/langgraph",
+    "description": "Build resilient agents.",
+    "language": "Python",
+    "stargazers_count": 42676,
+    "forks_count": 5334,
+    "open_issues_count": 0,
+    "topics": [
+     "agents",
+     "ai",
+     "ai-agents",
+     "chatgpt",
+     "deepagents",
+     "enterprise",
+     "framework",
+     "gemini",
+     "generative-ai",
+     "langchain",
+     "langgraph",
+     "llm",
+     "multiagent",
+     "open-source",
+     "openai",
+     "pydantic",
+     "python",
+     "rag"
+    ],
+    "created_at": "2024-01-01T00:00:00Z",
+    "pushed_at": "2026-10-01T00:00:00Z",
+    "license": {
+     "spdx_id": "MIT"
+    },
+    "private": false,
+    "archived": false,
+    "fork": false,
+    "homepage": ""
+   }
+  },
+  {
+   "starred_at": "2026-09-09T10:00:00Z",
+   "repo": {
+    "full_name": "stanfordnlp/dspy",
+    "name": "dspy",
+    "owner": {
+     "login": "stanfordnlp"
+    },
+    "html_url": "https://github.com/stanfordnlp/dspy",
+    "description": "DSPy: The framework for programming—not prompting—language models",
+    "language": "Python",
+    "stargazers_count": 38488,
+    "forks_count": 4811,
+    "open_issues_count": 0,
+    "topics": [],
+    "created_at": "2024-01-01T00:00:00Z",
+    "pushed_at": "2026-10-01T00:00:00Z",
+    "license": {
+     "spdx_id": "MIT"
+    },
+    "private": false,
+    "archived": false,
+    "fork": false,
+    "homepage": ""
+   }
+  },
+  {
+   "starred_at": "2026-09-08T10:00:00Z",
+   "repo": {
+    "full_name": "microsoft/graphrag",
+    "name": "graphrag",
+    "owner": {
+     "login": "microsoft"
+    },
+    "html_url": "https://github.com/microsoft/graphrag",
+    "description": "A modular graph-based Retrieval-Augmented Generation (RAG) system",
+    "language": "Python",
+    "stargazers_count": 36198,
+    "forks_count": 4524,
+    "open_issues_count": 0,
+    "topics": [
+     "gpt",
+     "gpt-4",
+     "gpt4",
+     "graphrag",
+     "llm",
+     "llms",
+     "rag"
+    ],
+    "created_at": "2024-01-01T00:00:00Z",
+    "pushed_at": "2026-10-01T00:00:00Z",
+    "license": {
+     "spdx_id": "MIT"
+    },
+    "private": false,
+    "archived": false,
+    "fork": false,
+    "homepage": ""
+   }
+  },
+  {
+   "starred_at": "2026-09-07T10:00:00Z",
+   "repo": {
+    "full_name": "langfuse/langfuse",
+    "name": "langfuse",
+    "owner": {
+     "login": "langfuse"
+    },
+    "html_url": "https://github.com/langfuse/langfuse",
+    "description": "🪢 Open source agent evals & observability: Trace, evaluate, and improve LLM applications with one open platform.",
+    "language": "TypeScript",
+    "stargazers_count": 35347,
+    "forks_count": 4418,
+    "open_issues_count": 0,
+    "topics": [
+     "analytics",
+     "autogen",
+     "evaluation",
+     "langchain",
+     "large-language-models",
+     "llama-index",
+     "llm",
+     "llm-evaluation",
+     "llm-observability",
+     "llmops",
+     "monitoring",
+     "observability",
+     "open-source",
+     "openai",
+     "playground",
+     "prompt-engineering",
+     "prompt-management",
+     "self-hosted",
+     "ycombinator"
+    ],
+    "created_at": "2024-01-01T00:00:00Z",
+    "pushed_at": "2026-10-01T00:00:00Z",
+    "license": {
+     "spdx_id": "MIT"
+    },
+    "private": false,
+    "archived": false,
+    "fork": false,
+    "homepage": ""
+   }
+  },
+  {
+   "starred_at": "2026-09-06T10:00:00Z",
+   "repo": {
+    "full_name": "qdrant/qdrant",
+    "name": "qdrant",
+    "owner": {
+     "login": "qdrant"
+    },
+    "html_url": "https://github.com/qdrant/qdrant",
+    "description": "Qdrant - High-performance, massive-scale Vector Database and Vector Search Engine for the next generation of AI. Also available in the cloud https://cloud.qdrant.io/",
+    "language": "Rust",
+    "stargazers_count": 34919,
+    "forks_count": 4364,
+    "open_issues_count": 0,
+    "topics": [
+     "ai-search",
+     "ai-search-engine",
+     "embeddings-similarity",
+     "hnsw",
+     "hybrid-search",
+     "image-search",
+     "knn-algorithm",
+     "machine-learning",
+     "mlops",
+     "nearest-neighbor-search",
+     "neural-network",
+     "neural-search",
+     "recommender-system",
+     "search",
+     "search-engine",
+     "search-engines",
+     "similarity-search",
+     "vector-database",
+     "vector-search",
+     "vector-search-engine"
+    ],
+    "created_at": "2024-01-01T00:00:00Z",
+    "pushed_at": "2026-10-01T00:00:00Z",
+    "license": {
+     "spdx_id": "MIT"
+    },
+    "private": false,
+    "archived": false,
+    "fork": false,
+    "homepage": ""
+   }
+  },
+  {
+   "starred_at": "2026-09-05T10:00:00Z",
+   "repo": {
+    "full_name": "promptfoo/promptfoo",
+    "name": "promptfoo",
+    "owner": {
+     "login": "promptfoo"
+    },
+    "html_url": "https://github.com/promptfoo/promptfoo",
+    "description": "Test your prompts, agents, and RAGs. Red teaming/pentesting/vulnerability scanning for AI. Compare performance of GPT, Claude, Gemini, DeepSeek, and more. Simple declarative configs with command line and CI/CD integration.  Used by OpenAI and Anthropic.",
+    "language": "TypeScript",
+    "stargazers_count": 25678,
+    "forks_count": 3209,
+    "open_issues_count": 0,
+    "topics": [
+     "ci",
+     "ci-cd",
+     "cicd",
+     "evaluation",
+     "evaluation-framework",
+     "llm",
+     "llm-eval",
+     "llm-evaluation",
+     "llm-evaluation-framework",
+     "llmops",
+     "pentesting",
+     "prompt-engineering",
+     "prompt-testing",
+     "prompts",
+     "rag",
+     "red-teaming",
+     "testing",
+     "vulnerability-scanners"
+    ],
+    "created_at": "2024-01-01T00:00:00Z",
+    "pushed_at": "2026-10-01T00:00:00Z",
+    "license": {
+     "spdx_id": "MIT"
+    },
+    "private": false,
+    "archived": false,
+    "fork": false,
+    "homepage": ""
+   }
+  },
+  {
+   "starred_at": "2026-09-04T10:00:00Z",
+   "repo": {
+    "full_name": "protectai/llm-guard",
+    "name": "llm-guard",
+    "owner": {
+     "login": "protectai"
+    },
+    "html_url": "https://github.com/protectai/llm-guard",
+    "description": "The Security Toolkit for LLM Interactions",
+    "language": "Python",
+    "stargazers_count": 3212,
+    "forks_count": 401,
+    "open_issues_count": 0,
+    "topics": [
+     "adversarial-machine-learning",
+     "chatgpt",
+     "large-language-models",
+     "llm",
+     "llm-security",
+     "llmops",
+     "prompt-engineering",
+     "prompt-injection",
+     "security-tools",
+     "transformers"
+    ],
+    "created_at": "2024-01-01T00:00:00Z",
+    "pushed_at": "2026-10-01T00:00:00Z",
+    "license": {
+     "spdx_id": "MIT"
+    },
+    "private": false,
+    "archived": true,
+    "fork": false,
+    "homepage": ""
+   }
+  },
+  {
+   "starred_at": "2026-09-03T10:00:00Z",
+   "repo": {
+    "full_name": "affaan-m/agentshield",
+    "name": "agentshield",
+    "owner": {
+     "login": "affaan-m"
+    },
+    "html_url": "https://github.com/affaan-m/agentshield",
+    "description": "AI agent security scanner. Detect vulnerabilities in agent configurations, MCP servers, and tool permissions. Available as CLI, GitHub Action, ECC plugin, and GitHub App integration. 🛡️",
+    "language": "TypeScript",
+    "stargazers_count": 1248,
+    "forks_count": 156,
+    "open_issues_count": 0,
+    "topics": [
+     "ai-agent",
+     "anthropic",
+     "claude-code",
+     "hackathon",
+     "mcp",
+     "opus",
+     "security"
+    ],
+    "created_at": "2024-01-01T00:00:00Z",
+    "pushed_at": "2026-10-01T00:00:00Z",
+    "license": {
+     "spdx_id": "MIT"
+    },
+    "private": false,
+    "archived": false,
+    "fork": false,
+    "homepage": ""
+   }
+  },
+  {
+   "starred_at": "2026-09-02T10:00:00Z",
+   "repo": {
+    "full_name": "grafana/plugin-tools",
+    "name": "plugin-tools",
+    "owner": {
+     "login": "grafana"
+    },
+    "html_url": "https://github.com/grafana/plugin-tools",
+    "description": "Create Grafana plugins with ease.",
+    "language": "TypeScript",
+    "stargazers_count": 88,
+    "forks_count": 11,
+    "open_issues_count": 0,
+    "topics": [
+     "grafana",
+     "grafana-plugin",
+     "group-datasources",
+     "keep",
+     "plugins-platform",
+     "scaffolder",
+     "team-grafana-catalog"
+    ],
+    "created_at": "2024-01-01T00:00:00Z",
+    "pushed_at": "2026-10-01T00:00:00Z",
+    "license": {
+     "spdx_id": "MIT"
+    },
+    "private": false,
+    "archived": false,
+    "fork": false,
+    "homepage": ""
+   }
+  },
+  {
+   "starred_at": "2026-09-01T10:00:00Z",
+   "repo": {
+    "full_name": "alebgl77/claude-inc",
+    "name": "claude-inc",
+    "owner": {
+     "login": "alebgl77"
+    },
+    "html_url": "https://github.com/alebgl77/claude-inc",
+    "description": "Your project, an entire virtual company. CEO and CTO, 8 business departments and 54 skill manuals in Claude Code.",
+    "language": "Python",
+    "stargazers_count": 16,
+    "forks_count": 2,
+    "open_issues_count": 0,
+    "topics": [
+     "agentic-ai",
+     "ai-agents",
+     "automation",
+     "claude",
+     "claude-code",
+     "claude-code-plugin",
+     "claude-skills",
+     "developer-tools",
+     "llm",
+     "multi-agent",
+     "productivity"
+    ],
+    "created_at": "2024-01-01T00:00:00Z",
+    "pushed_at": "2026-10-01T00:00:00Z",
+    "license": {
+     "spdx_id": "MIT"
+    },
+    "private": false,
+    "archived": false,
+    "fork": false,
+    "homepage": ""
+   }
+  }
+ ]
+}

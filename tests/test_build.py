@@ -82,6 +82,30 @@ class ClassifyTest(unittest.TestCase):
         self.assertNotEqual(self.by_name["n8n-io/n8n"]["key_topics"][0], "ai")
 
 
+class ForkTest(unittest.TestCase):
+    def fresh(self):
+        return build.load_config()
+
+    def test_original_repo_is_untouched(self):
+        cfg = build.adapt_for_fork(self.fresh(), {"GITHUB_REPOSITORY": "alebgl77/awesome-ai-architect"})
+        self.assertEqual(cfg["list"]["user"], "alebgl77")
+        self.assertTrue(cfg["overrides"])
+
+    def test_fork_takes_owner_identity(self):
+        env = {"GITHUB_REPOSITORY": "JaneDev/my-ai-map", "GITHUB_REPOSITORY_OWNER": "JaneDev"}
+        lst = build.adapt_for_fork(self.fresh(), env)["list"]
+        self.assertEqual((lst["user"], lst["repo"]), ("JaneDev", "JaneDev/my-ai-map"))
+        self.assertEqual(lst["site_url"], "https://janedev.github.io/my-ai-map/")
+        self.assertEqual(lst["exclude_own"], ["JaneDev", "my-ai-map"])
+
+    def test_fork_drops_owner_overrides(self):
+        cfg = build.adapt_for_fork(self.fresh(), {"GITHUB_REPOSITORY": "x/y"})
+        self.assertEqual(cfg["overrides"], {})
+
+    def test_local_run_is_untouched(self):
+        self.assertEqual(build.adapt_for_fork(self.fresh(), {})["list"]["user"], "alebgl77")
+
+
 class CollectTest(unittest.TestCase):
     def setUp(self):
         self.repos = {r["full_name"]: r for r in build.collect(FIXTURE, CFG)}

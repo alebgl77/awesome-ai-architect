@@ -18,7 +18,7 @@ highlight_size = 10
 # Days of star-count history kept to compute momentum.
 history_days = 35
 # Public repositories of `user` that never appear (exact names).
-exclude_own = ["alebgl77"]
+exclude_own = ["alebgl77", "awesome-ai-architect"]
 # Starred repositories that never appear (owner/name).
 exclude_starred = []
 

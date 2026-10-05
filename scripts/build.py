@@ -50,6 +50,32 @@ def load_config(path: Path = ROOT / "config.toml") -> dict:
     return cfg
 
 
+def adapt_for_fork(cfg: dict, env: dict | None = None) -> dict:
+    """Zero-config forks: in GitHub Actions, take the identity from the repository owner.
+
+    A fork needs no edit: the owner's stars are fetched, the README and explorer
+    point to the fork, and the original owner's overrides are dropped.
+    """
+    env = os.environ if env is None else env
+    full = env.get("GITHUB_REPOSITORY", "")
+    owner = env.get("GITHUB_REPOSITORY_OWNER") or full.partition("/")[0]
+    lst = cfg["list"]
+    if not full or not owner or owner.lower() == lst["user"].lower():
+        return cfg
+    name = full.partition("/")[2]
+    lst.update(
+        user=owner,
+        repo=full,
+        author=owner,
+        author_url=f"https://github.com/{owner}",
+        site_url=f"https://{owner.lower()}.github.io/{name}/",
+        exclude_own=[owner, name],
+        exclude_starred=[],
+    )
+    cfg["overrides"] = {}
+    return cfg
+
+
 # --------------------------------------------------------------------------- fetch
 
 def _request(url: str, token: str | None, accept: str) -> tuple[list, str]:
@@ -315,6 +341,10 @@ def render_readme(repos: list[dict], cfg: dict, today: dt.date) -> str:
     )
     out.append(f"> {lst['tagline']}\n")
     if lst.get("site_url"):
+        out.append(
+            f"<a href=\"{lst['site_url']}\"><img src=\"site/social-preview.png\" "
+            "alt=\"Interactive map of the GenAI stack, categories sized by number of projects\" width=\"100%\"></a>\n"
+        )
         out.append(f"**[Open the interactive explorer]({lst['site_url']})**: search, filter by category, sort by stars, momentum or recency.\n")
     out.append(
         f"{len(starred)} starred projects and {len(mine)} original projects across "
@@ -323,30 +353,23 @@ def render_readme(repos: list[dict], cfg: dict, today: dt.date) -> str:
     )
     if repo:
         out.append(
-            f"**Want this for your own stars?** [Fork it](https://github.com/{repo}/fork), change one line, done. "
-            "See [Use it for your own stars](#use-it-for-your-own-stars). "
-            f"If the map helps you, a star keeps it visible.\n"
+            f"**Want this for your own stars?** [Fork it](https://github.com/{repo}/fork), turn on Pages, done. "
+            "No config to edit, no API key. See [Use it for your own stars](#use-it-for-your-own-stars). "
+            "If the map helps you, a star keeps it visible.\n"
         )
 
     out.append("## Contents\n")
-    if mine:
-        out.append(f"- [Built by {lst['author'].split()[0]}](#built-by-{_anchor(lst['author'].split()[0])}) ({len(mine)})")
     out.append("- [Recently starred](#recently-starred)")
     rising_pool = [r for r in starred if r.get("stars_delta")]
     if rising_pool:
         out.append("- [Rising](#rising)")
     for c in non_empty:
         out.append(f"- [{c['title']}](#{_anchor(c['title'])}) ({len(by_cat[c['id']])})")
+    if mine:
+        out.append(f"- [Built by {lst['author'].split()[0]}](#built-by-{_anchor(lst['author'].split()[0])}) ({len(mine)})")
     out.append("- [How it works](#how-it-works)")
     out.append("- [Use it for your own stars](#use-it-for-your-own-stars)")
     out.append("- [Suggest a project](#suggest-a-project)\n")
-
-    if mine:
-        out.append(f"## Built by {lst['author'].split()[0]}\n")
-        out.append("Original open-source work, classified with the same taxonomy.\n")
-        out.append(head.format("Category"))
-        out.extend(_row(r, titles, show_cat=True) for r in mine)
-        out.append("")
 
     recent = sorted((r for r in starred if r["starred_at"]), key=lambda r: r["starred_at"], reverse=True)[:hl]
     out.append("## Recently starred\n")
@@ -376,6 +399,13 @@ def render_readme(repos: list[dict], cfg: dict, today: dt.date) -> str:
             out.extend(_row(r, titles) for r in items[top_n:])
             out.append("\n</details>\n")
 
+    if mine:
+        out.append(f"## Built by {lst['author'].split()[0]}\n")
+        out.append("Original open-source work, classified with the same taxonomy.\n")
+        out.append(head.format("Category"))
+        out.extend(_row(r, titles, show_cat=True) for r in mine)
+        out.append("")
+
     out.append("## How it works\n")
     out.append(
         "1. A scheduled GitHub Action fetches every public star and public original repository of "
@@ -388,12 +418,13 @@ def render_readme(repos: list[dict], cfg: dict, today: dt.date) -> str:
         "The generator is a single dependency-free Python file: [`scripts/build.py`](scripts/build.py). "
         "Fork it, change one line (`user`), and get the same list for your own stars.\n"
     )
-    out.append("### Use it for your own stars\n")
+    out.append("## Use it for your own stars\n")
     out.append(
-        f"1. [Fork this repository](https://github.com/{repo}/fork) (or copy `config.toml`, `scripts/`, `site/` and `.github/workflows/awesome.yml`).\n"
-        "2. Set `user`, `repo` and `site_url` in `config.toml`, and empty `[overrides]`.\n"
+        f"1. [Fork this repository](https://github.com/{repo}/fork).\n"
+        "2. In the Actions tab of your fork, enable workflows.\n"
         "3. In Settings > Pages, set Source to **GitHub Actions**.\n"
-        "4. Run the workflow once from the Actions tab. It then refreshes every day on its own.\n\n"
+        "4. Run the workflow once. Your stars, your README and your explorer, refreshed every day. "
+        "The fork detects its owner on its own; edit `config.toml` only to tune the taxonomy.\n\n"
         "No secrets, no API keys and no dependencies: the default `GITHUB_TOKEN` reads public stars.\n"
     )
     out.append("## Suggest a project\n")
@@ -432,6 +463,7 @@ def build(payload: dict, cfg: dict, today: dt.date, out_dir: Path = ROOT) -> dic
     dataset = {
         "generated_at": today.isoformat(),
         "user": cfg["list"]["user"],
+        "repo": cfg["list"].get("repo", ""),
         "title": cfg["list"]["title"],
         "tagline": cfg["list"]["tagline"],
         "categories": [
@@ -454,7 +486,7 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--out", type=Path, default=ROOT, help="output directory (default: repository root)")
     args = ap.parse_args(argv)
 
-    cfg = load_config()
+    cfg = adapt_for_fork(load_config())
     today = dt.date.fromisoformat(args.today) if args.today else dt.datetime.now(dt.timezone.utc).date()
     if args.fixture:
         payload = json.loads(args.fixture.read_text())

@@ -95,7 +95,7 @@ class ForkTest(unittest.TestCase):
         env = {"GITHUB_REPOSITORY": "JaneDev/my-ai-map", "GITHUB_REPOSITORY_OWNER": "JaneDev"}
         lst = build.adapt_for_fork(self.fresh(), env)["list"]
         self.assertEqual((lst["user"], lst["repo"]), ("JaneDev", "JaneDev/my-ai-map"))
-        self.assertEqual(lst["site_url"], "https://janedev.github.io/my-ai-map/")
+        self.assertEqual(lst["site_url"], "https://alebgl77.github.io/awesome-ai-architect/?repo=JaneDev/my-ai-map")
         self.assertEqual(lst["exclude_own"], ["JaneDev", "my-ai-map"])
 
     def test_fork_drops_owner_overrides(self):
@@ -162,6 +162,9 @@ class RenderTest(unittest.TestCase):
         for heading in ("## Built by Alexandre", "## Recently starred", "## MCP & Tool Use", "## How it works"):
             self.assertIn(heading, md)
         self.assertNotIn("## To Triage", md)
+        self.assertIn("/generate)", md)
+        self.assertNotIn("/fork)", md)
+        self.assertIn("placed by the rules alone", md)
         self.assertIn("(#rag-retrieval--knowledge)", md)
 
     def test_pipes_in_descriptions_are_escaped(self):

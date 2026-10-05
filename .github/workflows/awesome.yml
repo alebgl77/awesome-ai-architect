@@ -27,6 +27,9 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      pages: read
+    outputs:
+      pages: ${{ steps.pages.outputs.enabled }}
     steps:
       - uses: actions/checkout@v5
 
@@ -41,6 +44,18 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python "$DIR/scripts/build.py"
+
+      - name: Detect GitHub Pages
+        id: pages
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if gh api "repos/$GITHUB_REPOSITORY/pages" --jq .build_type 2>/dev/null | grep -q workflow; then
+            echo "enabled=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::GitHub Pages is off, which is fine. Your explorer: https://alebgl77.github.io/awesome-ai-architect/?repo=$GITHUB_REPOSITORY"
+          fi
 
       - name: Commit changes
         run: |
@@ -60,11 +75,10 @@ jobs:
           exit 1
 
   pages:
-    # Publishing needs Settings > Pages > Source: GitHub Actions (one-time switch).
-    # Until then this job fails softly and the Markdown list still updates.
+    # Optional: runs only when Settings > Pages > Source is GitHub Actions.
+    # Without it, the hosted explorer serves this repository through ?repo=owner/name.
     needs: build
-    if: github.ref == 'refs/heads/main'
-    continue-on-error: true
+    if: github.ref == 'refs/heads/main' && needs.build.outputs.pages == 'true'
     runs-on: ubuntu-latest
     permissions:
       contents: read

@@ -68,7 +68,7 @@ def adapt_for_fork(cfg: dict, env: dict | None = None) -> dict:
         repo=full,
         author=owner,
         author_url=f"https://github.com/{owner}",
-        site_url=f"https://{owner.lower()}.github.io/{name}/",
+        site_url=f"{lst.get('explorer_url', 'https://alebgl77.github.io/awesome-ai-architect/')}?repo={full}",
         exclude_own=[owner, name],
         exclude_starred=[],
     )
@@ -353,8 +353,9 @@ def render_readme(repos: list[dict], cfg: dict, today: dt.date) -> str:
     )
     if repo:
         out.append(
-            f"**Want this for your own stars?** [Fork it](https://github.com/{repo}/fork), turn on Pages, done. "
-            "No config to edit, no API key. See [Use it for your own stars](#use-it-for-your-own-stars). "
+            f"**Want this for your own stars?** [Use this template](https://github.com/{repo}/generate), "
+            "then run the workflow once. Two clicks, no config, no API key, no Pages setup. "
+            "See [Use it for your own stars](#use-it-for-your-own-stars). "
             "If the map helps you, a star keeps it visible.\n"
         )
 
@@ -415,16 +416,30 @@ def render_readme(repos: list[dict], cfg: dict, today: dt.date) -> str:
         "3. Daily snapshots of star counts give a momentum signal (stars gained over about 30 days).\n"
         "4. This README, a JSON dataset and the interactive explorer are regenerated and published.\n\n"
         "The taxonomy, weights and manual overrides live in [`config.toml`](config.toml). "
-        "The generator is a single dependency-free Python file: [`scripts/build.py`](scripts/build.py). "
-        "Fork it, change one line (`user`), and get the same list for your own stars.\n"
+        "The generator is a single dependency-free Python file: [`scripts/build.py`](scripts/build.py).\n"
+    )
+    by_rules = sum(1 for r in repos if r.get("classified_by") == "rules")
+    by_hand = sum(1 for r in repos if r.get("classified_by") == "override")
+    unmatched = sum(1 for r in repos if r["category"] == "triage")
+    out.append("### Why no LLM\n")
+    out.append(
+        "Classification is deterministic and explainable: same input, same category, and every project "
+        "shows the topics that placed it (the first tags in each row). It costs nothing, needs no key "
+        "and cannot hallucinate a category. "
+        f"On this list, **{by_rules} of {len(repos)} projects are placed by the rules alone**, "
+        f"{by_hand} by a manual override in `config.toml` and {unmatched} remain to triage. "
+        "The test suite pins the expected category of reference projects so taxonomy edits cannot drift silently.\n"
     )
     out.append("## Use it for your own stars\n")
     out.append(
-        f"1. [Fork this repository](https://github.com/{repo}/fork).\n"
-        "2. In the Actions tab of your fork, enable workflows.\n"
-        "3. In Settings > Pages, set Source to **GitHub Actions**.\n"
-        "4. Run the workflow once. Your stars, your README and your explorer, refreshed every day. "
-        "The fork detects its owner on its own; edit `config.toml` only to tune the taxonomy.\n\n"
+        f"1. Click **[Use this template](https://github.com/{repo}/generate)** and create a public repository.\n"
+        "2. In its Actions tab, open **Awesome AI Architect** and click **Run workflow**.\n\n"
+        "That is all. Your README lists your own stars, classified, and refreshes every day. "
+        "Your interactive explorer is live at "
+        f"`{lst.get('explorer_url', '')}?repo=<you>/<repo>` with no Pages setup. "
+        "The copy detects its owner on its own; edit `config.toml` only to tune the taxonomy.\n\n"
+        "Optional: set Settings > Pages > Source to **GitHub Actions** to host the explorer on your own domain. "
+        "Forking works too; GitHub disables scheduled workflows on forks until you enable them in the Actions tab.\n\n"
         "No secrets, no API keys and no dependencies: the default `GITHUB_TOKEN` reads public stars.\n"
     )
     out.append("## Suggest a project\n")

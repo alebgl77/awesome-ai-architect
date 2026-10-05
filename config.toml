@@ -11,6 +11,8 @@ author = "Alexandre Beguel"
 author_url = "https://github.com/alebgl77"
 site_url = "https://alebgl77.github.io/awesome-ai-architect/"
 repo = "alebgl77/awesome-ai-architect"
+# Hosted explorer reused by forks and template copies (?repo=owner/name), so they need no Pages.
+explorer_url = "https://alebgl77.github.io/awesome-ai-architect/"
 # Items shown per category in README before the rest folds into <details>.
 readme_top = 20
 # Recently starred / rising sections size.

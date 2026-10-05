@@ -24,7 +24,7 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     permissions:
       contents: write
       pages: read
@@ -79,7 +79,7 @@ jobs:
     # Without it, the hosted explorer serves this repository through ?repo=owner/name.
     needs: build
     if: github.ref == 'refs/heads/main' && needs.build.outputs.pages == 'true'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     permissions:
       contents: read
       pages: write

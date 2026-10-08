@@ -23,7 +23,27 @@ env:
   DIR: "."
 
 jobs:
+  branch:
+    runs-on: ubuntu-24.04
+    permissions: {}
+    outputs:
+      allowed: ${{ steps.check.outputs.allowed }}
+    steps:
+      - name: Check the default branch
+        id: check
+        shell: bash
+        env:
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          if [[ "$GITHUB_REF" == "refs/heads/$DEFAULT_BRANCH" ]]; then
+            echo "allowed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "allowed=false" >> "$GITHUB_OUTPUT"
+          fi
+
   build:
+    needs: branch
+    if: needs.branch.outputs.allowed == 'true'
     runs-on: ubuntu-24.04
     permissions:
       contents: write
@@ -78,7 +98,7 @@ jobs:
     # Optional: runs only when Settings > Pages > Source is GitHub Actions.
     # Without it, the hosted explorer serves this repository through ?repo=owner/name.
     needs: build
-    if: github.ref == 'refs/heads/main' && needs.build.outputs.pages == 'true'
+    if: needs.build.outputs.pages == 'true'
     runs-on: ubuntu-24.04
     permissions:
       contents: read

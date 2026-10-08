@@ -1,5 +1,8 @@
+import copy
 import datetime as dt
 import json
+import os
+import subprocess
 import sys
 import tempfile
 import unittest
@@ -11,7 +14,7 @@ sys.path.insert(0, str(HERE.parent / "scripts"))
 import build  # noqa: E402
 
 CFG = build.load_config()
-FIXTURE = json.loads((HERE / "fixture.json").read_text())
+FIXTURE = json.loads((HERE / "fixture.json").read_text(encoding="utf-8"))
 TODAY = dt.date(2026, 10, 3)
 
 
@@ -87,9 +90,27 @@ class ForkTest(unittest.TestCase):
         return build.load_config()
 
     def test_original_repo_is_untouched(self):
-        cfg = build.adapt_for_fork(self.fresh(), {"GITHUB_REPOSITORY": "alebgl77/awesome-ai-architect"})
-        self.assertEqual(cfg["list"]["user"], "alebgl77")
-        self.assertTrue(cfg["overrides"])
+        for repo in ("alebgl77/awesome-ai-architect", "AleBgl77/Awesome-AI-Architect"):
+            with self.subTest(repo=repo):
+                cfg = self.fresh()
+                original = copy.deepcopy(cfg)
+                self.assertIs(build.adapt_for_fork(cfg, {"GITHUB_REPOSITORY": repo}), cfg)
+                self.assertEqual(cfg, original)
+
+    def test_same_owner_copy_takes_repository_identity(self):
+        cfg = build.adapt_for_fork(self.fresh(), {"GITHUB_REPOSITORY": "alebgl77/my-copy"})
+        lst = cfg["list"]
+        self.assertEqual((lst["user"], lst["repo"]), ("alebgl77", "alebgl77/my-copy"))
+        self.assertEqual(lst["site_url"], "https://alebgl77.github.io/awesome-ai-architect/?repo=alebgl77/my-copy")
+        self.assertEqual(lst["exclude_own"], ["alebgl77", "my-copy"])
+        self.assertEqual(cfg["overrides"], {})
+
+    def test_configured_repository_preserves_custom_user(self):
+        cfg = self.fresh()
+        cfg["list"].update(repo="JaneDev/my-ai-map", user="CuratedAccount", author="Custom Author")
+        original = copy.deepcopy(cfg)
+        env = {"GITHUB_REPOSITORY": "JaneDev/my-ai-map", "GITHUB_REPOSITORY_OWNER": "JaneDev"}
+        self.assertEqual(build.adapt_for_fork(cfg, env), original)
 
     def test_fork_takes_owner_identity(self):
         env = {"GITHUB_REPOSITORY": "JaneDev/my-ai-map", "GITHUB_REPOSITORY_OWNER": "JaneDev"}
@@ -144,20 +165,20 @@ class MomentumTest(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             run_fixture(Path(tmp), dt.date(2026, 9, 26))
             hist_path = Path(tmp) / "data" / "history.json"
-            hist = json.loads(hist_path.read_text())
+            hist = json.loads(hist_path.read_text(encoding="utf-8"))
             hist["2026-09-26"]["vllm-project/vllm"] -= 500
-            hist_path.write_text(json.dumps(hist))
+            hist_path.write_text(json.dumps(hist), encoding="utf-8")
             data = run_fixture(Path(tmp))
             vllm = next(r for r in data["repos"] if r["full_name"] == "vllm-project/vllm")
             self.assertEqual((vllm["stars_delta"], vllm["delta_days"]), (500, 7))
-            self.assertIn("## Rising", (Path(tmp) / "README.md").read_text())
+            self.assertIn("## Rising", (Path(tmp) / "README.md").read_text(encoding="utf-8"))
 
 
 class RenderTest(unittest.TestCase):
     def test_readme_structure(self):
         with tempfile.TemporaryDirectory() as tmp:
             run_fixture(Path(tmp))
-            md = (Path(tmp) / "README.md").read_text()
+            md = (Path(tmp) / "README.md").read_text(encoding="utf-8")
         self.assertTrue(md.startswith("# Awesome AI Architect"))
         for heading in ("## Built by Alexandre", "## Recently starred", "## MCP & Tool Use", "## How it works"):
             self.assertIn(heading, md)
@@ -175,6 +196,66 @@ class RenderTest(unittest.TestCase):
 
     def test_number_format(self):
         self.assertEqual([build.fmt_num(n) for n in (999, 1000, 93128, 2_000_000)], ["999", "1k", "93.1k", "2M"])
+
+    def test_momentum_has_one_sign_and_omits_zero(self):
+        repo = build.normalize({"full_name": "a/b"}, None, False)
+        titles = {c["id"]: c["title"] for c in CFG["category"]}
+        for delta, expected in ((2, " <sub>+2</sub>"), (-2, " <sub>-2</sub>"),
+                                (1000, " <sub>+1k</sub>"), (-1000, " <sub>-1k</sub>"),
+                                (0, ""), (None, "")):
+            with self.subTest(delta=delta):
+                repo["stars_delta"] = delta
+                row = build._row(repo, titles)
+                self.assertIn(f" | 0{expected} | ", row)
+                self.assertNotIn("+-", row)
+
+    def test_rising_only_contains_positive_momentum(self):
+        repos = []
+        for name, delta in (("falling", -2), ("steady", 0), ("unknown", None),
+                            ("rising", 2), ("fastest", 10), ("own", 20)):
+            repo = build.normalize({"full_name": f"sample/{name}"}, None, name == "own")
+            build.classify([repo], CFG)
+            repo.update(stars_delta=delta, delta_days=7 if delta is not None else None)
+            repos.append(repo)
+        md = build.render_readme(repos, CFG, TODAY)
+        rising = md.split("## Rising\n", 1)[1].split("\n## ", 1)[0]
+        self.assertLess(rising.index("[**fastest**]"), rising.index("[**rising**]"))
+        for name in ("falling", "steady", "unknown", "own"):
+            self.assertNotIn(f"[**{name}**]", rising)
+        md = build.render_readme(repos[:3], CFG, TODAY)
+        self.assertNotIn("## Rising", md)
+        self.assertNotIn("[Rising](#rising)", md)
+
+
+class EncodingTest(unittest.TestCase):
+    def test_cli_preserves_unicode_without_utf8_mode(self):
+        description = "Café — 東京 🚀"
+        payload = {"starred": [{"full_name": "sample/unicode", "description": description,
+                                "stargazers_count": 12, "topics": ["inference"]}], "own": []}
+        env = {k: v for k, v in os.environ.items()
+               if k not in ("GITHUB_REPOSITORY", "GITHUB_REPOSITORY_OWNER")}
+        with tempfile.TemporaryDirectory() as tmp:
+            out = Path(tmp)
+            fixture = out / "fixture.json"
+            fixture.write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
+            data_dir = out / "data"
+            data_dir.mkdir()
+            history_path = data_dir / "history.json"
+            history = {"2026-09-26": {"sample/unicode": 10, "sample/東京": 1}}
+            history_path.write_text(json.dumps(history, ensure_ascii=False), encoding="utf-8")
+            result = subprocess.run(
+                [sys.executable, "-X", "utf8=0", "-X", "warn_default_encoding", "-W", "error::EncodingWarning",
+                 str(HERE.parent / "scripts" / "build.py"), "--fixture", str(fixture),
+                 "--today", TODAY.isoformat(), "--out", str(out)],
+                env=env, capture_output=True, text=True, encoding="utf-8", timeout=30,
+            )
+            self.assertEqual(result.returncode, 0, result.stderr)
+            dataset = json.loads((data_dir / "repos.json").read_text(encoding="utf-8"))
+            self.assertEqual(dataset["repos"][0]["description"], description)
+            self.assertEqual(dataset["repos"][0]["stars_delta"], 2)
+            self.assertIn(description, (out / "README.md").read_text(encoding="utf-8"))
+            self.assertEqual(json.loads(history_path.read_text(encoding="utf-8"))["2026-09-26"],
+                             history["2026-09-26"])
 
 
 if __name__ == "__main__":

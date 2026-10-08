@@ -60,7 +60,7 @@ def adapt_for_fork(cfg: dict, env: dict | None = None) -> dict:
     full = env.get("GITHUB_REPOSITORY", "")
     owner = env.get("GITHUB_REPOSITORY_OWNER") or full.partition("/")[0]
     lst = cfg["list"]
-    if not full or not owner or owner.lower() == lst["user"].lower():
+    if not full or not owner or full.lower() == lst.get("repo", "").lower():
         return cfg
     name = full.partition("/")[2]
     lst.update(
@@ -303,7 +303,8 @@ def _row(r: dict, titles: dict, show_cat: bool = False) -> str:
         desc = f"**Archived.** {desc}"
     stars = fmt_num(r["stars"])
     if r.get("stars_delta"):
-        stars += f" <sub>+{fmt_num(r['stars_delta'])}</sub>"
+        sign = "+" if r["stars_delta"] > 0 else "-"
+        stars += f" <sub>{sign}{fmt_num(abs(r['stars_delta']))}</sub>"
     meta = r["language"] or ""
     if show_cat:
         meta = f"{titles[r['category']]}"
@@ -361,7 +362,7 @@ def render_readme(repos: list[dict], cfg: dict, today: dt.date) -> str:
 
     out.append("## Contents\n")
     out.append("- [Recently starred](#recently-starred)")
-    rising_pool = [r for r in starred if r.get("stars_delta")]
+    rising_pool = [r for r in starred if (r.get("stars_delta") or 0) > 0]
     if rising_pool:
         out.append("- [Rising](#rising)")
     for c in non_empty:
@@ -467,7 +468,7 @@ def build(payload: dict, cfg: dict, today: dt.date, out_dir: Path = ROOT) -> dic
     data_dir = out_dir / "data"
     data_dir.mkdir(parents=True, exist_ok=True)
     hist_path = data_dir / "history.json"
-    history = json.loads(hist_path.read_text()) if hist_path.exists() else {}
+    history = json.loads(hist_path.read_text(encoding="utf-8")) if hist_path.exists() else {}
     history = update_history(repos, history, today, cfg["list"].get("history_days", 35))
     apply_momentum(repos, history, today)
 
@@ -488,9 +489,9 @@ def build(payload: dict, cfg: dict, today: dt.date, out_dir: Path = ROOT) -> dic
         ],
         "repos": repos,
     }
-    (data_dir / "repos.json").write_text(json.dumps(dataset, ensure_ascii=False, indent=1) + "\n")
-    hist_path.write_text(json.dumps(history, separators=(",", ":"), sort_keys=True) + "\n")
-    (out_dir / "README.md").write_text(render_readme(repos, cfg, today))
+    (data_dir / "repos.json").write_text(json.dumps(dataset, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    hist_path.write_text(json.dumps(history, separators=(",", ":"), sort_keys=True) + "\n", encoding="utf-8")
+    (out_dir / "README.md").write_text(render_readme(repos, cfg, today), encoding="utf-8")
     return dataset
 
 
@@ -504,7 +505,7 @@ def main(argv: list[str] | None = None) -> int:
     cfg = adapt_for_fork(load_config())
     today = dt.date.fromisoformat(args.today) if args.today else dt.datetime.now(dt.timezone.utc).date()
     if args.fixture:
-        payload = json.loads(args.fixture.read_text())
+        payload = json.loads(args.fixture.read_text(encoding="utf-8"))
     else:
         payload = fetch_live(cfg["list"]["user"], os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN"))
     dataset = build(payload, cfg, today, args.out)

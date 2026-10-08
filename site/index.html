@@ -347,6 +347,12 @@ footer a:hover { color: var(--text); }
     models: "brain", multimodal: "waveform", data: "database", automation: "flow-arrow", frontend: "paint-brush",
     infra: "cloud", apps: "chat-circle-text", learning: "graduation-cap", triage: "tray",
   };
+  const SORTS = {
+    stars: (a, b) => b.stars - a.stars,
+    momentum: (a, b) => (b.stars_delta ?? -1) - (a.stars_delta ?? -1) || b.stars - a.stars,
+    starred: (a, b) => (b.starred_at || b.created_at || "").localeCompare(a.starred_at || a.created_at || ""),
+    pushed: (a, b) => (b.pushed_at || "").localeCompare(a.pushed_at || ""),
+  };
   const state = { cat: "all", q: "", sort: "stars", mine: false, active: false, shown: PAGE };
   let DATA = null, CATS = {}, filtered = [], related = 0;
 
@@ -382,7 +388,7 @@ footer a:hover { color: var(--text); }
     const p = new URLSearchParams(location.hash.slice(1));
     state.cat = p.get("cat") || "all";
     state.q = p.get("q") || "";
-    state.sort = p.get("sort") || "stars";
+    state.sort = Object.prototype.hasOwnProperty.call(SORTS, p.get("sort")) ? p.get("sort") : "stars";
     state.mine = p.get("mine") === "1";
     state.active = p.get("active") === "1";
   };
@@ -459,6 +465,7 @@ footer a:hover { color: var(--text); }
 
   /* filtering */
   function apply() {
+    if (!Object.prototype.hasOwnProperty.call(CATS, state.cat)) state.cat = "all";
     const q = state.q.trim().toLowerCase();
     const terms = q ? q.split(/\s+/) : [];
     filtered = DATA.repos.filter((r) => {
@@ -471,12 +478,7 @@ footer a:hover { color: var(--text); }
     });
     const primaryFirst = (a, b) => state.cat === "all" ? 0 : (b.category === state.cat) - (a.category === state.cat);
     related = state.cat === "all" ? 0 : filtered.filter((r) => r.category !== state.cat).length;
-    const by = {
-      stars: (a, b) => b.stars - a.stars,
-      momentum: (a, b) => (b.stars_delta ?? -1) - (a.stars_delta ?? -1) || b.stars - a.stars,
-      starred: (a, b) => (b.starred_at || b.created_at || "").localeCompare(a.starred_at || a.created_at || ""),
-      pushed: (a, b) => (b.pushed_at || "").localeCompare(a.pushed_at || ""),
-    }[state.sort];
+    const by = SORTS[state.sort];
     filtered.sort((a, b) => primaryFirst(a, b) || by(a, b));
     render();
   }

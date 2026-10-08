@@ -87,7 +87,7 @@
    "title": "Models, Training & Fine-tuning",
    "short": "Models",
    "blurb": "Foundation models, fine-tuning, distillation, reinforcement learning, datasets and ML frameworks.",
-   "count": 2
+   "count": 1
   },
   {
    "id": "multimodal",
@@ -108,7 +108,7 @@
    "title": "Automation, Browser Agents & Productivity",
    "short": "Automation",
    "blurb": "Workflow automation, browser and computer-use agents, extensions and everyday productivity tools.",
-   "count": 8
+   "count": 9
   },
   {
    "id": "frontend",
@@ -129,7 +129,7 @@
    "title": "AI Apps & Chat Interfaces",
    "short": "AI Apps",
    "blurb": "End-user AI applications, chat UIs, assistants and business tools built on LLMs.",
-   "count": 4
+   "count": 3
   },
   {
    "id": "learning",
@@ -142,8 +142,8 @@
    "id": "triage",
    "title": "To Triage",
    "short": "Triage",
-   "blurb": "Not matched by the taxonomy yet. Add topics upstream or an override in config.toml.",
-   "count": 0
+   "blurb": "Unmatched projects or manual holds outside the GenAI taxonomy. Review upstream context before assigning a category.",
+   "count": 1
   }
  ],
  "repos": [
@@ -188,7 +188,21 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 1560,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 5,
+    "runner_up": "agents",
+    "runner_up_score": 1,
+    "margin": 4
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "mattpocock/skills",
@@ -216,7 +230,21 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 4927,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 3,
+    "runner_up": "agents",
+    "runner_up_score": 1,
+    "margin": 2
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "affaan-m/ECC",
@@ -262,7 +290,21 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 2721,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 8,
+    "runner_up": "mcp",
+    "runner_up_score": 3,
+    "margin": 5
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "deepseek-ai/deepseek-harness",
@@ -300,7 +342,23 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 2562,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": true,
+    "reasons": [
+     "low_score"
+    ],
+    "score": 1,
+    "runner_up": null,
+    "runner_up_score": 0,
+    "margin": 1
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "github/spec-kit",
@@ -342,7 +400,21 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 586,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 3,
+    "runner_up": null,
+    "runner_up_score": 0,
+    "margin": 3
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "garrytan/gstack",
@@ -370,7 +442,23 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 797,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": true,
+    "reasons": [
+     "low_score"
+    ],
+    "score": 1,
+    "runner_up": null,
+    "runner_up_score": 0,
+    "margin": 1
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "ggml-org/llama.cpp",
@@ -402,7 +490,23 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 408,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": true,
+    "reasons": [
+     "low_score"
+    ],
+    "score": 1,
+    "runner_up": null,
+    "runner_up_score": 0,
+    "margin": 1
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "Graphify-Labs/graphify",
@@ -460,7 +564,21 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 1192,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 14,
+    "runner_up": "rag",
+    "runner_up_score": 10,
+    "margin": 4
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "addyosmani/agent-skills",
@@ -503,7 +621,21 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 2241,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 16,
+    "runner_up": "agents",
+    "runner_up_score": 3,
+    "margin": 13
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "nexu-io/open-design",
@@ -560,7 +692,21 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 623,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 12,
+    "runner_up": "frontend",
+    "runner_up_score": 6,
+    "margin": 6
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "thedotmack/claude-mem",
@@ -618,7 +764,21 @@
    "classified_by": "override",
    "health": "active",
    "stars_delta": 2290,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "override",
+    "review_needed": false,
+    "reasons": [],
+    "score": 7,
+    "runner_up": "coding",
+    "runner_up_score": 13,
+    "margin": -6
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "hacksider/Deep-Live-Cam",
@@ -671,7 +831,21 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 30,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 5,
+    "runner_up": null,
+    "runner_up_score": 0,
+    "margin": 5
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "Panniantong/Agent-Reach",
@@ -727,7 +901,23 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 3671,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": true,
+    "reasons": [
+     "close_scores"
+    ],
+    "score": 5,
+    "runner_up": "agents",
+    "runner_up_score": 4,
+    "margin": 1
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "Leonxlnx/taste-skill",
@@ -778,7 +968,21 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 1257,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 20,
+    "runner_up": "automation",
+    "runner_up_score": 6,
+    "margin": 14
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "odysseus-dev/odysseus",
@@ -806,7 +1010,23 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 2753,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": true,
+    "reasons": [
+     "low_score"
+    ],
+    "score": 1,
+    "runner_up": null,
+    "runner_up_score": 0,
+    "margin": 1
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "D4Vinci/Scrapling",
@@ -864,7 +1084,21 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 767,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 12,
+    "runner_up": "mcp",
+    "runner_up_score": 6,
+    "margin": 6
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "bytedance/deer-flow",
@@ -917,7 +1151,21 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 136,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 15,
+    "runner_up": "coding",
+    "runner_up_score": 2,
+    "margin": 13
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "grafana/grafana",
@@ -969,7 +1217,21 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 80,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 15,
+    "runner_up": "data",
+    "runner_up_score": 6,
+    "margin": 9
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "ComposioHQ/awesome-claude-skills",
@@ -1025,7 +1287,21 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 250,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 24,
+    "runner_up": "automation",
+    "runner_up_score": 7,
+    "margin": 17
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "ruvnet/ruflo",
@@ -1084,7 +1360,21 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 287,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 19,
+    "runner_up": "coding",
+    "runner_up_score": 9,
+    "margin": 10
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "shanraisshan/claude-code-best-practice",
@@ -1142,7 +1432,21 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 204,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 9,
+    "runner_up": "agents",
+    "runner_up_score": 5,
+    "margin": 4
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "microsoft/autogen",
@@ -1187,7 +1491,21 @@
    "classified_by": "rules",
    "health": "maintained",
    "stars_delta": 48,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 13,
+    "runner_up": "apps",
+    "runner_up_score": 1,
+    "margin": 12
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "BerriAI/litellm",
@@ -1242,7 +1560,21 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 240,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 17,
+    "runner_up": "mcp",
+    "runner_up_score": 3,
+    "margin": 14
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "crewAIInc/crewAI",
@@ -1282,7 +1614,21 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 123,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 8,
+    "runner_up": null,
+    "runner_up_score": 0,
+    "margin": 8
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "hesreallyhim/awesome-claude-code",
@@ -1338,7 +1684,21 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 199,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 17,
+    "runner_up": "learning",
+    "runner_up_score": 13,
+    "margin": 4
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "blader/humanizer",
@@ -1388,7 +1748,21 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 978,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 12,
+    "runner_up": "context",
+    "runner_up_score": 3,
+    "margin": 9
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "anthropics/claude-cookbooks",
@@ -1416,7 +1790,23 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 97,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": true,
+    "reasons": [
+     "low_score"
+    ],
+    "score": 1,
+    "runner_up": null,
+    "runner_up_score": 0,
+    "margin": 1
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "ChromeDevTools/chrome-devtools-mcp",
@@ -1461,7 +1851,21 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 176,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 8,
+    "runner_up": "automation",
+    "runner_up_score": 6,
+    "margin": 2
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "multica-ai/multica",
@@ -1489,7 +1893,23 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 261,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": true,
+    "reasons": [
+     "low_score"
+    ],
+    "score": 1,
+    "runner_up": null,
+    "runner_up_score": 0,
+    "margin": 1
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "kepano/obsidian-skills",
@@ -1543,7 +1963,21 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 144,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 11,
+    "runner_up": "automation",
+    "runner_up_score": 6,
+    "margin": 5
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "HKUDS/nanobot",
@@ -1602,7 +2036,21 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 86,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 10,
+    "runner_up": "apps",
+    "runner_up_score": 8,
+    "margin": 2
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "KeygraphHQ/shannon",
@@ -1660,7 +2108,21 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 106,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 20,
+    "runner_up": "evals",
+    "runner_up_score": 3,
+    "margin": 17
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "paperless-ngx/paperless-ngx",
@@ -1694,11 +2156,12 @@
    "archived": false,
    "fork": false,
    "mine": false,
-   "category": "models",
+   "category": "automation",
    "tags": [
+    "models",
     "multimodal"
    ],
-   "score": 3,
+   "score": 0,
    "key_topics": [
     "machine-learning",
     "ocr",
@@ -1706,10 +2169,24 @@
     "dms",
     "llm"
    ],
-   "classified_by": "rules",
+   "classified_by": "override",
    "health": "active",
    "stars_delta": null,
-   "delta_days": null
+   "delta_days": null,
+   "classification": {
+    "method": "override",
+    "review_needed": false,
+    "reasons": [],
+    "score": 0,
+    "runner_up": "models",
+    "runner_up_score": 3,
+    "margin": -3
+   },
+   "maturity": {
+    "stage": "stable",
+    "source": "https://github.com/paperless-ngx/paperless-ngx/blob/138160cbda97796ffbc8c7048139c728210c020d/docs/administration.md",
+    "note": "Stable release channel; development builds may differ."
+   }
   },
   {
    "full_name": "LibreChat-AI/LibreChat",
@@ -1768,7 +2245,21 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 160,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 13,
+    "runner_up": "infra",
+    "runner_up_score": 7,
+    "margin": 6
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "payloadcms/payload",
@@ -1824,7 +2315,21 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 68,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 7,
+    "runner_up": "data",
+    "runner_up_score": 3,
+    "margin": 4
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "herdrdev/herdr",
@@ -1879,7 +2384,21 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 760,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 11,
+    "runner_up": "agents",
+    "runner_up_score": 3,
+    "margin": 8
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "zhaoxuya520/reverse-skill",
@@ -1907,7 +2426,21 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 623,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 5,
+    "runner_up": "inference",
+    "runner_up_score": 2,
+    "margin": 3
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "Zackriya-Solutions/meetily",
@@ -1964,7 +2497,21 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 115,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 14,
+    "runner_up": "inference",
+    "runner_up_score": 4,
+    "margin": 10
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "supermemoryai/supermemory",
@@ -2013,7 +2560,21 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 86,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 7,
+    "runner_up": "frontend",
+    "runner_up_score": 5,
+    "margin": 2
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "rohitg00/agentmemory",
@@ -2063,7 +2624,21 @@
    "classified_by": "override",
    "health": "active",
    "stars_delta": 112,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "override",
+    "review_needed": false,
+    "reasons": [],
+    "score": 4,
+    "runner_up": "coding",
+    "runner_up_score": 8,
+    "margin": -4
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "grafana/loki",
@@ -2104,7 +2679,21 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 9,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 6,
+    "runner_up": null,
+    "runner_up_score": 0,
+    "margin": 6
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "h4ckf0r0day/obscura",
@@ -2148,7 +2737,21 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 372,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 10,
+    "runner_up": "agents",
+    "runner_up_score": 1,
+    "margin": 9
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "TencentCloud/TencentDB-Agent-Memory",
@@ -2195,7 +2798,21 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 129,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 9,
+    "runner_up": "rag",
+    "runner_up_score": 6,
+    "margin": 3
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "neondatabase/neon",
@@ -2235,7 +2852,23 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 9,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": true,
+    "reasons": [
+     "close_scores"
+    ],
+    "score": 3,
+    "runner_up": "data",
+    "runner_up_score": 2,
+    "margin": 1
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "obsidianmd/obsidian-releases",
@@ -2276,7 +2909,21 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 83,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 9,
+    "runner_up": null,
+    "runner_up_score": 0,
+    "margin": 9
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "AgriciDaniel/claude-seo",
@@ -2321,7 +2968,21 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 257,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 8,
+    "runner_up": "coding",
+    "runner_up_score": 6,
+    "margin": 2
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "langchain-ai/openwiki",
@@ -2349,7 +3010,24 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 71,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": true,
+    "reasons": [
+     "low_score",
+     "close_scores"
+    ],
+    "score": 1,
+    "runner_up": "agents",
+    "runner_up_score": 1,
+    "margin": 0
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "semgrep/semgrep",
@@ -2396,7 +3074,21 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 64,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 7,
+    "runner_up": "frontend",
+    "runner_up_score": 1,
+    "margin": 6
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "opensandbox-group/OpenSandbox",
@@ -2436,7 +3128,23 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 72,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": true,
+    "reasons": [
+     "close_scores"
+    ],
+    "score": 3,
+    "runner_up": "agents",
+    "runner_up_score": 2,
+    "margin": 1
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "XiaomiMiMo/MiMo-Code",
@@ -2476,7 +3184,24 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 17,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": true,
+    "reasons": [
+     "low_score",
+     "close_scores"
+    ],
+    "score": 2,
+    "runner_up": "coding",
+    "runner_up_score": 1,
+    "margin": 1
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "google/artemis",
@@ -2516,7 +3241,23 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 196,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": true,
+    "reasons": [
+     "close_scores"
+    ],
+    "score": 3,
+    "runner_up": "evals",
+    "runner_up_score": 2,
+    "margin": 1
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "open-gsd/gsd-core",
@@ -2556,7 +3297,23 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 153,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": true,
+    "reasons": [
+     "close_scores"
+    ],
+    "score": 3,
+    "runner_up": "coding",
+    "runner_up_score": 3,
+    "margin": 0
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "FareedKhan-dev/kimi-k3-in-c",
@@ -2613,7 +3370,21 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 66,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 9,
+    "runner_up": "inference",
+    "runner_up_score": 7,
+    "margin": 2
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "lorien/awesome-web-scraping",
@@ -2662,7 +3433,21 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 3,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 12,
+    "runner_up": "learning",
+    "runner_up_score": 2,
+    "margin": 10
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "tester-army/e2e",
@@ -2704,7 +3489,21 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": null,
-   "delta_days": null
+   "delta_days": null,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 3,
+    "runner_up": "apps",
+    "runner_up_score": 1,
+    "margin": 2
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "HKUDS/OpenSpace",
@@ -2732,7 +3531,24 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 8,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": true,
+    "reasons": [
+     "low_score",
+     "close_scores"
+    ],
+    "score": 1,
+    "runner_up": "agents",
+    "runner_up_score": 1,
+    "margin": 0
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "zai-org/ZCode",
@@ -2760,7 +3576,24 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 148,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": true,
+    "reasons": [
+     "low_score",
+     "close_scores"
+    ],
+    "score": 1,
+    "runner_up": "agents",
+    "runner_up_score": 1,
+    "margin": 0
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "trailofbits/skills",
@@ -2792,7 +3625,21 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 73,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 7,
+    "runner_up": "security",
+    "runner_up_score": 2,
+    "margin": 5
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "kyegomez/swarms",
@@ -2849,7 +3696,21 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 6,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 13,
+    "runner_up": "context",
+    "runner_up_score": 3,
+    "margin": 10
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "czlonkowski/n8n-skills",
@@ -2887,7 +3748,21 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 24,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 7,
+    "runner_up": "coding",
+    "runner_up_score": 3,
+    "margin": 4
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "0xNyk/awesome-hermes-agent",
@@ -2936,7 +3811,23 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 19,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": true,
+    "reasons": [
+     "close_scores"
+    ],
+    "score": 8,
+    "runner_up": "coding",
+    "runner_up_score": 7,
+    "margin": 1
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "sohzm/cheating-daddy",
@@ -2964,7 +3855,23 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 6,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": true,
+    "reasons": [
+     "low_score"
+    ],
+    "score": 1,
+    "runner_up": null,
+    "runner_up_score": 0,
+    "margin": 1
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "ai-boost/awesome-harness-engineering",
@@ -3012,7 +3919,23 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 59,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": true,
+    "reasons": [
+     "close_scores"
+    ],
+    "score": 6,
+    "runner_up": "learning",
+    "runner_up_score": 6,
+    "margin": 0
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "Manavarya09/design-extract",
@@ -3071,7 +3994,21 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 16,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 23,
+    "runner_up": "automation",
+    "runner_up_score": 9,
+    "margin": 14
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "AzuraCast/AzuraCast",
@@ -3101,9 +4038,9 @@
    "archived": false,
    "fork": false,
    "mine": false,
-   "category": "apps",
+   "category": "triage",
    "tags": [],
-   "score": 1,
+   "score": 0,
    "key_topics": [
     "radio",
     "icecast",
@@ -3111,10 +4048,26 @@
     "webcast",
     "shoutcast"
    ],
-   "classified_by": "rules",
+   "classified_by": "override",
    "health": "active",
    "stars_delta": 6,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "override",
+    "review_needed": true,
+    "reasons": [
+     "manual_triage"
+    ],
+    "score": 0,
+    "runner_up": "apps",
+    "runner_up_score": 1,
+    "margin": -1
+   },
+   "maturity": {
+    "stage": "stable",
+    "source": "https://www.azuracast.com/docs/getting-started/updates/release-channels/",
+    "note": "Stable release channel; rolling builds may differ."
+   }
   },
   {
    "full_name": "Vexa-ai/vexa",
@@ -3168,7 +4121,23 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 15,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": true,
+    "reasons": [
+     "close_scores"
+    ],
+    "score": 11,
+    "runner_up": "mcp",
+    "runner_up_score": 10,
+    "margin": 1
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "jeremylongshore/tons-of-skills-marketplace",
@@ -3223,7 +4192,21 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 16,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 13,
+    "runner_up": "mcp",
+    "runner_up_score": 3,
+    "margin": 10
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "zilliztech/memsearch",
@@ -3281,7 +4264,21 @@
    "classified_by": "override",
    "health": "active",
    "stars_delta": 18,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "override",
+    "review_needed": false,
+    "reasons": [],
+    "score": 10,
+    "runner_up": "rag",
+    "runner_up_score": 15,
+    "margin": -5
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "dzhng/jevgrep",
@@ -3330,7 +4327,21 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 227,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 11,
+    "runner_up": "rag",
+    "runner_up_score": 3,
+    "margin": 8
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "llmsresearch/paperbanana",
@@ -3388,7 +4399,23 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 3,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": true,
+    "reasons": [
+     "close_scores"
+    ],
+    "score": 6,
+    "runner_up": "agents",
+    "runner_up_score": 6,
+    "margin": 0
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "gridex/gridex",
@@ -3416,7 +4443,24 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": null,
-   "delta_days": null
+   "delta_days": null,
+   "classification": {
+    "method": "rules",
+    "review_needed": true,
+    "reasons": [
+     "low_score",
+     "close_scores"
+    ],
+    "score": 1,
+    "runner_up": "frontend",
+    "runner_up_score": 1,
+    "margin": 0
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "tinyfish-io/bigset-oss",
@@ -3452,7 +4496,23 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 2,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": true,
+    "reasons": [
+     "low_score"
+    ],
+    "score": 1,
+    "runner_up": null,
+    "runner_up_score": 0,
+    "margin": 1
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "westpoint-io/mimik",
@@ -3506,7 +4566,21 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 48,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 12,
+    "runner_up": "frontend",
+    "runner_up_score": 4,
+    "margin": 8
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "dohooo/helmor",
@@ -3555,7 +4629,21 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 3,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 10,
+    "runner_up": "agents",
+    "runner_up_score": 5,
+    "margin": 5
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "affaan-m/agentshield",
@@ -3600,7 +4688,23 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 12,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": true,
+    "reasons": [
+     "close_scores"
+    ],
+    "score": 5,
+    "runner_up": "mcp",
+    "runner_up_score": 4,
+    "margin": 1
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "dariubs/awesome-workflow-automation",
@@ -3657,7 +4761,21 @@
    "classified_by": "rules",
    "health": "maintained",
    "stars_delta": 5,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 18,
+    "runner_up": "learning",
+    "runner_up_score": 3,
+    "margin": 15
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "Automattic/wordpress-mcp",
@@ -3685,7 +4803,21 @@
    "classified_by": "rules",
    "health": "archived",
    "stars_delta": 1,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 3,
+    "runner_up": null,
+    "runner_up_score": 0,
+    "margin": 3
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "Hackerest/pwneye",
@@ -3738,7 +4870,21 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 11,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 10,
+    "runner_up": null,
+    "runner_up_score": 0,
+    "margin": 10
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "Shubhamsaboo/google-memorybank-plugin",
@@ -3766,7 +4912,21 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 1,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 4,
+    "runner_up": null,
+    "runner_up_score": 0,
+    "margin": 4
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "thenicolas1894/awesome-claude-fable-5-prompt-vault",
@@ -3824,7 +4984,23 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 1,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": true,
+    "reasons": [
+     "close_scores"
+    ],
+    "score": 6,
+    "runner_up": "context",
+    "runner_up_score": 5,
+    "margin": 1
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "sveneisenschmidt/n8n-openai-bridge",
@@ -3852,7 +5028,24 @@
    "classified_by": "rules",
    "health": "maintained",
    "stars_delta": 0,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": true,
+    "reasons": [
+     "low_score",
+     "close_scores"
+    ],
+    "score": 1,
+    "runner_up": "automation",
+    "runner_up_score": 1,
+    "margin": 0
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "VicKayro/claude-security-audit",
@@ -3880,7 +5073,24 @@
    "classified_by": "rules",
    "health": "maintained",
    "stars_delta": 0,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": true,
+    "reasons": [
+     "low_score",
+     "close_scores"
+    ],
+    "score": 2,
+    "runner_up": "coding",
+    "runner_up_score": 2,
+    "margin": 0
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "picmakpro/vibeflow-os",
@@ -3908,7 +5118,23 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 9,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": true,
+    "reasons": [
+     "low_score"
+    ],
+    "score": 1,
+    "runner_up": null,
+    "runner_up_score": 0,
+    "margin": 1
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "rubentalstra/librechat-prom-exporter",
@@ -3946,7 +5172,21 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 0,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 6,
+    "runner_up": "apps",
+    "runner_up_score": 4,
+    "margin": 2
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "alebgl77/claude-inc",
@@ -3995,7 +5235,21 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 2,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 13,
+    "runner_up": "agents",
+    "runner_up_score": 7,
+    "margin": 6
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "Citatra/Citatra",
@@ -4037,7 +5291,21 @@
    "classified_by": "rules",
    "health": "maintained",
    "stars_delta": 0,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 9,
+    "runner_up": null,
+    "runner_up_score": 0,
+    "margin": 9
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "alebgl77/grafana-llmops-forge",
@@ -4092,7 +5360,21 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 0,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 34,
+    "runner_up": "coding",
+    "runner_up_score": 9,
+    "margin": 25
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "alebgl77/tierdecay",
@@ -4146,7 +5428,21 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 0,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 21,
+    "runner_up": "mcp",
+    "runner_up_score": 7,
+    "margin": 14
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "alebgl77/design-md-viewer",
@@ -4191,7 +5487,21 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 0,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 27,
+    "runner_up": null,
+    "runner_up_score": 0,
+    "margin": 27
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "alebgl77/dsh-plugin-otel-genai",
@@ -4231,7 +5541,21 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 0,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 11,
+    "runner_up": null,
+    "runner_up_score": 0,
+    "margin": 11
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "alebgl77/ftp-deploy-mcp",
@@ -4289,7 +5613,21 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 0,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 15,
+    "runner_up": "infra",
+    "runner_up_score": 12,
+    "margin": 3
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "alebgl77/generative-engine-monitor",
@@ -4338,7 +5676,21 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 0,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 19,
+    "runner_up": "frontend",
+    "runner_up_score": 4,
+    "margin": 15
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "alebgl77/harnessmeter",
@@ -4389,7 +5741,21 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 0,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 12,
+    "runner_up": "context",
+    "runner_up_score": 10,
+    "margin": 2
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "alebgl77/open-fullscreenshot",
@@ -4417,7 +5783,21 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 0,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 3,
+    "runner_up": "observability",
+    "runner_up_score": 1,
+    "margin": 2
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "alebgl77/open-shadow-ai",
@@ -4465,7 +5845,21 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 0,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 13,
+    "runner_up": "infra",
+    "runner_up_score": 7,
+    "margin": 6
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "alebgl77/openspanguard",
@@ -4516,7 +5910,21 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 0,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 28,
+    "runner_up": "evals",
+    "runner_up_score": 4,
+    "margin": 24
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   },
   {
    "full_name": "alebgl77/promptor",
@@ -4562,7 +5970,21 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 0,
-   "delta_days": 4
+   "delta_days": 4,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 7,
+    "runner_up": "apps",
+    "runner_up_score": 3,
+    "margin": 4
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   }
   }
  ]
 }

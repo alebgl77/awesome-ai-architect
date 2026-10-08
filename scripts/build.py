@@ -27,11 +27,14 @@ import sys
 import time
 import tomllib
 import urllib.error
+import urllib.parse
 import urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 API = "https://api.github.com"
+MATURITY_STAGES = {"unknown", "experimental", "alpha", "beta", "stable"}
+REVIEW_DEFAULTS = {"review_min_score": 3, "review_min_margin": 2}
 
 
 # --------------------------------------------------------------------------- config
@@ -47,20 +50,45 @@ def load_config(path: Path = ROOT / "config.toml") -> dict:
     for repo, cat in cfg.get("overrides", {}).items():
         if cat not in ids:
             raise SystemExit(f"config.toml: override {repo} -> unknown category '{cat}'")
+    for key, default in REVIEW_DEFAULTS.items():
+        value = cfg["scoring"].get(key, default)
+        if type(value) is not int or value < 0:
+            raise SystemExit(f"config.toml: scoring.{key} must be a non-negative integer")
+    for repo, annotation in cfg.get("maturity", {}).items():
+        if (not isinstance(annotation, dict) or not isinstance(annotation.get("stage"), str)
+                or annotation["stage"] not in MATURITY_STAGES):
+            raise SystemExit(f"config.toml: maturity {repo} has an unsupported stage")
+        source = annotation.get("source")
+        if (annotation["stage"] != "unknown" or source is not None) and not _https_source(source):
+            raise SystemExit(f"config.toml: maturity {repo} requires a valid HTTPS source")
+        if not isinstance(annotation.get("note", ""), str):
+            raise SystemExit(f"config.toml: maturity {repo} note must be a string")
     return cfg
+
+
+def _https_source(source: str | None) -> bool:
+    if not isinstance(source, str) or re.search(r"[\s\x00-\x1f\x7f<>\"'\\]", source):
+        return False
+    try:
+        parsed = urllib.parse.urlsplit(source)
+        return (parsed.scheme == "https" and bool(parsed.hostname)
+                and parsed.username is None and parsed.password is None
+                and (parsed.port is None or 0 < parsed.port <= 65535))
+    except ValueError:
+        return False
 
 
 def adapt_for_fork(cfg: dict, env: dict | None = None) -> dict:
     """Zero-config forks: in GitHub Actions, take the identity from the repository owner.
 
     A fork needs no edit: the owner's stars are fetched, the README and explorer
-    point to the fork, and the original owner's overrides are dropped.
+    point to the fork, and the original owner's curated annotations are dropped.
     """
     env = os.environ if env is None else env
     full = env.get("GITHUB_REPOSITORY", "")
     owner = env.get("GITHUB_REPOSITORY_OWNER") or full.partition("/")[0]
     lst = cfg["list"]
-    if not full or not owner or owner.lower() == lst["user"].lower():
+    if not full or not owner or full.lower() == lst.get("repo", "").lower():
         return cfg
     name = full.partition("/")[2]
     lst.update(
@@ -73,6 +101,7 @@ def adapt_for_fork(cfg: dict, env: dict | None = None) -> dict:
         exclude_starred=[],
     )
     cfg["overrides"] = {}
+    cfg["maturity"] = {}
     return cfg
 
 
@@ -219,6 +248,7 @@ def classify(repos: list[dict], cfg: dict) -> None:
     order = {c["id"]: i for i, c in enumerate(compiled)}
     weights = cfg["scoring"]
     overrides = {k.lower(): v for k, v in cfg.get("overrides", {}).items()}
+    maturity = {k.lower(): v for k, v in cfg.get("maturity", {}).items()}
     for repo in repos:
         scores = score(repo, compiled, weights)
         ranked = sorted(scores, key=lambda cid: (-scores[cid], order[cid]))
@@ -230,6 +260,36 @@ def classify(repos: list[dict], cfg: dict) -> None:
             if cid != primary and scores[cid] >= weights["secondary_min"]
         ][: weights["max_secondary"]]
         repo["score"] = scores.get(primary, 0)
+        runner_up = next((cid for cid in ranked if cid != primary), None)
+        runner_up_score = scores.get(runner_up, 0)
+        margin = repo["score"] - runner_up_score
+        method = "override" if forced else ("rules" if ranked else "unmatched")
+        reasons = []
+        if method == "unmatched":
+            reasons.append("unmatched")
+        elif method == "override":
+            if primary == "triage":
+                reasons.append("manual_triage")
+        else:
+            if repo["score"] < weights.get("review_min_score", REVIEW_DEFAULTS["review_min_score"]):
+                reasons.append("low_score")
+            if runner_up_score > 0 and margin < weights.get("review_min_margin", REVIEW_DEFAULTS["review_min_margin"]):
+                reasons.append("close_scores")
+        repo["classification"] = {
+            "method": method,
+            "review_needed": bool(reasons),
+            "reasons": reasons,
+            "score": repo["score"],
+            "runner_up": runner_up,
+            "runner_up_score": runner_up_score,
+            "margin": margin,
+        }
+        annotation = maturity.get(repo["full_name"].lower(), {})
+        repo["maturity"] = {
+            "stage": annotation.get("stage", "unknown"),
+            "source": annotation.get("source"),
+            "note": annotation.get("note", ""),
+        }
         # Topics that explain the classification first, generic ones last.
         rank = {cid: i for i, cid in enumerate([primary, *repo["tags"]])}
         by_id = {c["id"]: c for c in compiled}
@@ -299,11 +359,14 @@ def _when(iso: str | None) -> str:
 
 def _row(r: dict, titles: dict, show_cat: bool = False) -> str:
     desc = _cell(r["description"]) or "_No description._"
+    if r.get("classification", {}).get("review_needed"):
+        desc = f"**Classification review needed.** {desc}"
     if r["archived"]:
         desc = f"**Archived.** {desc}"
     stars = fmt_num(r["stars"])
     if r.get("stars_delta"):
-        stars += f" <sub>+{fmt_num(r['stars_delta'])}</sub>"
+        sign = "+" if r["stars_delta"] > 0 else "-"
+        stars += f" <sub>{sign}{fmt_num(abs(r['stars_delta']))}</sub>"
     meta = r["language"] or ""
     if show_cat:
         meta = f"{titles[r['category']]}"
@@ -325,6 +388,7 @@ def render_readme(repos: list[dict], cfg: dict, today: dt.date) -> str:
     non_empty = [c for c in cats if by_cat[c["id"]]]
     top_n = lst.get("readme_top", 20)
     hl = lst.get("highlight_size", 10)
+    review_count = sum(1 for r in repos if r.get("classification", {}).get("review_needed"))
     head = "| Project | What it does | Stars | {} | Last push |\n|:--|:--|--:|:--|:--|"
 
     out: list[str] = []
@@ -351,6 +415,7 @@ def render_readme(repos: list[dict], cfg: dict, today: dt.date) -> str:
         f"{len(non_empty)} categories. Regenerated every day by GitHub Actions from "
         f"[@{lst['user']}]({lst['author_url']})'s stars: star a repository and it shows up here, classified, the next morning.\n"
     )
+    out.append(f"**{review_count} projects need classification review.** Flagged rows keep their selected category pending review.\n")
     if repo:
         out.append(
             f"**Want this for your own stars?** [Use this template](https://github.com/{repo}/generate), "
@@ -361,7 +426,7 @@ def render_readme(repos: list[dict], cfg: dict, today: dt.date) -> str:
 
     out.append("## Contents\n")
     out.append("- [Recently starred](#recently-starred)")
-    rising_pool = [r for r in starred if r.get("stars_delta")]
+    rising_pool = [r for r in starred if (r.get("stars_delta") or 0) > 0]
     if rising_pool:
         out.append("- [Rising](#rising)")
     for c in non_empty:
@@ -415,19 +480,35 @@ def render_readme(repos: list[dict], cfg: dict, today: dt.date) -> str:
         "name and description. Topics weigh most because maintainers curate them.\n"
         "3. Daily snapshots of star counts give a momentum signal (stars gained over about 30 days).\n"
         "4. This README, a JSON dataset and the interactive explorer are regenerated and published.\n\n"
-        "The taxonomy, weights and manual overrides live in [`config.toml`](config.toml). "
+        "The taxonomy, weights, manual overrides and sourced project stages live in [`config.toml`](config.toml). "
         "The generator is a single dependency-free Python file: [`scripts/build.py`](scripts/build.py).\n"
+    )
+    out.append(
+        "Rule scores and the margin over the next positive-scoring category are heuristic evidence, "
+        "not calibrated probabilities. A rule winner is flagged for review when its score is below "
+        f"{cfg['scoring'].get('review_min_score', REVIEW_DEFAULTS['review_min_score'])} or its margin is below "
+        f"{cfg['scoring'].get('review_min_margin', REVIEW_DEFAULTS['review_min_margin'])} against another positive score. "
+        "Unmatched projects also need review. Manual category overrides are trusted curator decisions; "
+        "a manual hold in Triage still needs review, including projects outside the GenAI taxonomy. "
+        "An override's rule score or margin may be low or negative without weakening that manual decision.\n\n"
+        "Project stage (experimental, alpha, beta or stable) comes only from a curated upstream HTTPS source. "
+        "Unknown means unassessed; stars, version numbers and recent pushes do not establish stability. "
+        "Maintenance is separate: active means pushed within 90 days, maintained within 365 days, "
+        "and dormant means older; archived repositories and unknown push dates retain their own status. "
+        "See [catalog quality and metadata](docs/catalog-quality.md) for the field contract and reference tests.\n"
     )
     by_rules = sum(1 for r in repos if r.get("classified_by") == "rules")
     by_hand = sum(1 for r in repos if r.get("classified_by") == "override")
     unmatched = sum(1 for r in repos if r["category"] == "triage")
     out.append("### Why no LLM\n")
     out.append(
-        "Classification is deterministic and explainable: same input, same category, and every project "
-        "shows the topics that placed it (the first tags in each row). It costs nothing, needs no key "
-        "and cannot hallucinate a category. "
+        "Classification is deterministic and explainable: same input, same category. "
+        "The first tags in each row show available topic evidence, while the JSON includes the method, "
+        "review reasons, rule score and runner-up. Rules cost nothing and need no key, but weak or "
+        "ambiguous metadata can still produce an incorrect category. "
         f"On this list, **{by_rules} of {len(repos)} projects are placed by the rules alone**, "
-        f"{by_hand} by a manual override in `config.toml` and {unmatched} remain to triage. "
+        f"{by_hand} by a manual override in `config.toml`. "
+        f"The Triage category contains {unmatched} project{'s' if unmatched != 1 else ''}, including any manual holds. "
         "The test suite pins the expected category of reference projects so taxonomy edits cannot drift silently.\n"
     )
     out.append("## Use it for your own stars\n")
@@ -446,7 +527,8 @@ def render_readme(repos: list[dict], cfg: dict, today: dt.date) -> str:
     out.append(
         "This list mirrors what one practitioner actually uses and follows. "
         + (f"Know a project that belongs here? [Open a suggestion](https://github.com/{repo}/issues/new?template=suggest.yml). " if repo else "")
-        + "Accepted suggestions get starred, then classified on the next run.\n"
+        + "Accepted suggestions get starred, then classified on the next run. "
+        + "[Community review notes](docs/community-reviews.md) record evidence and pending editorial decisions.\n"
     )
     out.append("## License\n")
     out.append(
@@ -467,7 +549,7 @@ def build(payload: dict, cfg: dict, today: dt.date, out_dir: Path = ROOT) -> dic
     data_dir = out_dir / "data"
     data_dir.mkdir(parents=True, exist_ok=True)
     hist_path = data_dir / "history.json"
-    history = json.loads(hist_path.read_text()) if hist_path.exists() else {}
+    history = json.loads(hist_path.read_text(encoding="utf-8")) if hist_path.exists() else {}
     history = update_history(repos, history, today, cfg["list"].get("history_days", 35))
     apply_momentum(repos, history, today)
 
@@ -488,9 +570,9 @@ def build(payload: dict, cfg: dict, today: dt.date, out_dir: Path = ROOT) -> dic
         ],
         "repos": repos,
     }
-    (data_dir / "repos.json").write_text(json.dumps(dataset, ensure_ascii=False, indent=1) + "\n")
-    hist_path.write_text(json.dumps(history, separators=(",", ":"), sort_keys=True) + "\n")
-    (out_dir / "README.md").write_text(render_readme(repos, cfg, today))
+    (data_dir / "repos.json").write_text(json.dumps(dataset, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    hist_path.write_text(json.dumps(history, separators=(",", ":"), sort_keys=True) + "\n", encoding="utf-8")
+    (out_dir / "README.md").write_text(render_readme(repos, cfg, today), encoding="utf-8")
     return dataset
 
 
@@ -504,7 +586,7 @@ def main(argv: list[str] | None = None) -> int:
     cfg = adapt_for_fork(load_config())
     today = dt.date.fromisoformat(args.today) if args.today else dt.datetime.now(dt.timezone.utc).date()
     if args.fixture:
-        payload = json.loads(args.fixture.read_text())
+        payload = json.loads(args.fixture.read_text(encoding="utf-8"))
     else:
         payload = fetch_live(cfg["list"]["user"], os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN"))
     dataset = build(payload, cfg, today, args.out)

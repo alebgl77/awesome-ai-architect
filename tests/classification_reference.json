@@ -1,0 +1,195 @@
+[
+  {
+    "label": "Paperless document management: curated productivity override",
+    "repo": {
+      "full_name": "paperless-ngx/paperless-ngx",
+      "name": "paperless-ngx",
+      "description": "A community-supported supercharged document management system: scan, index and archive all your documents",
+      "topics": [
+        "ai",
+        "angular",
+        "archiving",
+        "django",
+        "dms",
+        "document-management",
+        "document-management-system",
+        "llm",
+        "machine-learning",
+        "ocr",
+        "optical-character-recognition",
+        "pdf"
+      ]
+    },
+    "expected_category": "automation",
+    "expected_classification": {
+      "method": "override",
+      "review_needed": false,
+      "reasons": [],
+      "score": 0,
+      "runner_up": "models",
+      "runner_up_score": 3,
+      "margin": -3
+    }
+  },
+  {
+    "label": "AzuraCast radio management: manual hold outside GenAI taxonomy",
+    "repo": {
+      "full_name": "AzuraCast/AzuraCast",
+      "name": "AzuraCast",
+      "description": "A self-hosted web radio management suite, including turnkey installer tools for the full radio software stack and a modern, easy-to-use web app to manage your stations.",
+      "topics": [
+        "icecast",
+        "liquidsoap",
+        "radio",
+        "radio-station",
+        "shoutcast",
+        "station",
+        "streaming",
+        "webcast"
+      ]
+    },
+    "expected_category": "triage",
+    "expected_classification": {
+      "method": "override",
+      "review_needed": true,
+      "reasons": [
+        "manual_triage"
+      ],
+      "score": 0,
+      "runner_up": "apps",
+      "runner_up_score": 1,
+      "margin": -1
+    }
+  },
+  {
+    "label": "Strong topic without a competing signal",
+    "repo": {
+      "full_name": "sample/reference",
+      "description": "",
+      "topics": [
+        "inference"
+      ]
+    },
+    "expected_category": "inference",
+    "expected_classification": {
+      "method": "rules",
+      "review_needed": false,
+      "reasons": [],
+      "score": 3,
+      "runner_up": null,
+      "runner_up_score": 0,
+      "margin": 3
+    }
+  },
+  {
+    "label": "Weak topic keeps its winner and requests review",
+    "repo": {
+      "full_name": "sample/reference",
+      "description": "",
+      "topics": [
+        "tools"
+      ]
+    },
+    "expected_category": "mcp",
+    "expected_classification": {
+      "method": "rules",
+      "review_needed": true,
+      "reasons": [
+        "low_score"
+      ],
+      "score": 1,
+      "runner_up": null,
+      "runner_up_score": 0,
+      "margin": 1
+    }
+  },
+  {
+    "label": "Tied strong topics use taxonomy order",
+    "repo": {
+      "full_name": "sample/reference",
+      "description": "",
+      "topics": [
+        "memory",
+        "mcp",
+        "rag"
+      ]
+    },
+    "expected_category": "mcp",
+    "expected_classification": {
+      "method": "rules",
+      "review_needed": true,
+      "reasons": [
+        "close_scores"
+      ],
+      "score": 3,
+      "runner_up": "memory",
+      "runner_up_score": 3,
+      "margin": 0
+    }
+  },
+  {
+    "label": "No signal remains unmatched",
+    "repo": {
+      "full_name": "sample/reference",
+      "description": "",
+      "topics": []
+    },
+    "expected_category": "triage",
+    "expected_classification": {
+      "method": "unmatched",
+      "review_needed": true,
+      "reasons": [
+        "unmatched"
+      ],
+      "score": 0,
+      "runner_up": null,
+      "runner_up_score": 0,
+      "margin": 0
+    }
+  },
+  {
+    "label": "Weak tied topics record both review reasons",
+    "repo": {
+      "full_name": "sample/reference",
+      "description": "",
+      "topics": [
+        "tools",
+        "search"
+      ]
+    },
+    "expected_category": "mcp",
+    "expected_classification": {
+      "method": "rules",
+      "review_needed": true,
+      "reasons": [
+        "low_score",
+        "close_scores"
+      ],
+      "score": 1,
+      "runner_up": "rag",
+      "runner_up_score": 1,
+      "margin": 0
+    }
+  },
+  {
+    "label": "Exact score and margin thresholds do not request review",
+    "repo": {
+      "full_name": "sample/reference",
+      "description": "",
+      "topics": [
+        "mcp",
+        "search"
+      ]
+    },
+    "expected_category": "mcp",
+    "expected_classification": {
+      "method": "rules",
+      "review_needed": false,
+      "reasons": [],
+      "score": 3,
+      "runner_up": "rag",
+      "runner_up_score": 1,
+      "margin": 2
+    }
+  }
+]

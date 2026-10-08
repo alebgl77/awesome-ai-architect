@@ -30,6 +30,22 @@ exclude_starred = []
 "thedotmack/claude-mem" = "memory"
 "rohitg00/agentmemory" = "memory"
 "zilliztech/memsearch" = "memory"
+# Document management and productivity, rather than model training or OCR tooling.
+"paperless-ngx/paperless-ngx" = "automation"
+# Radio management is outside the GenAI taxonomy; "web app" is not an AI signal.
+"AzuraCast/AzuraCast" = "triage"
+
+# Project stage is curated from explicit upstream statements, never inferred
+# from popularity, recent activity or version numbers. Unlisted = unassessed.
+[maturity."paperless-ngx/paperless-ngx"]
+stage = "stable"
+source = "https://github.com/paperless-ngx/paperless-ngx/blob/138160cbda97796ffbc8c7048139c728210c020d/docs/administration.md"
+note = "Stable release channel; development builds may differ."
+
+[maturity."AzuraCast/AzuraCast"]
+stage = "stable"
+source = "https://www.azuracast.com/docs/getting-started/updates/release-channels/"
+note = "Stable release channel; rolling builds may differ."
 
 # ---------------------------------------------------------------------------
 # Taxonomy
@@ -51,6 +67,9 @@ name = 2
 description = 1
 secondary_min = 3
 max_secondary = 3
+# Flag uncertain rule winners without changing their selected category.
+review_min_score = 3
+review_min_margin = 2
 
 [[category]]
 id = "mcp"
@@ -219,6 +238,6 @@ keywords = ["awesome", "tutorial", "tutorials", "course", "cookbook", "curated",
 id = "triage"
 title = "To Triage"
 short = "Triage"
-blurb = "Not matched by the taxonomy yet. Add topics upstream or an override in config.toml."
+blurb = "Unmatched projects or manual holds outside the GenAI taxonomy. Review upstream context before assigning a category."
 topics = []
 keywords = []

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-18",
+ "generated_at": "2026-10-19",
  "user": "alebgl77",
  "repo": "alebgl77/awesome-ai-architect",
  "title": "Awesome AI Architect",
@@ -143,7 +143,7 @@
    "title": "To Triage",
    "short": "Triage",
    "blurb": "Unmatched projects or manual holds outside the GenAI taxonomy. Review upstream context before assigning a category.",
-   "count": 1
+   "count": 2
   }
  ],
  "repos": [
@@ -156,8 +156,8 @@
    "homepage": "",
    "language": "Shell",
    "license": "MIT",
-   "stars": 301370,
-   "forks": 26911,
+   "stars": 301851,
+   "forks": 26953,
    "open_issues": 378,
    "topics": [
     "ai",
@@ -201,8 +201,8 @@
    ],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 6338,
-   "delta_days": 14
+   "stars_delta": 6819,
+   "delta_days": 15
   },
   {
    "full_name": "mattpocock/skills",
@@ -213,9 +213,9 @@
    "homepage": "https://aihero.dev/skills",
    "language": "Shell",
    "license": "MIT",
-   "stars": 295504,
-   "forks": 24792,
-   "open_issues": 190,
+   "stars": 296831,
+   "forks": 24920,
+   "open_issues": 195,
    "topics": [],
    "created_at": "2026-02-03T11:15:53Z",
    "pushed_at": "2026-10-13T08:46:40Z",
@@ -243,8 +243,8 @@
    "key_topics": [],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 19901,
-   "delta_days": 14
+   "stars_delta": 21228,
+   "delta_days": 15
   },
   {
    "full_name": "affaan-m/ECC",
@@ -255,9 +255,9 @@
    "homepage": "https://ecc.tools",
    "language": "JavaScript",
    "license": "MIT",
-   "stars": 282850,
-   "forks": 42013,
-   "open_issues": 240,
+   "stars": 283601,
+   "forks": 42124,
+   "open_issues": 246,
    "topics": [
     "ai-agents",
     "anthropic",
@@ -269,7 +269,7 @@
     "productivity"
    ],
    "created_at": "2026-01-18T00:51:51Z",
-   "pushed_at": "2026-10-15T19:17:01Z",
+   "pushed_at": "2026-10-19T05:03:15Z",
    "starred_at": "2026-06-03T13:55:54Z",
    "archived": false,
    "fork": false,
@@ -303,8 +303,8 @@
    ],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 10353,
-   "delta_days": 14
+   "stars_delta": 11104,
+   "delta_days": 15
   },
   {
    "full_name": "deepseek-ai/deepseek-harness",
@@ -315,8 +315,8 @@
    "homepage": "https://deepseek.com/harness",
    "language": "TypeScript",
    "license": "MIT",
-   "stars": 252593,
-   "forks": 30387,
+   "stars": 253997,
+   "forks": 30708,
    "open_issues": 0,
    "topics": [
     "ai-agents",
@@ -357,8 +357,8 @@
    ],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 9489,
-   "delta_days": 14
+   "stars_delta": 10893,
+   "delta_days": 15
   },
   {
    "full_name": "Shubhamsaboo/awesome-llm-apps",
@@ -369,9 +369,9 @@
    "homepage": "https://www.theunwindai.com",
    "language": "Python",
    "license": "Apache-2.0",
-   "stars": 142165,
-   "forks": 20898,
-   "open_issues": 36,
+   "stars": 142277,
+   "forks": 20919,
+   "open_issues": 14,
    "topics": [
     "agents",
     "llms",
@@ -379,7 +379,7 @@
     "rag"
    ],
    "created_at": "2024-04-29T05:30:25Z",
-   "pushed_at": "2026-10-17T16:56:09Z",
+   "pushed_at": "2026-10-18T16:28:46Z",
    "starred_at": "2026-10-12T06:47:58Z",
    "archived": false,
    "fork": false,
@@ -426,9 +426,9 @@
    "homepage": "https://github.github.com/spec-kit/",
    "language": "Python",
    "license": "MIT",
-   "stars": 141721,
-   "forks": 12677,
-   "open_issues": 187,
+   "stars": 141877,
+   "forks": 12688,
+   "open_issues": 189,
    "topics": [
     "ai",
     "copilot",
@@ -470,8 +470,8 @@
    ],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 1676,
-   "delta_days": 14
+   "stars_delta": 1832,
+   "delta_days": 15
   },
   {
    "full_name": "garrytan/gstack",
@@ -482,12 +482,12 @@
    "homepage": "",
    "language": "TypeScript",
    "license": "MIT",
-   "stars": 136806,
-   "forks": 20305,
-   "open_issues": 65,
+   "stars": 136900,
+   "forks": 20311,
+   "open_issues": 80,
    "topics": [],
    "created_at": "2026-03-11T21:22:45Z",
-   "pushed_at": "2026-10-18T09:12:41Z",
+   "pushed_at": "2026-10-19T10:31:27Z",
    "starred_at": "2026-04-02T12:13:58Z",
    "archived": false,
    "fork": false,
@@ -514,8 +514,8 @@
    "key_topics": [],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 1835,
-   "delta_days": 14
+   "stars_delta": 1929,
+   "delta_days": 15
   },
   {
    "full_name": "ggml-org/llama.cpp",
@@ -526,14 +526,14 @@
    "homepage": "https://llama.app",
    "language": "C++",
    "license": "MIT",
-   "stars": 131558,
-   "forks": 24515,
-   "open_issues": 2570,
+   "stars": 131678,
+   "forks": 24543,
+   "open_issues": 2553,
    "topics": [
     "ggml"
    ],
    "created_at": "2023-03-10T18:58:00Z",
-   "pushed_at": "2026-10-18T08:59:55Z",
+   "pushed_at": "2026-10-19T10:39:45Z",
    "starred_at": "2026-08-26T12:11:12Z",
    "archived": false,
    "fork": false,
@@ -562,8 +562,8 @@
    ],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 1294,
-   "delta_days": 14
+   "stars_delta": 1414,
+   "delta_days": 15
   },
   {
    "full_name": "Graphify-Labs/graphify",
@@ -574,9 +574,9 @@
    "homepage": "https://www.graphify.com",
    "language": "Python",
    "license": "Apache-2.0",
-   "stars": 127977,
-   "forks": 12338,
-   "open_issues": 1540,
+   "stars": 128708,
+   "forks": 12401,
+   "open_issues": 1555,
    "topics": [
     "ai-agents",
     "antigravity",
@@ -634,8 +634,8 @@
    ],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 4344,
-   "delta_days": 14
+   "stars_delta": 5075,
+   "delta_days": 15
   },
   {
    "full_name": "addyosmani/agent-skills",
@@ -646,9 +646,9 @@
    "homepage": "https://skills.addy.ie",
    "language": "JavaScript",
    "license": "MIT",
-   "stars": 107977,
-   "forks": 11253,
-   "open_issues": 133,
+   "stars": 108403,
+   "forks": 11298,
+   "open_issues": 134,
    "topics": [
     "agent-skills",
     "antigravity",
@@ -691,8 +691,8 @@
    ],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 7040,
-   "delta_days": 14
+   "stars_delta": 7466,
+   "delta_days": 15
   },
   {
    "full_name": "paperclipai/paperclip",
@@ -703,9 +703,9 @@
    "homepage": "https://paperclip.ing",
    "language": "TypeScript",
    "license": "MIT",
-   "stars": 103814,
-   "forks": 17362,
-   "open_issues": 6109,
+   "stars": 104405,
+   "forks": 17428,
+   "open_issues": 6200,
    "topics": [
     "acpx",
     "agent-orchestration",
@@ -729,7 +729,7 @@
     "workflow-automation"
    ],
    "created_at": "2026-03-02T15:01:51Z",
-   "pushed_at": "2026-10-18T09:27:28Z",
+   "pushed_at": "2026-10-19T10:01:43Z",
    "starred_at": "2026-10-09T07:51:54Z",
    "archived": false,
    "fork": false,
@@ -772,13 +772,13 @@
    "owner": "nexu-io",
    "name": "open-design",
    "url": "https://github.com/nexu-io/open-design",
-   "description": "The 1st Collaborative AI Design Agent Workspace. Local-first and open source. Create prototypes, websites, apps, dashboards, presentations, images, and videos with your team and AI agents. Share work, exchange feedback, and iterate together in one workspace.",
+   "description": "The 1st Collaborative AI Design Agent Workspace. Local-first and open source. Create motion, prototypes, websites, apps, dashboards, presentations, images, and videos with your team and AI agents. Share work, exchange feedback, and iterate together in one workspace.",
    "homepage": "https://open-design.ai",
    "language": "TypeScript",
    "license": "Apache-2.0",
-   "stars": 102045,
-   "forks": 11720,
-   "open_issues": 1201,
+   "stars": 102374,
+   "forks": 11743,
+   "open_issues": 1207,
    "topics": [
     "agent-skills",
     "ai-design",
@@ -786,12 +786,12 @@
     "claude-code-for-design",
     "claude-design",
     "codex-design",
-    "coding-agents",
     "cursor-design",
     "deepseek",
     "deepseek-harness",
     "design-systems",
     "desktop-app",
+    "desktop-apps",
     "dsh",
     "dsh-plugin",
     "figma-alternative",
@@ -802,7 +802,7 @@
     "vibe-coding"
    ],
    "created_at": "2026-04-28T04:25:20Z",
-   "pushed_at": "2026-10-18T01:24:39Z",
+   "pushed_at": "2026-10-19T10:41:45Z",
    "starred_at": "2026-05-03T23:25:09Z",
    "archived": false,
    "fork": false,
@@ -811,15 +811,17 @@
    "tags": [
     "frontend"
    ],
-   "score": 9,
+   "score": 6,
    "classification": {
     "method": "rules",
-    "review_needed": false,
-    "reasons": [],
-    "score": 9,
+    "review_needed": true,
+    "reasons": [
+     "close_scores"
+    ],
+    "score": 6,
     "runner_up": "frontend",
     "runner_up_score": 6,
-    "margin": 3
+    "margin": 0
    },
    "maturity": {
     "stage": "unknown",
@@ -829,14 +831,14 @@
    "key_topics": [
     "vibe-coding",
     "agent-skills",
-    "coding-agents",
     "design-systems",
-    "dsh"
+    "dsh",
+    "byok"
    ],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 2691,
-   "delta_days": 14
+   "stars_delta": 3020,
+   "delta_days": 15
   },
   {
    "full_name": "thedotmack/claude-mem",
@@ -847,9 +849,9 @@
    "homepage": "https://claude-mem.ai",
    "language": "TypeScript",
    "license": "Apache-2.0",
-   "stars": 101501,
-   "forks": 8904,
-   "open_issues": 136,
+   "stars": 101706,
+   "forks": 8938,
+   "open_issues": 89,
    "topics": [
     "ai",
     "ai-agents",
@@ -873,7 +875,7 @@
     "supermemory"
    ],
    "created_at": "2025-08-31T20:50:03Z",
-   "pushed_at": "2026-10-18T08:50:03Z",
+   "pushed_at": "2026-10-19T10:26:16Z",
    "starred_at": "2026-05-28T07:36:40Z",
    "archived": false,
    "fork": false,
@@ -907,8 +909,8 @@
    ],
    "classified_by": "override",
    "health": "active",
-   "stars_delta": 5730,
-   "delta_days": 14
+   "stars_delta": 5935,
+   "delta_days": 15
   },
   {
    "full_name": "Panniantong/Agent-Reach",
@@ -919,9 +921,9 @@
    "homepage": "",
    "language": "Python",
    "license": "MIT",
-   "stars": 98870,
-   "forks": 8708,
-   "open_issues": 222,
+   "stars": 99351,
+   "forks": 8769,
+   "open_issues": 230,
    "topics": [
     "agent-infrastructure",
     "ai-agent",
@@ -979,8 +981,8 @@
    ],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 8709,
-   "delta_days": 14
+   "stars_delta": 9190,
+   "delta_days": 15
   },
   {
    "full_name": "Leonxlnx/taste-skill",
@@ -991,9 +993,9 @@
    "homepage": "https://tasteskill.dev",
    "language": "JavaScript",
    "license": "MIT",
-   "stars": 98603,
-   "forks": 6694,
-   "open_issues": 2,
+   "stars": 99097,
+   "forks": 6739,
+   "open_issues": 1,
    "topics": [
     "agent-skills",
     "ai-agents",
@@ -1008,7 +1010,7 @@
     "web-design"
    ],
    "created_at": "2026-02-19T21:44:05Z",
-   "pushed_at": "2026-10-18T08:23:56Z",
+   "pushed_at": "2026-10-19T05:47:12Z",
    "starred_at": "2026-08-20T10:56:48Z",
    "archived": false,
    "fork": false,
@@ -1042,8 +1044,8 @@
    ],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 6182,
-   "delta_days": 14
+   "stars_delta": 6676,
+   "delta_days": 15
   },
   {
    "full_name": "hacksider/Deep-Live-Cam",
@@ -1054,9 +1056,9 @@
    "homepage": "https://deeplivecam.net/",
    "language": "Python",
    "license": "AGPL-3.0",
-   "stars": 97110,
-   "forks": 14145,
-   "open_issues": 45,
+   "stars": 97120,
+   "forks": 14148,
+   "open_issues": 46,
    "topics": [
     "ai",
     "ai-deep-fake",
@@ -1109,8 +1111,8 @@
    ],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 198,
-   "delta_days": 14
+   "stars_delta": 208,
+   "delta_days": 15
   },
   {
    "full_name": "odysseus-dev/odysseus",
@@ -1121,9 +1123,9 @@
    "homepage": "https://odysseus-dev.github.io/odysseus",
    "language": "Python",
    "license": "AGPL-3.0",
-   "stars": 93851,
-   "forks": 1661,
-   "open_issues": 1469,
+   "stars": 93951,
+   "forks": 1678,
+   "open_issues": 1471,
    "topics": [],
    "created_at": "2026-05-31T14:05:51Z",
    "pushed_at": "2026-10-16T19:05:32Z",
@@ -1153,8 +1155,8 @@
    "key_topics": [],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 4610,
-   "delta_days": 14
+   "stars_delta": 4710,
+   "delta_days": 15
   },
   {
    "full_name": "D4Vinci/Scrapling",
@@ -1165,9 +1167,9 @@
    "homepage": "https://scrapling.readthedocs.io/en/latest/",
    "language": "Python",
    "license": "BSD-3-Clause",
-   "stars": 88371,
-   "forks": 9108,
-   "open_issues": 5,
+   "stars": 88581,
+   "forks": 9138,
+   "open_issues": 6,
    "topics": [
     "ai",
     "ai-scraping",
@@ -1191,7 +1193,7 @@
     "xpath"
    ],
    "created_at": "2024-10-13T20:29:53Z",
-   "pushed_at": "2026-10-17T21:43:59Z",
+   "pushed_at": "2026-10-18T17:41:44Z",
    "starred_at": "2026-04-12T19:13:28Z",
    "archived": false,
    "fork": false,
@@ -1225,8 +1227,8 @@
    ],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 2829,
-   "delta_days": 14
+   "stars_delta": 3039,
+   "delta_days": 15
   },
   {
    "full_name": "bytedance/deer-flow",
@@ -1237,9 +1239,9 @@
    "homepage": "https://deerflow.tech",
    "language": "Python",
    "license": "MIT",
-   "stars": 84053,
-   "forks": 11720,
-   "open_issues": 953,
+   "stars": 84120,
+   "forks": 11738,
+   "open_issues": 949,
    "topics": [
     "agent",
     "agentic",
@@ -1261,7 +1263,7 @@
     "typescript"
    ],
    "created_at": "2025-05-07T02:50:19Z",
-   "pushed_at": "2026-10-18T05:12:23Z",
+   "pushed_at": "2026-10-19T08:31:49Z",
    "starred_at": "2026-03-23T09:45:18Z",
    "archived": false,
    "fork": false,
@@ -1292,74 +1294,8 @@
    ],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 684,
-   "delta_days": 14
-  },
-  {
-   "full_name": "grafana/grafana",
-   "owner": "grafana",
-   "name": "grafana",
-   "url": "https://github.com/grafana/grafana",
-   "description": "The open and composable observability and data visualization platform. Visualize metrics, logs, and traces from multiple sources like Prometheus, Loki, Elasticsearch, InfluxDB, Postgres and many more.",
-   "homepage": "https://grafana.com",
-   "language": "TypeScript",
-   "license": "AGPL-3.0",
-   "stars": 77344,
-   "forks": 14879,
-   "open_issues": 3341,
-   "topics": [
-    "alerting",
-    "analytics",
-    "business-intelligence",
-    "dashboard",
-    "data-visualization",
-    "elasticsearch",
-    "go",
-    "grafana",
-    "hacktoberfest",
-    "influxdb",
-    "metrics",
-    "monitoring",
-    "mysql",
-    "postgres",
-    "prometheus"
-   ],
-   "created_at": "2013-12-11T15:59:56Z",
-   "pushed_at": "2026-10-18T07:35:30Z",
-   "starred_at": "2026-03-30T13:37:13Z",
-   "archived": false,
-   "fork": false,
-   "mine": false,
-   "category": "observability",
-   "tags": [
-    "data"
-   ],
-   "score": 15,
-   "classification": {
-    "method": "rules",
-    "review_needed": false,
-    "reasons": [],
-    "score": 15,
-    "runner_up": "data",
-    "runner_up_score": 6,
-    "margin": 9
-   },
-   "maturity": {
-    "stage": "unknown",
-    "source": null,
-    "note": ""
-   },
-   "key_topics": [
-    "grafana",
-    "monitoring",
-    "prometheus",
-    "data-visualization",
-    "business-intelligence"
-   ],
-   "classified_by": "rules",
-   "health": "active",
-   "stars_delta": 283,
-   "delta_days": 14
+   "stars_delta": 751,
+   "delta_days": 15
   },
   {
    "full_name": "ComposioHQ/awesome-claude-skills",
@@ -1370,9 +1306,9 @@
    "homepage": "",
    "language": "Python",
    "license": "",
-   "stars": 77342,
-   "forks": 9172,
-   "open_issues": 1782,
+   "stars": 77415,
+   "forks": 9192,
+   "open_issues": 1789,
    "topics": [
     "agent-skills",
     "ai-agents",
@@ -1428,8 +1364,74 @@
    ],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 893,
-   "delta_days": 14
+   "stars_delta": 966,
+   "delta_days": 15
+  },
+  {
+   "full_name": "grafana/grafana",
+   "owner": "grafana",
+   "name": "grafana",
+   "url": "https://github.com/grafana/grafana",
+   "description": "The open and composable observability and data visualization platform. Visualize metrics, logs, and traces from multiple sources like Prometheus, Loki, Elasticsearch, InfluxDB, Postgres and many more.",
+   "homepage": "https://grafana.com",
+   "language": "TypeScript",
+   "license": "AGPL-3.0",
+   "stars": 77366,
+   "forks": 14883,
+   "open_issues": 3327,
+   "topics": [
+    "alerting",
+    "analytics",
+    "business-intelligence",
+    "dashboard",
+    "data-visualization",
+    "elasticsearch",
+    "go",
+    "grafana",
+    "hacktoberfest",
+    "influxdb",
+    "metrics",
+    "monitoring",
+    "mysql",
+    "postgres",
+    "prometheus"
+   ],
+   "created_at": "2013-12-11T15:59:56Z",
+   "pushed_at": "2026-10-19T10:44:11Z",
+   "starred_at": "2026-03-30T13:37:13Z",
+   "archived": false,
+   "fork": false,
+   "mine": false,
+   "category": "observability",
+   "tags": [
+    "data"
+   ],
+   "score": 15,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 15,
+    "runner_up": "data",
+    "runner_up_score": 6,
+    "margin": 9
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   },
+   "key_topics": [
+    "grafana",
+    "monitoring",
+    "prometheus",
+    "data-visualization",
+    "business-intelligence"
+   ],
+   "classified_by": "rules",
+   "health": "active",
+   "stars_delta": 305,
+   "delta_days": 15
   },
   {
    "full_name": "ruvnet/ruflo",
@@ -1440,9 +1442,9 @@
    "homepage": "https://Cognitum.One",
    "language": "TypeScript",
    "license": "MIT",
-   "stars": 76245,
-   "forks": 9012,
-   "open_issues": 1049,
+   "stars": 76813,
+   "forks": 9072,
+   "open_issues": 1064,
    "topics": [
     "agentic-ai",
     "agentic-framework",
@@ -1466,7 +1468,7 @@
     "typescript"
    ],
    "created_at": "2025-06-02T21:24:20Z",
-   "pushed_at": "2026-10-18T09:08:28Z",
+   "pushed_at": "2026-10-19T09:16:48Z",
    "starred_at": "2026-03-28T22:20:41Z",
    "archived": false,
    "fork": false,
@@ -1501,8 +1503,8 @@
    ],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 2419,
-   "delta_days": 14
+   "stars_delta": 2987,
+   "delta_days": 15
   },
   {
    "full_name": "shanraisshan/claude-code-best-practice",
@@ -1513,9 +1515,9 @@
    "homepage": "https://linkedin.com/in/shanraisshan",
    "language": "HTML",
    "license": "MIT",
-   "stars": 67681,
-   "forks": 6743,
-   "open_issues": 23,
+   "stars": 67731,
+   "forks": 6748,
+   "open_issues": 24,
    "topics": [
     "agentic-ai",
     "agentic-coding",
@@ -1539,7 +1541,7 @@
     "vibe-coding"
    ],
    "created_at": "2025-10-31T14:15:28Z",
-   "pushed_at": "2026-10-18T06:34:02Z",
+   "pushed_at": "2026-10-19T06:34:20Z",
    "starred_at": "2026-09-30T06:56:47Z",
    "archived": false,
    "fork": false,
@@ -1573,8 +1575,8 @@
    ],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 622,
-   "delta_days": 14
+   "stars_delta": 672,
+   "delta_days": 15
   },
   {
    "full_name": "BerriAI/litellm",
@@ -1585,8 +1587,8 @@
    "homepage": "https://docs.litellm.ai/docs/",
    "language": "Python",
    "license": "",
-   "stars": 61465,
-   "forks": 12448,
+   "stars": 61552,
+   "forks": 12472,
    "open_issues": 5571,
    "topics": [
     "ai-gateway",
@@ -1607,7 +1609,7 @@
     "vertex-ai"
    ],
    "created_at": "2023-07-27T00:09:52Z",
-   "pushed_at": "2026-10-18T09:35:01Z",
+   "pushed_at": "2026-10-19T10:36:12Z",
    "starred_at": "2026-03-31T12:09:09Z",
    "archived": false,
    "fork": false,
@@ -1642,8 +1644,8 @@
    ],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 1352,
-   "delta_days": 14
+   "stars_delta": 1439,
+   "delta_days": 15
   },
   {
    "full_name": "microsoft/autogen",
@@ -1654,9 +1656,9 @@
    "homepage": "https://microsoft.github.io/autogen/",
    "language": "Python",
    "license": "CC-BY-4.0",
-   "stars": 61457,
-   "forks": 9295,
-   "open_issues": 1125,
+   "stars": 61478,
+   "forks": 9299,
+   "open_issues": 1124,
    "topics": [
     "agentic",
     "agentic-agi",
@@ -1701,8 +1703,8 @@
    ],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 207,
-   "delta_days": 14
+   "stars_delta": 228,
+   "delta_days": 15
   },
   {
    "full_name": "crewAIInc/crewAI",
@@ -1713,9 +1715,9 @@
    "homepage": "https://crewai.com",
    "language": "Python",
    "license": "MIT",
-   "stars": 59823,
-   "forks": 8766,
-   "open_issues": 757,
+   "stars": 59861,
+   "forks": 8787,
+   "open_issues": 762,
    "topics": [
     "agents",
     "ai",
@@ -1724,7 +1726,7 @@
     "llms"
    ],
    "created_at": "2023-10-27T03:26:59Z",
-   "pushed_at": "2026-10-18T06:35:12Z",
+   "pushed_at": "2026-10-19T10:18:30Z",
    "starred_at": "2026-03-28T22:35:25Z",
    "archived": false,
    "fork": false,
@@ -1755,8 +1757,8 @@
    ],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 492,
-   "delta_days": 14
+   "stars_delta": 530,
+   "delta_days": 15
   },
   {
    "full_name": "blader/humanizer",
@@ -1767,8 +1769,8 @@
    "homepage": "https://skills.sh/blader/humanizer",
    "language": "Python",
    "license": "MIT",
-   "stars": 57930,
-   "forks": 4592,
+   "stars": 58297,
+   "forks": 4624,
    "open_issues": 6,
    "topics": [
     "agent-skills",
@@ -1819,8 +1821,8 @@
    ],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 4090,
-   "delta_days": 14
+   "stars_delta": 4457,
+   "delta_days": 15
   },
   {
    "full_name": "hesreallyhim/awesome-claude-code",
@@ -1831,9 +1833,9 @@
    "homepage": "",
    "language": "Python",
    "license": "",
-   "stars": 55926,
-   "forks": 4836,
-   "open_issues": 925,
+   "stars": 55993,
+   "forks": 4840,
+   "open_issues": 915,
    "topics": [
     "agent-skills",
     "agentic-code",
@@ -1856,7 +1858,7 @@
     "llm"
    ],
    "created_at": "2025-04-19T20:55:59Z",
-   "pushed_at": "2026-10-18T09:09:18Z",
+   "pushed_at": "2026-10-19T09:16:10Z",
    "starred_at": "2026-03-28T22:23:31Z",
    "archived": false,
    "fork": false,
@@ -1889,8 +1891,8 @@
    ],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 886,
-   "delta_days": 14
+   "stars_delta": 953,
+   "delta_days": 15
   },
   {
    "full_name": "ChromeDevTools/chrome-devtools-mcp",
@@ -1901,9 +1903,9 @@
    "homepage": "https://developer.chrome.com/docs/devtools/agents",
    "language": "TypeScript",
    "license": "Apache-2.0",
-   "stars": 53759,
-   "forks": 6885,
-   "open_issues": 180,
+   "stars": 53824,
+   "forks": 7005,
+   "open_issues": 170,
    "topics": [
     "browser",
     "chrome",
@@ -1915,7 +1917,7 @@
     "puppeteer"
    ],
    "created_at": "2025-09-11T10:39:55Z",
-   "pushed_at": "2026-10-18T06:48:01Z",
+   "pushed_at": "2026-10-19T10:41:12Z",
    "starred_at": "2026-05-28T22:00:21Z",
    "archived": false,
    "fork": false,
@@ -1948,8 +1950,8 @@
    ],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 824,
-   "delta_days": 14
+   "stars_delta": 889,
+   "delta_days": 15
   },
   {
    "full_name": "anthropics/claude-cookbooks",
@@ -1960,9 +1962,9 @@
    "homepage": "",
    "language": "Jupyter Notebook",
    "license": "MIT",
-   "stars": 53537,
-   "forks": 6440,
-   "open_issues": 361,
+   "stars": 53568,
+   "forks": 6451,
+   "open_issues": 362,
    "topics": [],
    "created_at": "2023-08-15T20:23:51Z",
    "pushed_at": "2026-10-17T00:28:09Z",
@@ -1992,8 +1994,8 @@
    "key_topics": [],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 368,
-   "delta_days": 14
+   "stars_delta": 399,
+   "delta_days": 15
   },
   {
    "full_name": "multica-ai/multica",
@@ -2004,12 +2006,12 @@
    "homepage": "https://multica.ai",
    "language": "Go",
    "license": "",
-   "stars": 53093,
-   "forks": 6955,
-   "open_issues": 1904,
+   "stars": 53192,
+   "forks": 6970,
+   "open_issues": 1877,
    "topics": [],
    "created_at": "2026-01-13T17:59:46Z",
-   "pushed_at": "2026-10-18T08:36:52Z",
+   "pushed_at": "2026-10-19T10:07:18Z",
    "starred_at": "2026-05-04T22:03:10Z",
    "archived": false,
    "fork": false,
@@ -2036,8 +2038,8 @@
    "key_topics": [],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 1185,
-   "delta_days": 14
+   "stars_delta": 1284,
+   "delta_days": 15
   },
   {
    "full_name": "kepano/obsidian-skills",
@@ -2048,9 +2050,9 @@
    "homepage": "",
    "language": "",
    "license": "MIT",
-   "stars": 49706,
+   "stars": 49760,
    "forks": 3521,
-   "open_issues": 73,
+   "open_issues": 75,
    "topics": [
     "agents",
     "agentskills",
@@ -2104,8 +2106,8 @@
    ],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 575,
-   "delta_days": 14
+   "stars_delta": 629,
+   "delta_days": 15
   },
   {
    "full_name": "HKUDS/nanobot",
@@ -2116,9 +2118,9 @@
    "homepage": "https://nanobot.wiki",
    "language": "Python",
    "license": "MIT",
-   "stars": 49143,
-   "forks": 8638,
-   "open_issues": 861,
+   "stars": 49173,
+   "forks": 8641,
+   "open_issues": 844,
    "topics": [
     "agent-framework",
     "ai-agent",
@@ -2142,7 +2144,7 @@
     "workflow-automation"
    ],
    "created_at": "2026-02-01T07:16:15Z",
-   "pushed_at": "2026-10-18T09:13:19Z",
+   "pushed_at": "2026-10-19T09:57:46Z",
    "starred_at": "2026-03-28T22:24:55Z",
    "archived": false,
    "fork": false,
@@ -2177,8 +2179,8 @@
    ],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 367,
-   "delta_days": 14
+   "stars_delta": 397,
+   "delta_days": 15
   },
   {
    "full_name": "KeygraphHQ/shannon",
@@ -2189,8 +2191,8 @@
    "homepage": "https://keygraph.io/",
    "language": "TypeScript",
    "license": "AGPL-3.0",
-   "stars": 49069,
-   "forks": 5623,
+   "stars": 49105,
+   "forks": 5626,
    "open_issues": 24,
    "topics": [
     "ai-penetration-testing",
@@ -2249,8 +2251,8 @@
    ],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 506,
-   "delta_days": 14
+   "stars_delta": 542,
+   "delta_days": 15
   },
   {
    "full_name": "paperless-ngx/paperless-ngx",
@@ -2261,9 +2263,9 @@
    "homepage": "http://docs.paperless-ngx.com/",
    "language": "Python",
    "license": "GPL-3.0",
-   "stars": 46824,
-   "forks": 3250,
-   "open_issues": 18,
+   "stars": 46869,
+   "forks": 3252,
+   "open_issues": 19,
    "topics": [
     "ai",
     "angular",
@@ -2279,7 +2281,7 @@
     "pdf"
    ],
    "created_at": "2022-02-12T21:56:52Z",
-   "pushed_at": "2026-10-18T00:54:22Z",
+   "pushed_at": "2026-10-19T06:45:14Z",
    "starred_at": "2026-10-06T14:03:25Z",
    "archived": false,
    "fork": false,
@@ -2325,9 +2327,9 @@
    "homepage": "https://librechat.ai/",
    "language": "TypeScript",
    "license": "MIT",
-   "stars": 45910,
-   "forks": 9440,
-   "open_issues": 962,
+   "stars": 45964,
+   "forks": 9453,
+   "open_issues": 966,
    "topics": [
     "ai",
     "anthropic",
@@ -2351,7 +2353,7 @@
     "webui"
    ],
    "created_at": "2023-02-12T01:06:52Z",
-   "pushed_at": "2026-10-18T09:29:22Z",
+   "pushed_at": "2026-10-19T10:08:15Z",
    "starred_at": "2026-02-12T10:40:07Z",
    "archived": false,
    "fork": false,
@@ -2386,8 +2388,8 @@
    ],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 667,
-   "delta_days": 14
+   "stars_delta": 721,
+   "delta_days": 15
   },
   {
    "full_name": "payloadcms/payload",
@@ -2398,9 +2400,9 @@
    "homepage": "https://payloadcms.com",
    "language": "TypeScript",
    "license": "MIT",
-   "stars": 45319,
-   "forks": 4304,
-   "open_issues": 1361,
+   "stars": 45345,
+   "forks": 4306,
+   "open_issues": 1364,
    "topics": [
     "cms",
     "content-management",
@@ -2423,7 +2425,7 @@
     "typescript"
    ],
    "created_at": "2021-01-05T18:49:45Z",
-   "pushed_at": "2026-10-17T13:21:04Z",
+   "pushed_at": "2026-10-19T10:12:03Z",
    "starred_at": "2026-08-05T14:35:57Z",
    "archived": false,
    "fork": false,
@@ -2456,8 +2458,8 @@
    ],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 239,
-   "delta_days": 14
+   "stars_delta": 265,
+   "delta_days": 15
   },
   {
    "full_name": "herdrdev/herdr",
@@ -2468,9 +2470,9 @@
    "homepage": "https://herdr.dev",
    "language": "Rust",
    "license": "Apache-2.0",
-   "stars": 44568,
-   "forks": 3543,
-   "open_issues": 377,
+   "stars": 44737,
+   "forks": 3564,
+   "open_issues": 387,
    "topics": [
     "agent",
     "agent-orchestration",
@@ -2492,7 +2494,7 @@
     "workspace-manager"
    ],
    "created_at": "2026-03-27T17:54:33Z",
-   "pushed_at": "2026-10-15T23:05:24Z",
+   "pushed_at": "2026-10-18T18:57:09Z",
    "starred_at": "2026-09-13T22:16:37Z",
    "archived": false,
    "fork": false,
@@ -2525,8 +2527,8 @@
    ],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 2433,
-   "delta_days": 14
+   "stars_delta": 2602,
+   "delta_days": 15
   },
   {
    "full_name": "zhaoxuya520/reverse-skill",
@@ -2537,8 +2539,8 @@
    "homepage": "",
    "language": "PowerShell",
    "license": "MIT",
-   "stars": 42502,
-   "forks": 6187,
+   "stars": 42627,
+   "forks": 6223,
    "open_issues": 35,
    "topics": [],
    "created_at": "2026-05-13T14:37:57Z",
@@ -2567,8 +2569,8 @@
    "key_topics": [],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 2941,
-   "delta_days": 14
+   "stars_delta": 3066,
+   "delta_days": 15
   },
   {
    "full_name": "Zackriya-Solutions/meetily",
@@ -2579,9 +2581,9 @@
    "homepage": "https://meetily.ai",
    "language": "Rust",
    "license": "MIT",
-   "stars": 31874,
-   "forks": 3591,
-   "open_issues": 379,
+   "stars": 31924,
+   "forks": 3640,
+   "open_issues": 380,
    "topics": [
     "ai",
     "ai-meeting-assistant",
@@ -2638,8 +2640,8 @@
    ],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 457,
-   "delta_days": 14
+   "stars_delta": 507,
+   "delta_days": 15
   },
   {
    "full_name": "supermemoryai/supermemory",
@@ -2650,8 +2652,8 @@
    "homepage": "https://supermemory.ai/docs",
    "language": "TypeScript",
    "license": "MIT",
-   "stars": 31271,
-   "forks": 2749,
+   "stars": 31301,
+   "forks": 2747,
    "open_issues": 34,
    "topics": [
     "agent-memory",
@@ -2701,8 +2703,8 @@
    ],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 196,
-   "delta_days": 14
+   "stars_delta": 226,
+   "delta_days": 15
   },
   {
    "full_name": "rohitg00/agentmemory",
@@ -2713,9 +2715,9 @@
    "homepage": "https://agent-memory.dev",
    "language": "TypeScript",
    "license": "Apache-2.0",
-   "stars": 29637,
-   "forks": 2609,
-   "open_issues": 575,
+   "stars": 29669,
+   "forks": 2620,
+   "open_issues": 577,
    "topics": [
     "agentmemory",
     "agents",
@@ -2732,7 +2734,7 @@
     "openclaw"
    ],
    "created_at": "2026-02-25T07:32:52Z",
-   "pushed_at": "2026-10-18T05:32:16Z",
+   "pushed_at": "2026-10-19T06:10:16Z",
    "starred_at": "2026-09-14T22:19:32Z",
    "archived": false,
    "fork": false,
@@ -2765,8 +2767,8 @@
    ],
    "classified_by": "override",
    "health": "active",
-   "stars_delta": 511,
-   "delta_days": 14
+   "stars_delta": 543,
+   "delta_days": 15
   },
   {
    "full_name": "TencentCloud/TencentDB-Agent-Memory",
@@ -2777,9 +2779,9 @@
    "homepage": "https://tencentcloud.github.io/TencentDB-Agent-Memory/",
    "language": "TypeScript",
    "license": "",
-   "stars": 29540,
-   "forks": 2931,
-   "open_issues": 768,
+   "stars": 29613,
+   "forks": 2971,
+   "open_issues": 774,
    "topics": [
     "agent",
     "ai-agent",
@@ -2792,7 +2794,7 @@
     "vector-search"
    ],
    "created_at": "2026-04-07T06:34:26Z",
-   "pushed_at": "2026-10-15T12:24:35Z",
+   "pushed_at": "2026-10-19T10:19:38Z",
    "starred_at": "2026-09-20T19:21:39Z",
    "archived": false,
    "fork": false,
@@ -2826,63 +2828,8 @@
    ],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 1858,
-   "delta_days": 14
-  },
-  {
-   "full_name": "grafana/loki",
-   "owner": "grafana",
-   "name": "loki",
-   "url": "https://github.com/grafana/loki",
-   "description": "Like Prometheus, but for logs.",
-   "homepage": "https://grafana.com/oss/loki",
-   "language": "Go",
-   "license": "AGPL-3.0",
-   "stars": 29034,
-   "forks": 4143,
-   "open_issues": 1082,
-   "topics": [
-    "cloudnative",
-    "grafana",
-    "hacktoberfest",
-    "logging",
-    "loki",
-    "prometheus"
-   ],
-   "created_at": "2018-04-16T09:22:48Z",
-   "pushed_at": "2026-10-18T09:09:39Z",
-   "starred_at": "2026-08-21T09:17:45Z",
-   "archived": false,
-   "fork": false,
-   "mine": false,
-   "category": "observability",
-   "tags": [],
-   "score": 6,
-   "classification": {
-    "method": "rules",
-    "review_needed": false,
-    "reasons": [],
-    "score": 6,
-    "runner_up": null,
-    "runner_up_score": 0,
-    "margin": 6
-   },
-   "maturity": {
-    "stage": "unknown",
-    "source": null,
-    "note": ""
-   },
-   "key_topics": [
-    "grafana",
-    "prometheus",
-    "loki",
-    "logging",
-    "cloudnative"
-   ],
-   "classified_by": "rules",
-   "health": "active",
-   "stars_delta": 46,
-   "delta_days": 14
+   "stars_delta": 1931,
+   "delta_days": 15
   },
   {
    "full_name": "h4ckf0r0day/obscura",
@@ -2893,9 +2840,9 @@
    "homepage": "https://obscura.sh",
    "language": "Rust",
    "license": "Apache-2.0",
-   "stars": 29014,
-   "forks": 2162,
-   "open_issues": 184,
+   "stars": 29042,
+   "forks": 2164,
+   "open_issues": 192,
    "topics": [
     "antidetect",
     "antidetect-browser",
@@ -2908,7 +2855,7 @@
     "rust"
    ],
    "created_at": "2026-04-13T10:31:41Z",
-   "pushed_at": "2026-10-17T14:55:24Z",
+   "pushed_at": "2026-10-19T10:02:51Z",
    "starred_at": "2026-09-02T23:20:41Z",
    "archived": false,
    "fork": false,
@@ -2939,8 +2886,63 @@
    ],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 693,
-   "delta_days": 14
+   "stars_delta": 721,
+   "delta_days": 15
+  },
+  {
+   "full_name": "grafana/loki",
+   "owner": "grafana",
+   "name": "loki",
+   "url": "https://github.com/grafana/loki",
+   "description": "Like Prometheus, but for logs.",
+   "homepage": "https://grafana.com/oss/loki",
+   "language": "Go",
+   "license": "AGPL-3.0",
+   "stars": 29038,
+   "forks": 4144,
+   "open_issues": 1103,
+   "topics": [
+    "cloudnative",
+    "grafana",
+    "hacktoberfest",
+    "logging",
+    "loki",
+    "prometheus"
+   ],
+   "created_at": "2018-04-16T09:22:48Z",
+   "pushed_at": "2026-10-19T10:40:33Z",
+   "starred_at": "2026-08-21T09:17:45Z",
+   "archived": false,
+   "fork": false,
+   "mine": false,
+   "category": "observability",
+   "tags": [],
+   "score": 6,
+   "classification": {
+    "method": "rules",
+    "review_needed": false,
+    "reasons": [],
+    "score": 6,
+    "runner_up": null,
+    "runner_up_score": 0,
+    "margin": 6
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   },
+   "key_topics": [
+    "grafana",
+    "prometheus",
+    "loki",
+    "logging",
+    "cloudnative"
+   ],
+   "classified_by": "rules",
+   "health": "active",
+   "stars_delta": 50,
+   "delta_days": 15
   },
   {
    "full_name": "neondatabase/neon",
@@ -2951,8 +2953,8 @@
    "homepage": "https://neon.tech",
    "language": "Rust",
    "license": "Apache-2.0",
-   "stars": 23214,
-   "forks": 1114,
+   "stars": 23220,
+   "forks": 1115,
    "open_issues": 577,
    "topics": [
     "database",
@@ -2995,8 +2997,8 @@
    ],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 43,
-   "delta_days": 14
+   "stars_delta": 49,
+   "delta_days": 15
   },
   {
    "full_name": "obsidianmd/obsidian-releases",
@@ -3007,8 +3009,8 @@
    "homepage": "https://obsidian.md",
    "language": "",
    "license": "",
-   "stars": 22330,
-   "forks": 7860,
+   "stars": 22376,
+   "forks": 7864,
    "open_issues": 4,
    "topics": [
     "bases",
@@ -3019,7 +3021,7 @@
     "obsidian-md"
    ],
    "created_at": "2020-05-08T14:18:27Z",
-   "pushed_at": "2026-10-18T09:26:58Z",
+   "pushed_at": "2026-10-19T09:38:58Z",
    "starred_at": "2026-08-05T09:18:56Z",
    "archived": false,
    "fork": false,
@@ -3050,8 +3052,8 @@
    ],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 345,
-   "delta_days": 14
+   "stars_delta": 391,
+   "delta_days": 15
   },
   {
    "full_name": "AgriciDaniel/claude-seo",
@@ -3059,11 +3061,11 @@
    "name": "claude-seo",
    "url": "https://github.com/AgriciDaniel/claude-seo",
    "description": "Universal SEO skill for Claude Code. 26 sub-skills + 19 sub-agents covering technical SEO, E-E-A-T, schema, GEO/AEO, agent readiness (Lighthouse Agentic Browsing, WebMCP, llms.txt), backlinks, local SEO, e-commerce, international SEO, Google APIs, and PDF/Excel reporting. 9 optional extensions for live SEO data.",
-   "homepage": "https://claude-seo.md",
+   "homepage": "skool.com/ai-marketing-hub-pro",
    "language": "Python",
    "license": "MIT",
-   "stars": 19151,
-   "forks": 2787,
+   "stars": 19223,
+   "forks": 2800,
    "open_issues": 38,
    "topics": [
     "ai",
@@ -3109,8 +3111,8 @@
    ],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 895,
-   "delta_days": 14
+   "stars_delta": 967,
+   "delta_days": 15
   },
   {
    "full_name": "langchain-ai/openwiki",
@@ -3121,12 +3123,12 @@
    "homepage": "",
    "language": "TypeScript",
    "license": "MIT",
-   "stars": 17242,
-   "forks": 1265,
-   "open_issues": 186,
+   "stars": 17267,
+   "forks": 1269,
+   "open_issues": 189,
    "topics": [],
    "created_at": "2026-06-22T23:48:26Z",
-   "pushed_at": "2026-10-18T08:10:28Z",
+   "pushed_at": "2026-10-19T08:19:17Z",
    "starred_at": "2026-08-19T11:58:44Z",
    "archived": false,
    "fork": false,
@@ -3154,8 +3156,8 @@
    "key_topics": [],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 289,
-   "delta_days": 14
+   "stars_delta": 314,
+   "delta_days": 15
   },
   {
    "full_name": "semgrep/semgrep",
@@ -3166,9 +3168,9 @@
    "homepage": "https://semgrep.dev",
    "language": "C",
    "license": "LGPL-2.1",
-   "stars": 17114,
-   "forks": 1107,
-   "open_issues": 954,
+   "stars": 17127,
+   "forks": 1109,
+   "open_issues": 955,
    "topics": [
     "c",
     "go",
@@ -3184,7 +3186,7 @@
     "typescript"
    ],
    "created_at": "2019-12-13T09:29:54Z",
-   "pushed_at": "2026-10-16T00:03:03Z",
+   "pushed_at": "2026-10-19T00:03:35Z",
    "starred_at": "2026-08-18T08:02:22Z",
    "archived": false,
    "fork": false,
@@ -3215,8 +3217,8 @@
    ],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 251,
-   "delta_days": 14
+   "stars_delta": 264,
+   "delta_days": 15
   },
   {
    "full_name": "opensandbox-group/OpenSandbox",
@@ -3227,9 +3229,9 @@
    "homepage": "https://open-sandbox.ai",
    "language": "Python",
    "license": "Apache-2.0",
-   "stars": 15934,
-   "forks": 1480,
-   "open_issues": 132,
+   "stars": 15967,
+   "forks": 1483,
+   "open_issues": 136,
    "topics": [
     "ai",
     "ai-agent",
@@ -3238,7 +3240,7 @@
     "sandbox"
    ],
    "created_at": "2025-12-17T08:41:09Z",
-   "pushed_at": "2026-10-18T09:22:25Z",
+   "pushed_at": "2026-10-19T09:31:12Z",
    "starred_at": "2026-08-15T21:33:13Z",
    "archived": false,
    "fork": false,
@@ -3271,8 +3273,8 @@
    ],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 278,
-   "delta_days": 14
+   "stars_delta": 311,
+   "delta_days": 15
   },
   {
    "full_name": "XiaomiMiMo/MiMo-Code",
@@ -3283,9 +3285,9 @@
    "homepage": "https://mimo.xiaomi.com/mimocode",
    "language": "TypeScript",
    "license": "MIT",
-   "stars": 13681,
-   "forks": 1499,
-   "open_issues": 1144,
+   "stars": 13691,
+   "forks": 1524,
+   "open_issues": 1145,
    "topics": [
     "ai",
     "ai-agents",
@@ -3294,7 +3296,7 @@
     "mimo-code"
    ],
    "created_at": "2026-06-10T11:52:41Z",
-   "pushed_at": "2026-10-17T18:10:26Z",
+   "pushed_at": "2026-10-19T10:44:10Z",
    "starred_at": "2026-08-20T09:23:46Z",
    "archived": false,
    "fork": false,
@@ -3328,8 +3330,8 @@
    ],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 85,
-   "delta_days": 14
+   "stars_delta": 95,
+   "delta_days": 15
   },
   {
    "full_name": "google/artemis",
@@ -3340,9 +3342,9 @@
    "homepage": "",
    "language": "Python",
    "license": "Apache-2.0",
-   "stars": 12223,
-   "forks": 1411,
-   "open_issues": 139,
+   "stars": 12749,
+   "forks": 1483,
+   "open_issues": 140,
    "topics": [
     "ai-agents",
     "android",
@@ -3384,8 +3386,8 @@
    ],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 1281,
-   "delta_days": 14
+   "stars_delta": 1807,
+   "delta_days": 15
   },
   {
    "full_name": "tester-army/e2e",
@@ -3396,9 +3398,9 @@
    "homepage": "https://tester.army/e2e",
    "language": "TypeScript",
    "license": "Apache-2.0",
-   "stars": 11119,
-   "forks": 558,
-   "open_issues": 66,
+   "stars": 11302,
+   "forks": 577,
+   "open_issues": 74,
    "topics": [
     "e2e",
     "e2e-testing",
@@ -3409,7 +3411,7 @@
     "web"
    ],
    "created_at": "2026-07-22T09:29:04Z",
-   "pushed_at": "2026-10-17T14:26:08Z",
+   "pushed_at": "2026-10-19T10:44:06Z",
    "starred_at": "2026-10-06T13:32:32Z",
    "archived": false,
    "fork": false,
@@ -3452,9 +3454,9 @@
    "homepage": "https://opengsd.net",
    "language": "JavaScript",
    "license": "MIT",
-   "stars": 10637,
+   "stars": 10671,
    "forks": 762,
-   "open_issues": 290,
+   "open_issues": 286,
    "topics": [
     "claude-code",
     "context-engineering",
@@ -3462,7 +3464,7 @@
     "spec-driven-development"
    ],
    "created_at": "2026-05-22T11:36:21Z",
-   "pushed_at": "2026-10-18T08:02:07Z",
+   "pushed_at": "2026-10-19T07:43:43Z",
    "starred_at": "2026-08-11T13:33:13Z",
    "archived": false,
    "fork": false,
@@ -3496,8 +3498,52 @@
    ],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 488,
-   "delta_days": 14
+   "stars_delta": 522,
+   "delta_days": 15
+  },
+  {
+   "full_name": "google-research/harness2",
+   "owner": "google-research",
+   "name": "harness2",
+   "url": "https://github.com/google-research/harness2",
+   "description": "",
+   "homepage": "",
+   "language": "Python",
+   "license": "Apache-2.0",
+   "stars": 9181,
+   "forks": 809,
+   "open_issues": 72,
+   "topics": [],
+   "created_at": "2026-10-06T21:48:11Z",
+   "pushed_at": "2026-10-14T02:22:51Z",
+   "starred_at": "2026-10-18T12:17:52Z",
+   "archived": false,
+   "fork": false,
+   "mine": false,
+   "category": "triage",
+   "tags": [],
+   "score": 0,
+   "classification": {
+    "method": "unmatched",
+    "review_needed": true,
+    "reasons": [
+     "unmatched"
+    ],
+    "score": 0,
+    "runner_up": null,
+    "runner_up_score": 0,
+    "margin": 0
+   },
+   "maturity": {
+    "stage": "unknown",
+    "source": null,
+    "note": ""
+   },
+   "key_topics": [],
+   "classified_by": "none",
+   "health": "active",
+   "stars_delta": null,
+   "delta_days": null
   },
   {
    "full_name": "FareedKhan-dev/kimi-k3-in-c",
@@ -3508,8 +3554,8 @@
    "homepage": "https://medium.com/@fareedkhandev/building-kimi-k3-in-c-to-run-a-2-8t-model-on-consumer-hardware-a5792cbf3b59",
    "language": "C",
    "license": "Apache-2.0",
-   "stars": 9095,
-   "forks": 1485,
+   "stars": 9107,
+   "forks": 1486,
    "open_issues": 4,
    "topics": [
     "avx2",
@@ -3567,8 +3613,8 @@
    ],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 224,
-   "delta_days": 14
+   "stars_delta": 236,
+   "delta_days": 15
   },
   {
    "full_name": "lorien/awesome-web-scraping",
@@ -3579,8 +3625,8 @@
    "homepage": "",
    "language": "JavaScript",
    "license": "",
-   "stars": 8176,
-   "forks": 955,
+   "stars": 8178,
+   "forks": 956,
    "open_issues": 15,
    "topics": [
     "captcha-bypass",
@@ -3630,8 +3676,8 @@
    ],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 8,
-   "delta_days": 14
+   "stars_delta": 10,
+   "delta_days": 15
   },
   {
    "full_name": "zai-org/ZCode",
@@ -3642,12 +3688,12 @@
    "homepage": "https://zcode.z.ai/",
    "language": "TypeScript",
    "license": "Apache-2.0",
-   "stars": 7920,
-   "forks": 2443,
+   "stars": 7956,
+   "forks": 2453,
    "open_issues": 11,
    "topics": [],
    "created_at": "2026-09-20T12:01:16Z",
-   "pushed_at": "2026-10-10T11:02:50Z",
+   "pushed_at": "2026-10-19T02:35:04Z",
    "starred_at": "2026-09-21T07:22:50Z",
    "archived": false,
    "fork": false,
@@ -3675,8 +3721,8 @@
    "key_topics": [],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 534,
-   "delta_days": 14
+   "stars_delta": 570,
+   "delta_days": 15
   },
   {
    "full_name": "HKUDS/OpenSpace",
@@ -3687,8 +3733,8 @@
    "homepage": "",
    "language": "Python",
    "license": "MIT",
-   "stars": 7755,
-   "forks": 924,
+   "stars": 7757,
+   "forks": 923,
    "open_issues": 54,
    "topics": [],
    "created_at": "2026-03-24T08:01:49Z",
@@ -3720,8 +3766,8 @@
    "key_topics": [],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 14,
-   "delta_days": 14
+   "stars_delta": 16,
+   "delta_days": 15
   },
   {
    "full_name": "trailofbits/skills",
@@ -3732,8 +3778,8 @@
    "homepage": "",
    "language": "Python",
    "license": "CC-BY-SA-4.0",
-   "stars": 7628,
-   "forks": 659,
+   "stars": 7641,
+   "forks": 662,
    "open_issues": 47,
    "topics": [
     "agent-skills"
@@ -3766,8 +3812,8 @@
    ],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 274,
-   "delta_days": 14
+   "stars_delta": 287,
+   "delta_days": 15
   },
   {
    "full_name": "kyegomez/swarms",
@@ -3778,9 +3824,9 @@
    "homepage": "https://docs.swarms.world",
    "language": "Python",
    "license": "Apache-2.0",
-   "stars": 7274,
-   "forks": 1051,
-   "open_issues": 331,
+   "stars": 7278,
+   "forks": 1052,
+   "open_issues": 430,
    "topics": [
     "agentic-ai",
     "agentic-workflow",
@@ -3802,7 +3848,7 @@
     "tree-of-thoughts"
    ],
    "created_at": "2023-05-11T01:09:00Z",
-   "pushed_at": "2026-10-18T00:29:26Z",
+   "pushed_at": "2026-10-19T10:44:01Z",
    "starred_at": "2026-03-31T10:35:10Z",
    "archived": false,
    "fork": false,
@@ -3837,8 +3883,8 @@
    ],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 44,
-   "delta_days": 14
+   "stars_delta": 48,
+   "delta_days": 15
   },
   {
    "full_name": "vastsa/PI-Desktop",
@@ -3849,9 +3895,9 @@
    "homepage": "https://pi-docs.aiuo.net",
    "language": "TypeScript",
    "license": "LGPL-3.0",
-   "stars": 6979,
-   "forks": 673,
-   "open_issues": 202,
+   "stars": 7015,
+   "forks": 677,
+   "open_issues": 214,
    "topics": [
     "ai-agent",
     "coding-agent",
@@ -3870,7 +3916,7 @@
     "typescript"
    ],
    "created_at": "2023-03-22T14:23:39Z",
-   "pushed_at": "2026-10-18T06:31:07Z",
+   "pushed_at": "2026-10-19T07:57:31Z",
    "starred_at": "2026-10-09T23:12:39Z",
    "archived": false,
    "fork": false,
@@ -3918,8 +3964,8 @@
    "homepage": "https://pypi.org/project/laya-mlx/",
    "language": "Python",
    "license": "Apache-2.0",
-   "stars": 6960,
-   "forks": 568,
+   "stars": 6973,
+   "forks": 569,
    "open_issues": 0,
    "topics": [
     "apple-silicon",
@@ -3979,8 +4025,8 @@
    "homepage": "https://www.n8n-skills.com",
    "language": "Shell",
    "license": "MIT",
-   "stars": 6454,
-   "forks": 1074,
+   "stars": 6461,
+   "forks": 1076,
    "open_issues": 20,
    "topics": [
     "ai-agents",
@@ -4019,8 +4065,8 @@
    ],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 85,
-   "delta_days": 14
+   "stars_delta": 92,
+   "delta_days": 15
   },
   {
    "full_name": "yihui-dev/awesome-opus5-5-videos",
@@ -4031,8 +4077,8 @@
    "homepage": "https://skillry.dev/ai-videos/opus-5-5",
    "language": "",
    "license": "MIT",
-   "stars": 5946,
-   "forks": 627,
+   "stars": 6427,
+   "forks": 674,
    "open_issues": 3,
    "topics": [
     "ai-video",
@@ -4091,9 +4137,9 @@
    "homepage": "https://www.nyk.dev/oss/awesome-hermes-agent",
    "language": "",
    "license": "",
-   "stars": 5860,
-   "forks": 449,
-   "open_issues": 167,
+   "stars": 5863,
+   "forks": 452,
+   "open_issues": 170,
    "topics": [
     "agent-skills",
     "ai-agents",
@@ -4144,8 +4190,8 @@
    ],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 68,
-   "delta_days": 14
+   "stars_delta": 71,
+   "delta_days": 15
   },
   {
    "full_name": "sohzm/cheating-daddy",
@@ -4156,8 +4202,8 @@
    "homepage": "https://cheatingdaddy.com",
    "language": "JavaScript",
    "license": "GPL-3.0",
-   "stars": 5631,
-   "forks": 977,
+   "stars": 5630,
+   "forks": 976,
    "open_issues": 158,
    "topics": [],
    "created_at": "2025-05-28T22:50:20Z",
@@ -4188,8 +4234,8 @@
    "key_topics": [],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 9,
-   "delta_days": 14
+   "stars_delta": 8,
+   "delta_days": 15
   },
   {
    "full_name": "ai-boost/awesome-harness-engineering",
@@ -4200,9 +4246,9 @@
    "homepage": "https://github.com/ai-boost/awesome-harness-engineering",
    "language": "Python",
    "license": "",
-   "stars": 4867,
-   "forks": 677,
-   "open_issues": 261,
+   "stars": 4882,
+   "forks": 682,
+   "open_issues": 262,
    "topics": [
     "agent-harness",
     "agent-memory",
@@ -4215,7 +4261,7 @@
     "mcp"
    ],
    "created_at": "2026-03-29T15:39:49Z",
-   "pushed_at": "2026-10-18T09:12:40Z",
+   "pushed_at": "2026-10-19T09:13:14Z",
    "starred_at": "2026-09-14T22:21:36Z",
    "archived": false,
    "fork": false,
@@ -4252,8 +4298,8 @@
    ],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 175,
-   "delta_days": 14
+   "stars_delta": 190,
+   "delta_days": 15
   },
   {
    "full_name": "Manavarya09/design-extract",
@@ -4264,8 +4310,8 @@
    "homepage": "https://www.designlang.app",
    "language": "HTML",
    "license": "MIT",
-   "stars": 4251,
-   "forks": 369,
+   "stars": 4260,
+   "forks": 371,
    "open_issues": 25,
    "topics": [
     "accessibility",
@@ -4325,8 +4371,8 @@
    ],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 84,
-   "delta_days": 14
+   "stars_delta": 93,
+   "delta_days": 15
   },
   {
    "full_name": "AzuraCast/AzuraCast",
@@ -4337,9 +4383,9 @@
    "homepage": "https://www.azuracast.com/",
    "language": "PHP",
    "license": "AGPL-3.0",
-   "stars": 4069,
+   "stars": 4070,
    "forks": 761,
-   "open_issues": 106,
+   "open_issues": 101,
    "topics": [
     "icecast",
     "liquidsoap",
@@ -4351,7 +4397,7 @@
     "webcast"
    ],
    "created_at": "2016-04-30T21:41:23Z",
-   "pushed_at": "2026-10-17T21:35:08Z",
+   "pushed_at": "2026-10-18T18:33:00Z",
    "starred_at": "2026-07-08T22:39:47Z",
    "archived": false,
    "fork": false,
@@ -4384,8 +4430,8 @@
    ],
    "classified_by": "override",
    "health": "active",
-   "stars_delta": 14,
-   "delta_days": 14
+   "stars_delta": 15,
+   "delta_days": 15
   },
   {
    "full_name": "Vexa-ai/vexa",
@@ -4396,8 +4442,8 @@
    "homepage": "https://vexa.ai",
    "language": "Python",
    "license": "Apache-2.0",
-   "stars": 2886,
-   "forks": 509,
+   "stars": 2890,
+   "forks": 510,
    "open_issues": 701,
    "topics": [
     "api",
@@ -4454,8 +4500,8 @@
    ],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 36,
-   "delta_days": 14
+   "stars_delta": 40,
+   "delta_days": 15
   },
   {
    "full_name": "jeremylongshore/tons-of-skills-marketplace",
@@ -4466,9 +4512,9 @@
    "homepage": "https://tonsofskills.com",
    "language": "Python",
    "license": "MIT",
-   "stars": 2849,
-   "forks": 420,
-   "open_issues": 31,
+   "stars": 2852,
+   "forks": 421,
+   "open_issues": 33,
    "topics": [
     "agent-skills",
     "ai",
@@ -4488,7 +4534,7 @@
     "skills"
    ],
    "created_at": "2025-10-10T01:01:00Z",
-   "pushed_at": "2026-10-18T01:30:20Z",
+   "pushed_at": "2026-10-19T05:36:13Z",
    "starred_at": "2026-05-04T06:59:29Z",
    "archived": false,
    "fork": false,
@@ -4523,8 +4569,8 @@
    ],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 43,
-   "delta_days": 14
+   "stars_delta": 46,
+   "delta_days": 15
   },
   {
    "full_name": "dzhng/jevgrep",
@@ -4535,9 +4581,9 @@
    "homepage": "",
    "language": "TypeScript",
    "license": "MIT",
-   "stars": 2777,
-   "forks": 211,
-   "open_issues": 6,
+   "stars": 2803,
+   "forks": 214,
+   "open_issues": 7,
    "topics": [
     "ai-sdk",
     "claude-code",
@@ -4553,7 +4599,7 @@
     "vercel-ai-gateway"
    ],
    "created_at": "2026-09-26T04:06:56Z",
-   "pushed_at": "2026-10-18T09:25:33Z",
+   "pushed_at": "2026-10-19T03:42:23Z",
    "starred_at": "2026-10-02T15:42:25Z",
    "archived": false,
    "fork": false,
@@ -4586,8 +4632,8 @@
    ],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 570,
-   "delta_days": 14
+   "stars_delta": 596,
+   "delta_days": 15
   },
   {
    "full_name": "zilliztech/memsearch",
@@ -4598,7 +4644,7 @@
    "homepage": "https://zilliztech.github.io/memsearch/",
    "language": "Python",
    "license": "MIT",
-   "stars": 2756,
+   "stars": 2760,
    "forks": 268,
    "open_issues": 273,
    "topics": [
@@ -4624,7 +4670,7 @@
     "skills"
    ],
    "created_at": "2026-02-09T02:29:16Z",
-   "pushed_at": "2026-10-09T11:51:36Z",
+   "pushed_at": "2026-10-19T08:16:01Z",
    "starred_at": "2026-06-14T11:22:22Z",
    "archived": false,
    "fork": false,
@@ -4658,8 +4704,8 @@
    ],
    "classified_by": "override",
    "health": "active",
-   "stars_delta": 45,
-   "delta_days": 14
+   "stars_delta": 49,
+   "delta_days": 15
   },
   {
    "full_name": "llmsresearch/paperbanana",
@@ -4670,8 +4716,8 @@
    "homepage": "",
    "language": "Python",
    "license": "MIT",
-   "stars": 2405,
-   "forks": 341,
+   "stars": 2407,
+   "forks": 342,
    "open_issues": 13,
    "topics": [
     "academic-diagrams",
@@ -4732,8 +4778,8 @@
    ],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 20,
-   "delta_days": 14
+   "stars_delta": 22,
+   "delta_days": 15
   },
   {
    "full_name": "gridex/gridex",
@@ -4744,7 +4790,7 @@
    "homepage": "https://gridex.app",
    "language": "C++",
    "license": "Apache-2.0",
-   "stars": 1968,
+   "stars": 1967,
    "forks": 166,
    "open_issues": 10,
    "topics": [],
@@ -4830,7 +4876,7 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 3,
-   "delta_days": 14
+   "delta_days": 15
   },
   {
    "full_name": "HelixDB/helix-foundry",
@@ -4841,9 +4887,9 @@
    "homepage": "",
    "language": "TypeScript",
    "license": "Apache-2.0",
-   "stars": 1592,
-   "forks": 240,
-   "open_issues": 16,
+   "stars": 1616,
+   "forks": 243,
+   "open_issues": 17,
    "topics": [],
    "created_at": "2026-10-07T05:10:45Z",
    "pushed_at": "2026-10-13T06:13:06Z",
@@ -4885,8 +4931,8 @@
    "homepage": "https://mimik.westpoint.io",
    "language": "TypeScript",
    "license": "MIT",
-   "stars": 1581,
-   "forks": 198,
+   "stars": 1584,
+   "forks": 197,
    "open_issues": 9,
    "topics": [
     "browser-extension",
@@ -4941,8 +4987,8 @@
    ],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 131,
-   "delta_days": 14
+   "stars_delta": 134,
+   "delta_days": 15
   },
   {
    "full_name": "dohooo/helmor",
@@ -5005,7 +5051,7 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 2,
-   "delta_days": 14
+   "delta_days": 15
   },
   {
    "full_name": "affaan-m/agentshield",
@@ -5016,7 +5062,7 @@
    "homepage": "https://cerebralvalley.ai/e/claude-code-hackathon",
    "language": "TypeScript",
    "license": "MIT",
-   "stars": 1296,
+   "stars": 1300,
    "forks": 287,
    "open_issues": 20,
    "topics": [
@@ -5065,8 +5111,8 @@
    ],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 46,
-   "delta_days": 14
+   "stars_delta": 50,
+   "delta_days": 15
   },
   {
    "full_name": "dariubs/awesome-workflow-automation",
@@ -5077,8 +5123,8 @@
    "homepage": "https://productivity.directory/category/workflow-automation",
    "language": "",
    "license": "MIT",
-   "stars": 1249,
-   "forks": 233,
+   "stars": 1250,
+   "forks": 234,
    "open_issues": 83,
    "topics": [
     "activepieces",
@@ -5136,8 +5182,8 @@
    ],
    "classified_by": "rules",
    "health": "maintained",
-   "stars_delta": 12,
-   "delta_days": 14
+   "stars_delta": 13,
+   "delta_days": 15
   },
   {
    "full_name": "Automattic/wordpress-mcp",
@@ -5179,7 +5225,7 @@
    "classified_by": "rules",
    "health": "archived",
    "stars_delta": 4,
-   "delta_days": 14
+   "delta_days": 15
   },
   {
    "full_name": "Hackerest/pwneye",
@@ -5190,7 +5236,7 @@
    "homepage": "",
    "language": "Python",
    "license": "GPL-3.0",
-   "stars": 382,
+   "stars": 388,
    "forks": 59,
    "open_issues": 4,
    "topics": [
@@ -5245,8 +5291,8 @@
    ],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 43,
-   "delta_days": 14
+   "stars_delta": 49,
+   "delta_days": 15
   },
   {
    "full_name": "Shubhamsaboo/google-memorybank-plugin",
@@ -5288,7 +5334,7 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 2,
-   "delta_days": 14
+   "delta_days": 15
   },
   {
    "full_name": "thenicolas1894/awesome-claude-fable-5-prompt-vault",
@@ -5325,7 +5371,7 @@
     "use-cases"
    ],
    "created_at": "2026-06-28T19:26:01Z",
-   "pushed_at": "2026-10-18T06:39:22Z",
+   "pushed_at": "2026-10-19T06:59:57Z",
    "starred_at": "2026-07-13T22:29:52Z",
    "archived": false,
    "fork": false,
@@ -5362,7 +5408,7 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 0,
-   "delta_days": 14
+   "delta_days": 15
   },
   {
    "full_name": "sveneisenschmidt/n8n-openai-bridge",
@@ -5407,7 +5453,7 @@
    "classified_by": "rules",
    "health": "maintained",
    "stars_delta": 0,
-   "delta_days": 14
+   "delta_days": 15
   },
   {
    "full_name": "VicKayro/claude-security-audit",
@@ -5452,7 +5498,7 @@
    "classified_by": "rules",
    "health": "maintained",
    "stars_delta": 0,
-   "delta_days": 14
+   "delta_days": 15
   },
   {
    "full_name": "picmakpro/vibeflow-os",
@@ -5496,7 +5542,7 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 15,
-   "delta_days": 14
+   "delta_days": 15
   },
   {
    "full_name": "rubentalstra/librechat-prom-exporter",
@@ -5509,14 +5555,14 @@
    "license": "MIT",
    "stars": 36,
    "forks": 8,
-   "open_issues": 14,
+   "open_issues": 15,
    "topics": [
     "exporter",
     "librechat",
     "prometheus"
    ],
    "created_at": "2025-03-04T08:16:54Z",
-   "pushed_at": "2026-10-12T05:24:10Z",
+   "pushed_at": "2026-10-19T08:01:22Z",
    "starred_at": "2026-02-12T11:38:02Z",
    "archived": false,
    "fork": false,
@@ -5548,7 +5594,7 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 0,
-   "delta_days": 14
+   "delta_days": 15
   },
   {
    "full_name": "alebgl77/claude-inc",
@@ -5611,7 +5657,7 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 3,
-   "delta_days": 14
+   "delta_days": 15
   },
   {
    "full_name": "Citatra/Citatra",
@@ -5667,7 +5713,7 @@
    "classified_by": "rules",
    "health": "maintained",
    "stars_delta": 0,
-   "delta_days": 14
+   "delta_days": 15
   },
   {
    "full_name": "alebgl77/grafana-llmops-forge",
@@ -5736,7 +5782,7 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 0,
-   "delta_days": 14
+   "delta_days": 15
   },
   {
    "full_name": "alebgl77/tierdecay",
@@ -5804,7 +5850,7 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 0,
-   "delta_days": 14
+   "delta_days": 15
   },
   {
    "full_name": "alebgl77/design-md-viewer",
@@ -5863,7 +5909,7 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 0,
-   "delta_days": 14
+   "delta_days": 15
   },
   {
    "full_name": "alebgl77/dsh-plugin-otel-genai",
@@ -5917,7 +5963,7 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 0,
-   "delta_days": 14
+   "delta_days": 15
   },
   {
    "full_name": "alebgl77/ftp-deploy-mcp",
@@ -5989,7 +6035,7 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 0,
-   "delta_days": 14
+   "delta_days": 15
   },
   {
    "full_name": "alebgl77/generative-engine-monitor",
@@ -6052,7 +6098,7 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 0,
-   "delta_days": 14
+   "delta_days": 15
   },
   {
    "full_name": "alebgl77/harnessmeter",
@@ -6117,7 +6163,7 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 0,
-   "delta_days": 14
+   "delta_days": 15
   },
   {
    "full_name": "alebgl77/open-fullscreenshot",
@@ -6159,7 +6205,7 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 0,
-   "delta_days": 14
+   "delta_days": 15
   },
   {
    "full_name": "alebgl77/open-shadow-ai",
@@ -6221,7 +6267,7 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 0,
-   "delta_days": 14
+   "delta_days": 15
   },
   {
    "full_name": "alebgl77/openspanguard",
@@ -6286,7 +6332,7 @@
    "classified_by": "rules",
    "health": "active",
    "stars_delta": 0,
-   "delta_days": 14
+   "delta_days": 15
   },
   {
    "full_name": "alebgl77/pilovo",
@@ -6413,9 +6459,9 @@
     "ai"
    ],
    "classified_by": "rules",
-   "health": "active",
+   "health": "maintained",
    "stars_delta": 0,
-   "delta_days": 14
+   "delta_days": 15
   }
  ]
 }

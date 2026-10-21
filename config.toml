@@ -22,7 +22,15 @@ history_days = 35
 # Public repositories of `user` that never appear (exact names).
 exclude_own = ["alebgl77", "awesome-ai-architect"]
 # Starred repositories that never appear (owner/name).
-exclude_starred = []
+# Offensive or misuse-oriented tools and projects outside the GenAI taxonomy
+# stay starred but are kept out of this curated map.
+exclude_starred = [
+  "Hackerest/pwneye",
+  "hacksider/Deep-Live-Cam",
+  "sohzm/cheating-daddy",
+  "AzuraCast/AzuraCast",
+  "gridex/gridex",
+]
 
 # Force a category when the automatic classifier is wrong: "owner/name" = "category-id".
 [overrides]
@@ -34,6 +42,37 @@ exclude_starred = []
 "paperless-ngx/paperless-ngx" = "automation"
 # Radio management is outside the GenAI taxonomy; "web app" is not an AI signal.
 "AzuraCast/AzuraCast" = "triage"
+# Curator review, October 2026: weak or ambiguous metadata resolved by hand.
+"affaan-m/agentshield" = "security"
+"VicKayro/claude-security-audit" = "security"
+"anthropics/claude-cookbooks" = "learning"
+"Shubhamsaboo/awesome-llm-apps" = "learning"
+"0xNyk/awesome-hermes-agent" = "learning"
+"ai-boost/awesome-harness-engineering" = "learning"
+"thenicolas1894/awesome-claude-fable-5-prompt-vault" = "learning"
+"deepseek-ai/deepseek-harness" = "coding"
+"garrytan/gstack" = "coding"
+"langchain-ai/openwiki" = "coding"
+"zai-org/ZCode" = "coding"
+"XiaomiMiMo/MiMo-Code" = "coding"
+"HKUDS/OpenSpace" = "coding"
+"vastsa/PI-Desktop" = "coding"
+"picmakpro/vibeflow-os" = "coding"
+"open-gsd/gsd-core" = "context"
+"google-research/harness2" = "agents"
+"multica-ai/multica" = "agents"
+"ggml-org/llama.cpp" = "inference"
+"opensandbox-group/OpenSandbox" = "infra"
+"neondatabase/neon" = "infra"
+"nexu-io/open-design" = "frontend"
+"Panniantong/Agent-Reach" = "automation"
+"google/artemis" = "automation"
+"sveneisenschmidt/n8n-openai-bridge" = "automation"
+"tinyfish-io/bigset-oss" = "data"
+"HelixDB/helix-foundry" = "data"
+"Vexa-ai/vexa" = "multimodal"
+"llmsresearch/paperbanana" = "multimodal"
+"odysseus-dev/odysseus" = "apps"
 
 # Project stage is curated from explicit upstream statements, never inferred
 # from popularity, recent activity or version numbers. Unlisted = unassessed.

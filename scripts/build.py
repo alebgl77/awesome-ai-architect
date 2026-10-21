@@ -415,7 +415,8 @@ def render_readme(repos: list[dict], cfg: dict, today: dt.date) -> str:
         f"{len(non_empty)} categories. Regenerated every day by GitHub Actions from "
         f"[@{lst['user']}]({lst['author_url']})'s stars: star a repository and it shows up here, classified, the next morning.\n"
     )
-    out.append(f"**{review_count} projects need classification review.** Flagged rows keep their selected category pending review.\n")
+    if review_count:
+        out.append(f"**{review_count} projects need classification review.** Flagged rows keep their selected category pending review.\n")
     if repo:
         out.append(
             f"**Want this for your own stars?** [Use this template](https://github.com/{repo}/generate), "

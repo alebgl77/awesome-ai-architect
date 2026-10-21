@@ -10,7 +10,7 @@
    "title": "MCP & Tool Use",
    "short": "MCP",
    "blurb": "Model Context Protocol servers, clients, gateways and function-calling infrastructure.",
-   "count": 4
+   "count": 3
   },
   {
    "id": "memory",
@@ -24,7 +24,7 @@
    "title": "RAG, Retrieval & Knowledge",
    "short": "RAG",
    "blurb": "Retrieval-augmented generation, vector search, document parsing, embeddings and knowledge graphs.",
-   "count": 1
+   "count": 0
   },
   {
    "id": "evals",
@@ -45,7 +45,7 @@
    "title": "AI Security, Safety & Governance",
    "short": "AI Security",
    "blurb": "Guardrails, prompt-injection defense, agent security scanning, privacy and AI governance or compliance.",
-   "count": 6
+   "count": 5
   },
   {
    "id": "search",
@@ -59,21 +59,21 @@
    "title": "Prompt & Context Engineering",
    "short": "Context Eng.",
    "blurb": "Prompt design and optimization, context engineering, structured outputs and instruction profiling.",
-   "count": 3
+   "count": 2
   },
   {
    "id": "coding",
    "title": "AI Coding Agents & Skills",
    "short": "Coding Agents",
    "blurb": "Coding agents, IDE copilots, agent skills, plugins and harness tooling for Claude Code, Codex, Cursor and peers.",
-   "count": 29
+   "count": 30
   },
   {
    "id": "agents",
    "title": "Agent Frameworks & Orchestration",
    "short": "Agents",
    "blurb": "Frameworks and runtimes for single and multi-agent systems, planning, memory and orchestration.",
-   "count": 11
+   "count": 8
   },
   {
    "id": "inference",
@@ -101,49 +101,49 @@
    "title": "Data Engineering, Scraping & Analytics",
    "short": "Data",
    "blurb": "Pipelines, web crawling for LLMs, text-to-SQL, warehouses and analytics tooling.",
-   "count": 3
+   "count": 4
   },
   {
    "id": "automation",
    "title": "Automation, Browser Agents & Productivity",
    "short": "Automation",
    "blurb": "Workflow automation, browser and computer-use agents, extensions and everyday productivity tools.",
-   "count": 10
+   "count": 12
   },
   {
    "id": "frontend",
    "title": "Frontend, Design & Generative UI",
    "short": "Frontend",
    "blurb": "Design systems, UI components, design taste for AI agents and generative interfaces.",
-   "count": 3
+   "count": 4
   },
   {
    "id": "infra",
    "title": "Cloud, DevOps & Infrastructure",
    "short": "Infra",
    "blurb": "Deployment, containers, CI/CD and cloud infrastructure for shipping AI systems.",
-   "count": 3
+   "count": 2
   },
   {
    "id": "apps",
    "title": "AI Apps & Chat Interfaces",
    "short": "AI Apps",
    "blurb": "End-user AI applications, chat UIs, assistants and business tools built on LLMs.",
-   "count": 4
+   "count": 2
   },
   {
    "id": "learning",
    "title": "Learning, Papers & Awesome Lists",
    "short": "Learning",
    "blurb": "Curated lists, courses, cookbooks, tutorials and research references.",
-   "count": 4
+   "count": 6
   },
   {
    "id": "triage",
    "title": "To Triage",
    "short": "Triage",
    "blurb": "Unmatched projects or manual holds outside the GenAI taxonomy. Review upstream context before assigning a category.",
-   "count": 2
+   "count": 0
   }
  ],
  "repos": [
@@ -156,7 +156,7 @@
    "homepage": "",
    "language": "Shell",
    "license": "MIT",
-   "stars": 302886,
+   "stars": 302888,
    "forks": 26988,
    "open_issues": 348,
    "topics": [
@@ -201,7 +201,7 @@
    ],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 7854,
+   "stars_delta": 7856,
    "delta_days": 17
   },
   {
@@ -213,7 +213,7 @@
    "homepage": "https://aihero.dev/skills",
    "language": "Shell",
    "license": "MIT",
-   "stars": 299319,
+   "stars": 299320,
    "forks": 25132,
    "open_issues": 199,
    "topics": [],
@@ -243,7 +243,7 @@
    "key_topics": [],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 23716,
+   "stars_delta": 23717,
    "delta_days": 17
   },
   {
@@ -330,19 +330,17 @@
    "archived": false,
    "fork": false,
    "mine": false,
-   "category": "agents",
+   "category": "coding",
    "tags": [],
-   "score": 1,
+   "score": 0,
    "classification": {
-    "method": "rules",
-    "review_needed": true,
-    "reasons": [
-     "low_score"
-    ],
-    "score": 1,
-    "runner_up": null,
-    "runner_up_score": 0,
-    "margin": 1
+    "method": "override",
+    "review_needed": false,
+    "reasons": [],
+    "score": 0,
+    "runner_up": "agents",
+    "runner_up_score": 1,
+    "margin": -1
    },
    "maturity": {
     "stage": "unknown",
@@ -350,12 +348,12 @@
     "note": ""
    },
    "key_topics": [
-    "ai-agents",
     "dsh",
     "cordis",
+    "ai-agents",
     "dsh-plugin"
    ],
-   "classified_by": "rules",
+   "classified_by": "override",
    "health": "active",
    "stars_delta": 13511,
    "delta_days": 17
@@ -384,22 +382,21 @@
    "archived": false,
    "fork": false,
    "mine": false,
-   "category": "rag",
+   "category": "learning",
    "tags": [
+    "rag",
     "agents",
     "apps"
    ],
-   "score": 4,
+   "score": 2,
    "classification": {
-    "method": "rules",
-    "review_needed": true,
-    "reasons": [
-     "close_scores"
-    ],
-    "score": 4,
-    "runner_up": "agents",
-    "runner_up_score": 3,
-    "margin": 1
+    "method": "override",
+    "review_needed": false,
+    "reasons": [],
+    "score": 2,
+    "runner_up": "rag",
+    "runner_up_score": 4,
+    "margin": -2
    },
    "maturity": {
     "stage": "unknown",
@@ -412,7 +409,7 @@
     "llms",
     "python"
    ],
-   "classified_by": "rules",
+   "classified_by": "override",
    "health": "active",
    "stars_delta": null,
    "delta_days": null
@@ -426,9 +423,9 @@
    "homepage": "https://github.github.com/spec-kit/",
    "language": "Python",
    "license": "MIT",
-   "stars": 142254,
+   "stars": 142255,
    "forks": 12736,
-   "open_issues": 180,
+   "open_issues": 181,
    "topics": [
     "ai",
     "copilot",
@@ -470,7 +467,7 @@
    ],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 2209,
+   "stars_delta": 2210,
    "delta_days": 17
   },
   {
@@ -482,7 +479,7 @@
    "homepage": "",
    "language": "TypeScript",
    "license": "MIT",
-   "stars": 137147,
+   "stars": 137148,
    "forks": 20340,
    "open_issues": 60,
    "topics": [],
@@ -496,11 +493,9 @@
    "tags": [],
    "score": 1,
    "classification": {
-    "method": "rules",
-    "review_needed": true,
-    "reasons": [
-     "low_score"
-    ],
+    "method": "override",
+    "review_needed": false,
+    "reasons": [],
     "score": 1,
     "runner_up": null,
     "runner_up_score": 0,
@@ -512,9 +507,9 @@
     "note": ""
    },
    "key_topics": [],
-   "classified_by": "rules",
+   "classified_by": "override",
    "health": "active",
-   "stars_delta": 2176,
+   "stars_delta": 2177,
    "delta_days": 17
   },
   {
@@ -533,7 +528,7 @@
     "ggml"
    ],
    "created_at": "2023-03-10T18:58:00Z",
-   "pushed_at": "2026-10-21T12:15:22Z",
+   "pushed_at": "2026-10-21T12:48:12Z",
    "starred_at": "2026-08-26T12:11:12Z",
    "archived": false,
    "fork": false,
@@ -542,11 +537,9 @@
    "tags": [],
    "score": 1,
    "classification": {
-    "method": "rules",
-    "review_needed": true,
-    "reasons": [
-     "low_score"
-    ],
+    "method": "override",
+    "review_needed": false,
+    "reasons": [],
     "score": 1,
     "runner_up": null,
     "runner_up_score": 0,
@@ -560,7 +553,7 @@
    "key_topics": [
     "ggml"
    ],
-   "classified_by": "rules",
+   "classified_by": "override",
    "health": "active",
    "stars_delta": 1638,
    "delta_days": 17
@@ -574,8 +567,8 @@
    "homepage": "https://www.graphify.com",
    "language": "Python",
    "license": "Apache-2.0",
-   "stars": 130953,
-   "forks": 12586,
+   "stars": 130955,
+   "forks": 12587,
    "open_issues": 1577,
    "topics": [
     "ai-agents",
@@ -634,7 +627,7 @@
    ],
    "classified_by": "rules",
    "health": "active",
-   "stars_delta": 7320,
+   "stars_delta": 7322,
    "delta_days": 17
   },
   {
@@ -807,19 +800,17 @@
    "archived": false,
    "fork": false,
    "mine": false,
-   "category": "coding",
+   "category": "frontend",
    "tags": [
-    "frontend"
+    "coding"
    ],
    "score": 6,
    "classification": {
-    "method": "rules",
-    "review_needed": true,
-    "reasons": [
-     "close_scores"
-    ],
+    "method": "override",
+    "review_needed": false,
+    "reasons": [],
     "score": 6,
-    "runner_up": "frontend",
+    "runner_up": "coding",
     "runner_up_score": 6,
     "margin": 0
    },
@@ -829,13 +820,13 @@
     "note": ""
    },
    "key_topics": [
+    "design-systems",
     "vibe-coding",
     "agent-skills",
-    "design-systems",
     "dsh",
     "byok"
    ],
-   "classified_by": "rules",
+   "classified_by": "override",
    "health": "active",
    "stars_delta": 3607,
    "delta_days": 17
@@ -949,23 +940,21 @@
    "archived": false,
    "fork": false,
    "mine": false,
-   "category": "coding",
+   "category": "automation",
    "tags": [
+    "coding",
     "agents",
-    "mcp",
-    "search"
+    "mcp"
    ],
-   "score": 5,
+   "score": 3,
    "classification": {
-    "method": "rules",
-    "review_needed": true,
-    "reasons": [
-     "close_scores"
-    ],
-    "score": 5,
-    "runner_up": "agents",
-    "runner_up_score": 4,
-    "margin": 1
+    "method": "override",
+    "review_needed": false,
+    "reasons": [],
+    "score": 3,
+    "runner_up": "coding",
+    "runner_up_score": 5,
+    "margin": -2
    },
    "maturity": {
     "stage": "unknown",
@@ -973,13 +962,13 @@
     "note": ""
    },
    "key_topics": [
+    "automation",
     "claude-code",
     "mcp",
-    "ai-search",
     "cli",
     "cursor"
    ],
-   "classified_by": "rules",
+   "classified_by": "override",
    "health": "active",
    "stars_delta": 10326,
    "delta_days": 17
@@ -1048,73 +1037,6 @@
    "delta_days": 17
   },
   {
-   "full_name": "hacksider/Deep-Live-Cam",
-   "owner": "hacksider",
-   "name": "Deep-Live-Cam",
-   "url": "https://github.com/hacksider/Deep-Live-Cam",
-   "description": "real time face swap and one-click video deepfake with only a single image",
-   "homepage": "https://deeplivecam.net/",
-   "language": "Python",
-   "license": "AGPL-3.0",
-   "stars": 97153,
-   "forks": 14143,
-   "open_issues": 48,
-   "topics": [
-    "ai",
-    "ai-deep-fake",
-    "ai-face",
-    "ai-webcam",
-    "artificial-intelligence",
-    "deep-fake",
-    "deepfake",
-    "deepfake-webcam",
-    "faceswap",
-    "fake-webcam",
-    "gan",
-    "real-time-deepfake",
-    "realtime",
-    "realtime-deepfake",
-    "realtime-face-changer",
-    "video-deepfake",
-    "webcam",
-    "webcamera"
-   ],
-   "created_at": "2023-09-24T13:19:31Z",
-   "pushed_at": "2026-10-10T04:19:17Z",
-   "starred_at": "2026-03-28T22:37:08Z",
-   "archived": false,
-   "fork": false,
-   "mine": false,
-   "category": "multimodal",
-   "tags": [],
-   "score": 5,
-   "classification": {
-    "method": "rules",
-    "review_needed": false,
-    "reasons": [],
-    "score": 5,
-    "runner_up": null,
-    "runner_up_score": 0,
-    "margin": 5
-   },
-   "maturity": {
-    "stage": "unknown",
-    "source": null,
-    "note": ""
-   },
-   "key_topics": [
-    "deepfake",
-    "ai",
-    "gan",
-    "webcam",
-    "ai-face"
-   ],
-   "classified_by": "rules",
-   "health": "active",
-   "stars_delta": 241,
-   "delta_days": 17
-  },
-  {
    "full_name": "odysseus-dev/odysseus",
    "owner": "odysseus-dev",
    "name": "odysseus",
@@ -1137,11 +1059,9 @@
    "tags": [],
    "score": 1,
    "classification": {
-    "method": "rules",
-    "review_needed": true,
-    "reasons": [
-     "low_score"
-    ],
+    "method": "override",
+    "review_needed": false,
+    "reasons": [],
     "score": 1,
     "runner_up": null,
     "runner_up_score": 0,
@@ -1153,7 +1073,7 @@
     "note": ""
    },
    "key_topics": [],
-   "classified_by": "rules",
+   "classified_by": "override",
    "health": "active",
    "stars_delta": 4882,
    "delta_days": 17
@@ -1470,7 +1390,7 @@
     "prometheus"
    ],
    "created_at": "2013-12-11T15:59:56Z",
-   "pushed_at": "2026-10-21T12:45:54Z",
+   "pushed_at": "2026-10-21T12:48:09Z",
    "starred_at": "2026-03-30T13:37:13Z",
    "archived": false,
    "fork": false,
@@ -1976,11 +1896,9 @@
    "tags": [],
    "score": 1,
    "classification": {
-    "method": "rules",
-    "review_needed": true,
-    "reasons": [
-     "low_score"
-    ],
+    "method": "override",
+    "review_needed": false,
+    "reasons": [],
     "score": 1,
     "runner_up": null,
     "runner_up_score": 0,
@@ -1992,7 +1910,7 @@
     "note": ""
    },
    "key_topics": [],
-   "classified_by": "rules",
+   "classified_by": "override",
    "health": "active",
    "stars_delta": 471,
    "delta_days": 17
@@ -2020,11 +1938,9 @@
    "tags": [],
    "score": 1,
    "classification": {
-    "method": "rules",
-    "review_needed": true,
-    "reasons": [
-     "low_score"
-    ],
+    "method": "override",
+    "review_needed": false,
+    "reasons": [],
     "score": 1,
     "runner_up": null,
     "runner_up_score": 0,
@@ -2036,7 +1952,7 @@
     "note": ""
    },
    "key_topics": [],
-   "classified_by": "rules",
+   "classified_by": "override",
    "health": "active",
    "stars_delta": 1499,
    "delta_days": 17
@@ -2425,7 +2341,7 @@
     "typescript"
    ],
    "created_at": "2021-01-05T18:49:45Z",
-   "pushed_at": "2026-10-21T12:44:31Z",
+   "pushed_at": "2026-10-21T12:48:39Z",
    "starred_at": "2026-08-05T14:35:57Z",
    "archived": false,
    "fork": false,
@@ -2973,11 +2889,9 @@
    "tags": [],
    "score": 3,
    "classification": {
-    "method": "rules",
-    "review_needed": true,
-    "reasons": [
-     "close_scores"
-    ],
+    "method": "override",
+    "review_needed": false,
+    "reasons": [],
     "score": 3,
     "runner_up": "data",
     "runner_up_score": 2,
@@ -2995,7 +2909,7 @@
     "postgres",
     "postgresql"
    ],
-   "classified_by": "rules",
+   "classified_by": "override",
    "health": "active",
    "stars_delta": 64,
    "delta_days": 17
@@ -3137,12 +3051,9 @@
    "tags": [],
    "score": 1,
    "classification": {
-    "method": "rules",
-    "review_needed": true,
-    "reasons": [
-     "low_score",
-     "close_scores"
-    ],
+    "method": "override",
+    "review_needed": false,
+    "reasons": [],
     "score": 1,
     "runner_up": "agents",
     "runner_up_score": 1,
@@ -3154,7 +3065,7 @@
     "note": ""
    },
    "key_topics": [],
-   "classified_by": "rules",
+   "classified_by": "override",
    "health": "active",
    "stars_delta": 360,
    "delta_days": 17
@@ -3229,7 +3140,7 @@
    "homepage": "",
    "language": "Python",
    "license": "Apache-2.0",
-   "stars": 16670,
+   "stars": 16671,
    "forks": 1538,
    "open_issues": 117,
    "topics": [],
@@ -3239,15 +3150,13 @@
    "archived": false,
    "fork": false,
    "mine": false,
-   "category": "triage",
+   "category": "agents",
    "tags": [],
    "score": 0,
    "classification": {
-    "method": "unmatched",
-    "review_needed": true,
-    "reasons": [
-     "unmatched"
-    ],
+    "method": "override",
+    "review_needed": false,
+    "reasons": [],
     "score": 0,
     "runner_up": null,
     "runner_up_score": 0,
@@ -3259,7 +3168,7 @@
     "note": ""
    },
    "key_topics": [],
-   "classified_by": "none",
+   "classified_by": "override",
    "health": "active",
    "stars_delta": null,
    "delta_days": null
@@ -3293,11 +3202,9 @@
    "tags": [],
    "score": 3,
    "classification": {
-    "method": "rules",
-    "review_needed": true,
-    "reasons": [
-     "close_scores"
-    ],
+    "method": "override",
+    "review_needed": false,
+    "reasons": [],
     "score": 3,
     "runner_up": "agents",
     "runner_up_score": 2,
@@ -3315,7 +3222,7 @@
     "ai-agent",
     "ai-infra"
    ],
-   "classified_by": "rules",
+   "classified_by": "override",
    "health": "active",
    "stars_delta": 363,
    "delta_days": 17
@@ -3345,20 +3252,17 @@
    "archived": false,
    "fork": false,
    "mine": false,
-   "category": "agents",
+   "category": "coding",
    "tags": [],
-   "score": 2,
+   "score": 1,
    "classification": {
-    "method": "rules",
-    "review_needed": true,
-    "reasons": [
-     "low_score",
-     "close_scores"
-    ],
-    "score": 2,
-    "runner_up": "coding",
-    "runner_up_score": 1,
-    "margin": 1
+    "method": "override",
+    "review_needed": false,
+    "reasons": [],
+    "score": 1,
+    "runner_up": "agents",
+    "runner_up_score": 2,
+    "margin": -1
    },
    "maturity": {
     "stage": "unknown",
@@ -3366,13 +3270,13 @@
     "note": ""
    },
    "key_topics": [
-    "ai-agents",
-    "ai",
     "cli",
+    "ai",
     "mimo",
+    "ai-agents",
     "mimo-code"
    ],
-   "classified_by": "rules",
+   "classified_by": "override",
    "health": "active",
    "stars_delta": 100,
    "delta_days": 17
@@ -3386,7 +3290,7 @@
    "homepage": "",
    "language": "Python",
    "license": "Apache-2.0",
-   "stars": 13414,
+   "stars": 13415,
    "forks": 1409,
    "open_issues": 140,
    "topics": [
@@ -3406,11 +3310,9 @@
    "tags": [],
    "score": 3,
    "classification": {
-    "method": "rules",
-    "review_needed": true,
-    "reasons": [
-     "close_scores"
-    ],
+    "method": "override",
+    "review_needed": false,
+    "reasons": [],
     "score": 3,
     "runner_up": "evals",
     "runner_up_score": 2,
@@ -3428,9 +3330,9 @@
     "ai-agents",
     "test-automation"
    ],
-   "classified_by": "rules",
+   "classified_by": "override",
    "health": "active",
-   "stars_delta": 2472,
+   "stars_delta": 2473,
    "delta_days": 17
   },
   {
@@ -3519,11 +3421,9 @@
    ],
    "score": 3,
    "classification": {
-    "method": "rules",
-    "review_needed": true,
-    "reasons": [
-     "close_scores"
-    ],
+    "method": "override",
+    "review_needed": false,
+    "reasons": [],
     "score": 3,
     "runner_up": "coding",
     "runner_up_score": 3,
@@ -3540,7 +3440,7 @@
     "meta-prompting",
     "spec-driven-development"
    ],
-   "classified_by": "rules",
+   "classified_by": "override",
    "health": "active",
    "stars_delta": 586,
    "delta_days": 17
@@ -3702,12 +3602,9 @@
    "tags": [],
    "score": 1,
    "classification": {
-    "method": "rules",
-    "review_needed": true,
-    "reasons": [
-     "low_score",
-     "close_scores"
-    ],
+    "method": "override",
+    "review_needed": false,
+    "reasons": [],
     "score": 1,
     "runner_up": "agents",
     "runner_up_score": 1,
@@ -3719,7 +3616,7 @@
     "note": ""
    },
    "key_topics": [],
-   "classified_by": "rules",
+   "classified_by": "override",
    "health": "active",
    "stars_delta": 684,
    "delta_days": 17
@@ -3733,7 +3630,7 @@
    "homepage": "https://skillry.dev/ai-videos/opus-5-5",
    "language": "",
    "license": "MIT",
-   "stars": 7829,
+   "stars": 7833,
    "forks": 808,
    "open_issues": 3,
    "topics": [
@@ -3807,12 +3704,9 @@
    "tags": [],
    "score": 1,
    "classification": {
-    "method": "rules",
-    "review_needed": true,
-    "reasons": [
-     "low_score",
-     "close_scores"
-    ],
+    "method": "override",
+    "review_needed": false,
+    "reasons": [],
     "score": 1,
     "runner_up": "agents",
     "runner_up_score": 1,
@@ -3824,7 +3718,7 @@
     "note": ""
    },
    "key_topics": [],
-   "classified_by": "rules",
+   "classified_by": "override",
    "health": "active",
    "stars_delta": 21,
    "delta_days": 17
@@ -3988,11 +3882,9 @@
    ],
    "score": 4,
    "classification": {
-    "method": "rules",
-    "review_needed": true,
-    "reasons": [
-     "close_scores"
-    ],
+    "method": "override",
+    "review_needed": false,
+    "reasons": [],
     "score": 4,
     "runner_up": "frontend",
     "runner_up_score": 4,
@@ -4010,7 +3902,7 @@
     "typescript",
     "pi"
    ],
-   "classified_by": "rules",
+   "classified_by": "override",
    "health": "active",
    "stars_delta": null,
    "delta_days": null
@@ -4166,11 +4058,9 @@
    ],
    "score": 8,
    "classification": {
-    "method": "rules",
-    "review_needed": true,
-    "reasons": [
-     "close_scores"
-    ],
+    "method": "override",
+    "review_needed": false,
+    "reasons": [],
     "score": 8,
     "runner_up": "coding",
     "runner_up_score": 7,
@@ -4188,53 +4078,9 @@
     "agent-skills",
     "memory"
    ],
-   "classified_by": "rules",
+   "classified_by": "override",
    "health": "active",
    "stars_delta": 84,
-   "delta_days": 17
-  },
-  {
-   "full_name": "sohzm/cheating-daddy",
-   "owner": "sohzm",
-   "name": "cheating-daddy",
-   "url": "https://github.com/sohzm/cheating-daddy",
-   "description": "a free and opensource app that lets you gain an unfair advantage",
-   "homepage": "https://cheatingdaddy.com",
-   "language": "JavaScript",
-   "license": "GPL-3.0",
-   "stars": 5634,
-   "forks": 978,
-   "open_issues": 158,
-   "topics": [],
-   "created_at": "2025-05-28T22:50:20Z",
-   "pushed_at": "2026-07-23T18:48:18Z",
-   "starred_at": "2026-05-21T20:45:24Z",
-   "archived": false,
-   "fork": false,
-   "mine": false,
-   "category": "apps",
-   "tags": [],
-   "score": 1,
-   "classification": {
-    "method": "rules",
-    "review_needed": true,
-    "reasons": [
-     "low_score"
-    ],
-    "score": 1,
-    "runner_up": null,
-    "runner_up_score": 0,
-    "margin": 1
-   },
-   "maturity": {
-    "stage": "unknown",
-    "source": null,
-    "note": ""
-   },
-   "key_topics": [],
-   "classified_by": "rules",
-   "health": "active",
-   "stars_delta": 12,
    "delta_days": 17
   },
   {
@@ -4266,21 +4112,19 @@
    "archived": false,
    "fork": false,
    "mine": false,
-   "category": "context",
+   "category": "learning",
    "tags": [
-    "learning",
+    "context",
     "mcp",
     "memory"
    ],
    "score": 6,
    "classification": {
-    "method": "rules",
-    "review_needed": true,
-    "reasons": [
-     "close_scores"
-    ],
+    "method": "override",
+    "review_needed": false,
+    "reasons": [],
     "score": 6,
-    "runner_up": "learning",
+    "runner_up": "context",
     "runner_up_score": 6,
     "margin": 0
    },
@@ -4290,13 +4134,13 @@
     "note": ""
    },
    "key_topics": [
+    "awesome-list",
     "context-engineering",
     "harness-engineering",
-    "awesome-list",
     "mcp",
     "agent-memory"
    ],
-   "classified_by": "rules",
+   "classified_by": "override",
    "health": "active",
    "stars_delta": 220,
    "delta_days": 17
@@ -4375,65 +4219,6 @@
    "delta_days": 17
   },
   {
-   "full_name": "AzuraCast/AzuraCast",
-   "owner": "AzuraCast",
-   "name": "AzuraCast",
-   "url": "https://github.com/AzuraCast/AzuraCast",
-   "description": "A self-hosted web radio management suite, including turnkey installer tools for the full radio software stack and a modern, easy-to-use web app to manage your stations.",
-   "homepage": "https://www.azuracast.com/",
-   "language": "PHP",
-   "license": "AGPL-3.0",
-   "stars": 4069,
-   "forks": 762,
-   "open_issues": 99,
-   "topics": [
-    "icecast",
-    "liquidsoap",
-    "radio",
-    "radio-station",
-    "shoutcast",
-    "station",
-    "streaming",
-    "webcast"
-   ],
-   "created_at": "2016-04-30T21:41:23Z",
-   "pushed_at": "2026-10-20T15:27:51Z",
-   "starred_at": "2026-07-08T22:39:47Z",
-   "archived": false,
-   "fork": false,
-   "mine": false,
-   "category": "triage",
-   "tags": [],
-   "score": 0,
-   "classification": {
-    "method": "override",
-    "review_needed": true,
-    "reasons": [
-     "manual_triage"
-    ],
-    "score": 0,
-    "runner_up": "apps",
-    "runner_up_score": 1,
-    "margin": -1
-   },
-   "maturity": {
-    "stage": "stable",
-    "source": "https://www.azuracast.com/docs/getting-started/updates/release-channels/",
-    "note": "Stable release channel; rolling builds may differ."
-   },
-   "key_topics": [
-    "radio",
-    "icecast",
-    "station",
-    "webcast",
-    "shoutcast"
-   ],
-   "classified_by": "override",
-   "health": "active",
-   "stars_delta": 14,
-   "delta_days": 17
-  },
-  {
    "full_name": "Vexa-ai/vexa",
    "owner": "Vexa-ai",
    "name": "vexa",
@@ -4476,11 +4261,9 @@
    ],
    "score": 11,
    "classification": {
-    "method": "rules",
-    "review_needed": true,
-    "reasons": [
-     "close_scores"
-    ],
+    "method": "override",
+    "review_needed": false,
+    "reasons": [],
     "score": 11,
     "runner_up": "mcp",
     "runner_up_score": 10,
@@ -4498,7 +4281,7 @@
     "mcp",
     "mcp-server"
    ],
-   "classified_by": "rules",
+   "classified_by": "override",
    "health": "active",
    "stars_delta": 47,
    "delta_days": 17
@@ -4747,20 +4530,18 @@
    "archived": false,
    "fork": false,
    "mine": false,
-   "category": "mcp",
+   "category": "multimodal",
    "tags": [
-    "agents",
-    "multimodal"
+    "mcp",
+    "agents"
    ],
    "score": 6,
    "classification": {
-    "method": "rules",
-    "review_needed": true,
-    "reasons": [
-     "close_scores"
-    ],
+    "method": "override",
+    "review_needed": false,
+    "reasons": [],
     "score": 6,
-    "runner_up": "agents",
+    "runner_up": "mcp",
     "runner_up_score": 6,
     "margin": 0
    },
@@ -4770,61 +4551,16 @@
     "note": ""
    },
    "key_topics": [
+    "vlm",
+    "text-to-image",
     "mcp",
     "mcp-server",
-    "agentic-ai",
-    "multiagent",
-    "vlm"
+    "agentic-ai"
    ],
-   "classified_by": "rules",
+   "classified_by": "override",
    "health": "active",
    "stars_delta": 27,
    "delta_days": 17
-  },
-  {
-   "full_name": "gridex/gridex",
-   "owner": "gridex",
-   "name": "gridex",
-   "url": "https://github.com/gridex/gridex",
-   "description": "A native macOS / windows / Linux database IDE built with Swift and AppKit. Connect to PostgreSQL, MySQL, SQLite, and Redis from a single app with a fast, keyboard-driven interface.",
-   "homepage": "https://gridex.app",
-   "language": "C++",
-   "license": "Apache-2.0",
-   "stars": 1968,
-   "forks": 166,
-   "open_issues": 8,
-   "topics": [],
-   "created_at": "2026-04-16T20:51:35Z",
-   "pushed_at": "2026-10-20T10:47:27Z",
-   "starred_at": "2026-10-06T19:50:49Z",
-   "archived": false,
-   "fork": false,
-   "mine": false,
-   "category": "data",
-   "tags": [],
-   "score": 1,
-   "classification": {
-    "method": "rules",
-    "review_needed": true,
-    "reasons": [
-     "low_score",
-     "close_scores"
-    ],
-    "score": 1,
-    "runner_up": "frontend",
-    "runner_up_score": 1,
-    "margin": 0
-   },
-   "maturity": {
-    "stage": "unknown",
-    "source": null,
-    "note": ""
-   },
-   "key_topics": [],
-   "classified_by": "rules",
-   "health": "active",
-   "stars_delta": null,
-   "delta_days": null
   },
   {
    "full_name": "tinyfish-io/bigset-oss",
@@ -4849,19 +4585,17 @@
    "archived": false,
    "fork": false,
    "mine": false,
-   "category": "agents",
+   "category": "data",
    "tags": [],
-   "score": 1,
+   "score": 0,
    "classification": {
-    "method": "rules",
-    "review_needed": true,
-    "reasons": [
-     "low_score"
-    ],
-    "score": 1,
-    "runner_up": null,
-    "runner_up_score": 0,
-    "margin": 1
+    "method": "override",
+    "review_needed": false,
+    "reasons": [],
+    "score": 0,
+    "runner_up": "agents",
+    "runner_up_score": 1,
+    "margin": -1
    },
    "maturity": {
     "stage": "unknown",
@@ -4873,7 +4607,7 @@
     "tinyfish",
     "open-source"
    ],
-   "classified_by": "rules",
+   "classified_by": "override",
    "health": "active",
    "stars_delta": 3,
    "delta_days": 17
@@ -4897,19 +4631,17 @@
    "archived": false,
    "fork": false,
    "mine": false,
-   "category": "apps",
+   "category": "data",
    "tags": [],
-   "score": 1,
+   "score": 0,
    "classification": {
-    "method": "rules",
-    "review_needed": true,
-    "reasons": [
-     "low_score"
-    ],
-    "score": 1,
-    "runner_up": null,
-    "runner_up_score": 0,
-    "margin": 1
+    "method": "override",
+    "review_needed": false,
+    "reasons": [],
+    "score": 0,
+    "runner_up": "apps",
+    "runner_up_score": 1,
+    "margin": -1
    },
    "maturity": {
     "stage": "unknown",
@@ -4917,7 +4649,7 @@
     "note": ""
    },
    "key_topics": [],
-   "classified_by": "rules",
+   "classified_by": "override",
    "health": "active",
    "stars_delta": null,
    "delta_days": null
@@ -5024,11 +4756,9 @@
    ],
    "score": 5,
    "classification": {
-    "method": "rules",
-    "review_needed": true,
-    "reasons": [
-     "close_scores"
-    ],
+    "method": "override",
+    "review_needed": false,
+    "reasons": [],
     "score": 5,
     "runner_up": "mcp",
     "runner_up_score": 4,
@@ -5046,7 +4776,7 @@
     "opus",
     "ai-agent"
    ],
-   "classified_by": "rules",
+   "classified_by": "override",
    "health": "active",
    "stars_delta": 58,
    "delta_days": 17
@@ -5228,73 +4958,6 @@
    "delta_days": 17
   },
   {
-   "full_name": "Hackerest/pwneye",
-   "owner": "Hackerest",
-   "name": "pwneye",
-   "url": "https://github.com/Hackerest/pwneye",
-   "description": "Your ONVIF and RTSP camera companion for discovering and hacking real-world security cameras 🎥",
-   "homepage": "",
-   "language": "Python",
-   "license": "GPL-3.0",
-   "stars": 393,
-   "forks": 61,
-   "open_issues": 4,
-   "topics": [
-    "cctv",
-    "cctv-hacking",
-    "hacking",
-    "hacking-tool",
-    "hacking-tools",
-    "ip-camera",
-    "netsec",
-    "network-scanner",
-    "network-security",
-    "onvif",
-    "penetration-testing",
-    "pentesting",
-    "recon",
-    "reconnaissance",
-    "red-team",
-    "rtsp",
-    "security",
-    "security-tools"
-   ],
-   "created_at": "2026-04-03T18:00:56Z",
-   "pushed_at": "2026-09-06T16:33:05Z",
-   "starred_at": "2026-09-27T12:21:23Z",
-   "archived": false,
-   "fork": false,
-   "mine": false,
-   "category": "security",
-   "tags": [],
-   "score": 10,
-   "classification": {
-    "method": "rules",
-    "review_needed": false,
-    "reasons": [],
-    "score": 10,
-    "runner_up": null,
-    "runner_up_score": 0,
-    "margin": 10
-   },
-   "maturity": {
-    "stage": "unknown",
-    "source": null,
-    "note": ""
-   },
-   "key_topics": [
-    "security",
-    "pentesting",
-    "security-tools",
-    "cctv",
-    "rtsp"
-   ],
-   "classified_by": "rules",
-   "health": "active",
-   "stars_delta": 54,
-   "delta_days": 17
-  },
-  {
    "full_name": "Shubhamsaboo/google-memorybank-plugin",
    "owner": "Shubhamsaboo",
    "name": "google-memorybank-plugin",
@@ -5383,11 +5046,9 @@
    ],
    "score": 6,
    "classification": {
-    "method": "rules",
-    "review_needed": true,
-    "reasons": [
-     "close_scores"
-    ],
+    "method": "override",
+    "review_needed": false,
+    "reasons": [],
     "score": 6,
     "runner_up": "context",
     "runner_up_score": 5,
@@ -5405,7 +5066,7 @@
     "llm",
     "muapi"
    ],
-   "classified_by": "rules",
+   "classified_by": "override",
    "health": "active",
    "stars_delta": 0,
    "delta_days": 17
@@ -5429,18 +5090,15 @@
    "archived": false,
    "fork": false,
    "mine": false,
-   "category": "agents",
+   "category": "automation",
    "tags": [],
    "score": 1,
    "classification": {
-    "method": "rules",
-    "review_needed": true,
-    "reasons": [
-     "low_score",
-     "close_scores"
-    ],
+    "method": "override",
+    "review_needed": false,
+    "reasons": [],
     "score": 1,
-    "runner_up": "automation",
+    "runner_up": "agents",
     "runner_up_score": 1,
     "margin": 0
    },
@@ -5450,7 +5108,7 @@
     "note": ""
    },
    "key_topics": [],
-   "classified_by": "rules",
+   "classified_by": "override",
    "health": "maintained",
    "stars_delta": 0,
    "delta_days": 17
@@ -5478,12 +5136,9 @@
    "tags": [],
    "score": 2,
    "classification": {
-    "method": "rules",
-    "review_needed": true,
-    "reasons": [
-     "low_score",
-     "close_scores"
-    ],
+    "method": "override",
+    "review_needed": false,
+    "reasons": [],
     "score": 2,
     "runner_up": "coding",
     "runner_up_score": 2,
@@ -5495,7 +5150,7 @@
     "note": ""
    },
    "key_topics": [],
-   "classified_by": "rules",
+   "classified_by": "override",
    "health": "maintained",
    "stars_delta": 0,
    "delta_days": 17
@@ -5519,19 +5174,17 @@
    "archived": false,
    "fork": false,
    "mine": false,
-   "category": "infra",
+   "category": "coding",
    "tags": [],
-   "score": 1,
+   "score": 0,
    "classification": {
-    "method": "rules",
-    "review_needed": true,
-    "reasons": [
-     "low_score"
-    ],
-    "score": 1,
-    "runner_up": null,
-    "runner_up_score": 0,
-    "margin": 1
+    "method": "override",
+    "review_needed": false,
+    "reasons": [],
+    "score": 0,
+    "runner_up": "infra",
+    "runner_up_score": 1,
+    "margin": -1
    },
    "maturity": {
     "stage": "unknown",
@@ -5539,7 +5192,7 @@
     "note": ""
    },
    "key_topics": [],
-   "classified_by": "rules",
+   "classified_by": "override",
    "health": "active",
    "stars_delta": 15,
    "delta_days": 17

@@ -38,6 +38,7 @@ exclude_starred = [
 "thedotmack/claude-mem" = "memory"
 "rohitg00/agentmemory" = "memory"
 "zilliztech/memsearch" = "memory"
+"louis030195/hyperconsciousness" = "memory"
 # Document management and productivity, rather than model training or OCR tooling.
 "paperless-ngx/paperless-ngx" = "automation"
 # Radio management is outside the GenAI taxonomy; "web app" is not an AI signal.
@@ -85,6 +86,11 @@ note = "Stable release channel; development builds may differ."
 stage = "stable"
 source = "https://www.azuracast.com/docs/getting-started/updates/release-channels/"
 note = "Stable release channel; rolling builds may differ."
+
+[maturity."louis030195/hyperconsciousness"]
+stage = "alpha"
+source = "https://github.com/louis030195/hyperconsciousness/blob/5748f89138c6817c88af419b0511cff77d0b4ee4/README.md"
+note = "Upstream declares a developer alpha; APIs and commands may change."
 
 # ---------------------------------------------------------------------------
 # Taxonomy

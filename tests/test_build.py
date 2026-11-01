@@ -213,7 +213,7 @@ class MaturityTest(unittest.TestCase):
                 repo = build.normalize({"full_name": full_name.upper()}, None, False)
                 build.classify([repo], CFG)
                 self.assertEqual(repo["maturity"], expected)
-                self.assertEqual(repo["maturity"]["stage"], "stable")
+                self.assertEqual(repo["maturity"]["stage"], expected["stage"])
                 self.assertIsNot(repo["maturity"], expected)
 
     def test_stage_is_cleared_when_annotation_is_removed(self):
